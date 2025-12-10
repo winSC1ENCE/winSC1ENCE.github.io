@@ -1,0 +1,284 @@
+/* Flashcards Specific Styles */
+
+.flashcard-wrapper {
+    background-color: #f5f5f7;
+    padding: 2rem 0;
+    min-height: calc(100vh - 200px);
+}
+
+.flashcard-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.flashcard-header h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.flashcard-header p {
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+
+.btn-control {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: white;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn-control:hover {
+    background: #f0f0f0;
+    border-color: #999;
+}
+
+.btn-control.primary {
+    background: #3498db;
+    color: white;
+    border: none;
+}
+
+.btn-control.primary:hover {
+    background: #2980b9;
+}
+
+/* Card Container */
+.card-container {
+    width: 100%;
+    max-width: 680px;
+    height: 380px;
+    margin: 0 auto 2rem;
+    perspective: 1200px;
+}
+
+.card {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.65s ease;
+    cursor: pointer;
+}
+
+.card.flipped {
+    transform: rotateY(180deg);
+}
+
+.side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 26px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+    background: white;
+    backface-visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.front {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.back {
+    background: white;
+    color: #333;
+}
+
+.question {
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.answer {
+    font-size: 19px;
+    color: #333;
+    line-height: 1.5;
+    word-wrap: break-word;
+}
+
+.front .question {
+    color: white;
+}
+
+.card-counter {
+    font-size: 0.9rem;
+    margin-top: 1rem;
+    opacity: 0.9;
+}
+
+/* All Cards Grid */
+.allcards-grid {
+    display: none;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 2rem;
+    padding: 2rem 0;
+}
+
+.mini {
+    border: 1px solid #ddd;
+    background: white;
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.mini:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+.mini b {
+    color: #2c3e50;
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.mini br + {
+    margin-top: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .card-container {
+        height: 320px;
+    }
+
+    .question {
+        font-size: 19px;
+    }
+
+    .answer {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flashcard-header h1 {
+        font-size: 2rem;
+    }
+
+    .card-container {
+        height: 280px;
+        max-width: 100%;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+
+    .side {
+        padding: 20px;
+        border-radius: 10px;
+    }
+
+    .question {
+        font-size: 18px;
+    }
+
+    .answer {
+        font-size: 16px;
+    }
+
+    .controls {
+        gap: 8px;
+    }
+
+    .btn-control {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        flex: 1;
+        min-width: calc(50% - 4px);
+    }
+
+    .allcards-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .mini {
+        padding: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .flashcard-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .flashcard-header p {
+        font-size: 0.95rem;
+    }
+
+    .card-container {
+        height: 240px;
+        margin-bottom: 1.5rem;
+    }
+
+    .side {
+        padding: 16px;
+    }
+
+    .question {
+        font-size: 16px;
+        margin-bottom: 8px;
+    }
+
+    .answer {
+        font-size: 14px;
+    }
+
+    .card-counter {
+        font-size: 0.85rem;
+        margin-top: 0.8rem;
+    }
+
+    .btn-control {
+        padding: 7px 10px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Print Style */
+@media print {
+    .navbar,
+    .flashcard-header,
+    .controls,
+    .card-container,
+    .footer {
+        display: none;
+    }
+
+    .allcards-grid {
+        display: grid !important;
+    }
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards - PCPP1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/flashcards.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">winSC1ENCE</div>
+            <ul class="nav-links">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="index.html#about">Über mich</a></li>
+                <li><a href="index.html#projects">Projekte</a></li>
+                <li><a href="flashcards.html">Flashcards</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="flashcard-wrapper">
+        <div class="container">
+            <header class="flashcard-header">
+                <h1>PCPP1 Lernkarten</h1>
+                <p>Klicke die Karte an, um sie umzudrehen. Lerne unterwegs!</p>
+            </header>
+
+            <div class="controls">
+                <button id="prev" class="btn-control">« Vorherige</button>
+                <button id="flip" class="btn-control">Umdrehen</button>
+                <button id="next" class="btn-control">Nächste »</button>
+                <button id="shuffle" class="btn-control">Mischen</button>
+                <button id="showall" class="btn-control">Alle anzeigen</button>
+                <button id="download" class="btn-control primary">⬇ Download</button>
+            </div>
+
+            <div class="card-container">
+                <div id="card" class="card">
+                    <div class="side front">
+                        <div class="question" id="q">Lade…</div>
+                        <div class="card-counter">Karte <span id="i1">0</span>/<span id="tot1">0</span></div>
+                    </div>
+                    <div class="side back">
+                        <div class="answer" id="a">...</div>
+                        <div class="card-counter">Karte <span id="i2">0</span>/<span id="tot2">0</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="allcards" class="allcards-grid"></div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 winSC1ENCE. Alle Rechte vorbehalten.</p>
+        </div>
+    </footer>
+
+    <script src="js/flashcards.js"></script>
+</body>
+</html>
