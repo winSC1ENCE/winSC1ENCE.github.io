@@ -3,29 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flashcards - PCPP1</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/flashcards.css">
+    <title>PCPP1 - Python OOP Kapitel 1 Lernkarten</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="navbar">
         <div class="container">
-            <div class="logo">winSC1ENCE</div>
+            <a href="../../index.html" class="logo">← winSC1ENCE</a>
             <ul class="nav-links">
-                <li><a href="index.html#home">Home</a></li>
-                <li><a href="index.html#about">Über mich</a></li>
-                <li><a href="index.html#projects">Projekte</a></li>
-                <li><a href="flashcards.html">Flashcards</a></li>
+                <li><a href="../../index.html#home">Home</a></li>
+                <li><a href="../../index.html#projects">Projekte</a></li>
             </ul>
+            <button id="hamburger" class="hamburger">☰</button>
         </div>
     </nav>
 
-    <div class="flashcard-wrapper">
+    <div class="pcpp1-wrapper">
         <div class="container">
-            <header class="flashcard-header">
-                <h1>PCPP1 Lernkarten</h1>
-                <p>Klicke die Karte an, um sie umzudrehen. Lerne unterwegs!</p>
+            <header class="project-header">
+                <h1>PCPP1 - Python OOP</h1>
+                <p>Kapitel 1: Advanced Perspective of Classes</p>
+                <p class="subtitle">Interaktive Lernkarten zum Üben</p>
             </header>
 
             <div class="controls">
@@ -51,15 +51,20 @@
             </div>
 
             <div id="allcards" class="allcards-grid"></div>
+
+            <div class="keyboard-hints">
+                <p><strong>⌨️ Tastatursteuerung:</strong> Pfeiltasten zum Navigieren • Leertaste zum Umdrehen</p>
+            </div>
         </div>
     </div>
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 winSC1ENCE. Alle Rechte vorbehalten.</p>
+            <p>&copy; 2025 winSC1ENCE - PCPP1 Lernkarten. Alle Rechte vorbehalten.</p>
         </div>
     </footer>
 
-    <script src="js/flashcards.js"></script>
+    <script src="../../js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

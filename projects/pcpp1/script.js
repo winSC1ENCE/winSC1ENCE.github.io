@@ -1,4 +1,4 @@
-// Flashcards Daten aus PCPP1 Projekt
+// PCPP1 - Python OOP Kapitel 1: Advanced Perspective of Classes
 const cards = [
     {
         q: "Was gibt die `type()`-Funktion in Python zurück, wenn sie auf eine Instanz angewendet wird?",
@@ -87,7 +87,7 @@ document.getElementById("download").addEventListener("click", () => {
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
     a.href = url;
-    a.download = "flashcards-pcpp1.html";
+    a.download = "pcpp1-chapter1-flashcards.html";
     a.click();
     URL.revokeObjectURL(url);
 });
