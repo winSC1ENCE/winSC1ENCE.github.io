@@ -123,7 +123,7 @@ body {
 
 /* Hero Section */
 .hero {
-    background: linear-gradient(135deg, rgba(15, 76, 117, 0.8) 0%, rgba(31, 122, 140, 0.8) 40%, rgba(43, 108, 176, 0.8) 100%);
+    background: linear-gradient(135deg, rgba(15, 76, 117, 1.0) 0%, rgba(31, 122, 140, 1.0) 40%, rgba(43, 108, 176, 1.0) 100%);
     color: white;
     padding: 6rem 0;
     text-align: center;
