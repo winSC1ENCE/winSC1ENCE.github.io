@@ -129,6 +129,8 @@ body {
     text-align: center;
 }
 
+.hero .container { position: relative; }
+
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
@@ -166,20 +168,23 @@ body {
     right: 1rem;
     top: 1rem;
     pointer-events: none;
+    opacity: 0;
+    transform: translateY(-6px) scale(0.7);
+    transition: opacity 0.25s ease, transform 0.28s ease;
 }
 
 .cv-portrait .portrait-frame {
     position: relative;
-    width: 92px;
-    height: 92px;
+    width: 96px;
+    height: 96px;
     border-radius: 50%;
     padding: 3px;
     background: conic-gradient(from 200deg, rgba(234,243,255,0.35), rgba(155,208,255,0.25), rgba(203,226,255,0.35), rgba(234,243,255,0.35));
     box-shadow: none;
-    opacity: 0.12;
+    opacity: 0.18;
     mix-blend-mode: luminosity;
     filter: blur(0.2px);
-    transition: opacity 0.25s ease;
+    transition: opacity 0.25s ease, transform 0.28s ease;
 }
 
 .cv-portrait img {
@@ -205,7 +210,8 @@ body {
 }
 
 .cv-portrait:hover .portrait-frame {
-    opacity: 0.18;
+    opacity: 0.22;
+    transform: scale(1.02);
 }
 
 .cv-portrait figcaption {
@@ -214,16 +220,23 @@ body {
 
 @media (max-width: 768px) {
     .cv-portrait { right: 0.75rem; top: 0.75rem; }
-    .cv-portrait .portrait-frame { width: 80px; height: 80px; }
+    .cv-portrait .portrait-frame { width: 84px; height: 84px; }
 }
 
 @media (max-width: 480px) {
     .cv-portrait { right: 0.5rem; top: 0.5rem; }
-    .cv-portrait .portrait-frame { width: 68px; height: 68px; }
+    .cv-portrait .portrait-frame { width: 72px; height: 72px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
     .cv-portrait .portrait-frame { transition: none; }
+}
+
+/* Reveal portrait when hovering/focusing the name */
+.hero h1:hover ~ .cv-portrait,
+.hero h1:focus ~ .cv-portrait {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 @media (max-width: 768px) {
