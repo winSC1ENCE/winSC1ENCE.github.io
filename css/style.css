@@ -162,22 +162,24 @@ body {
 
 /* CV Portrait */
 .cv-portrait {
-    margin: 1.2rem auto 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.6rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    pointer-events: none;
 }
 
 .cv-portrait .portrait-frame {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 92px;
+    height: 92px;
     border-radius: 50%;
-    padding: 6px;
-    background: conic-gradient(from 200deg, #eaf3ff, #9bd0ff, #cbe2ff, #eaf3ff);
-    box-shadow: 0 14px 34px rgba(0,0,0,0.18);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    padding: 3px;
+    background: conic-gradient(from 200deg, rgba(234,243,255,0.35), rgba(155,208,255,0.25), rgba(203,226,255,0.35), rgba(234,243,255,0.35));
+    box-shadow: none;
+    opacity: 0.12;
+    mix-blend-mode: luminosity;
+    filter: blur(0.2px);
+    transition: opacity 0.25s ease;
 }
 
 .cv-portrait img {
@@ -186,38 +188,38 @@ body {
     object-fit: cover;
     border-radius: 50%;
     display: block;
-    filter: saturate(1.05) contrast(1.02);
-    background: #fff;
+    filter: grayscale(0.2) saturate(0.9) contrast(0.98);
+    background: transparent;
 }
 
 .cv-portrait .sparkle {
     position: absolute;
-    right: -6px;
-    top: -6px;
-    width: 18px;
-    height: 18px;
-    background: radial-gradient(circle, #fff 30%, #ffd86b 60%, rgba(255,216,107,0.0) 70%);
+    right: -4px;
+    top: -4px;
+    width: 12px;
+    height: 12px;
+    background: radial-gradient(circle, rgba(255,255,255,0.6) 30%, rgba(255,216,107,0.5) 60%, rgba(255,216,107,0.0) 70%);
     border-radius: 50%;
-    box-shadow: 0 0 12px rgba(255,216,107,0.8);
-    transform: rotate(12deg);
+    box-shadow: none;
+    transform: rotate(8deg);
 }
 
 .cv-portrait:hover .portrait-frame {
-    transform: translateY(-2px) rotate(-1deg);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.22);
+    opacity: 0.18;
 }
 
 .cv-portrait figcaption {
-    font-size: 0.95rem;
-    color: #eaf3ff;
+    display: none;
 }
 
 @media (max-width: 768px) {
-    .cv-portrait .portrait-frame { width: 140px; height: 140px; }
+    .cv-portrait { right: 0.75rem; top: 0.75rem; }
+    .cv-portrait .portrait-frame { width: 80px; height: 80px; }
 }
 
 @media (max-width: 480px) {
-    .cv-portrait .portrait-frame { width: 120px; height: 120px; }
+    .cv-portrait { right: 0.5rem; top: 0.5rem; }
+    .cv-portrait .portrait-frame { width: 68px; height: 68px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
