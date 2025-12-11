@@ -33,15 +33,15 @@
 /* Controls */
 .controls {
     display: flex;
-    gap: 12px;
-    margin-bottom: 1rem;
+    gap: 16px;
+    margin-bottom: 1.5rem;
     justify-content: center;
     align-items: center;
 }
 
 .secondary-controls {
     display: flex;
-    gap: 10px;
+    gap: 12px;
     margin-bottom: 2rem;
     justify-content: center;
     flex-wrap: wrap;
@@ -51,98 +51,76 @@
 .btn-nav {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 14px 24px;
-    border-radius: 12px;
-    border: 2px solid #e0e0e0;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
     background: white;
     cursor: pointer;
-    font-size: 1rem;
-    font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    color: #2c3e50;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
-    min-width: 120px;
-    justify-content: center;
+    color: #667eea;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .btn-nav:hover {
     background: #667eea;
     color: white;
-    border-color: #667eea;
-    transform: translateY(-2px);
-    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
 }
 
 .btn-nav:active {
-    transform: translateY(0);
-    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+    transform: scale(0.95);
 }
 
 .btn-nav svg {
-    width: 20px;
-    height: 20px;
-    transition: transform 0.3s ease;
-}
-
-.btn-nav:hover svg {
-    transform: scale(1.1);
+    width: 28px;
+    height: 28px;
 }
 
 /* Flip Button */
 .btn-flip {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 14px 28px;
-    border-radius: 12px;
+    gap: 10px;
+    padding: 16px 32px;
+    border-radius: 50px;
     border: none;
     background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.05rem;
     font-weight: 600;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     color: white;
-    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
-    min-width: 140px;
-    justify-content: center;
+    box-shadow: 0 4px 16px rgba(102, 126, 234, 0.4);
 }
 
 .btn-flip:hover {
-    transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(102, 126, 234, 0.5);
 }
 
 .btn-flip:active {
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
 }
 
 .btn-flip svg {
-    width: 22px;
-    height: 22px;
-    animation: rotate 2s linear infinite;
-}
-
-@keyframes rotate {
-    0%, 100% { transform: rotate(0deg); }
-    50% { transform: rotate(180deg); }
-}
-
-.btn-flip:hover svg {
-    animation-play-state: paused;
+    width: 20px;
+    height: 20px;
 }
 
 /* Secondary Buttons */
 .btn-secondary {
     display: flex;
     align-items: center;
-    gap: 6px;
-    padding: 10px 18px;
-    border-radius: 10px;
-    border: 1px solid #ddd;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 24px;
+    border: 2px solid #e0e0e0;
     background: white;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
     font-weight: 500;
     transition: all 0.3s ease;
     color: #555;
@@ -150,15 +128,19 @@
 
 .btn-secondary:hover {
     background: #f8f9fa;
-    border-color: #999;
-    color: #2c3e50;
-    transform: translateY(-1px);
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    border-color: #667eea;
+    color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.btn-secondary:active {
+    transform: translateY(0);
 }
 
 .btn-secondary svg {
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
 }
 
 /* Card Container */
@@ -305,7 +287,7 @@
     }
 
     .card-container {
-        height: 320px;
+        height: 340px;
         max-width: 100%;
     }
 
@@ -322,44 +304,34 @@
     }
 
     .controls {
-        gap: 10px;
-        width: 100%;
-        padding: 0 1rem;
+        gap: 12px;
     }
 
     .btn-nav {
-        flex: 1;
-        min-width: 0;
-        padding: 12px 16px;
-        font-size: 0.9rem;
-    }
-
-    .btn-nav span {
-        display: none;
+        width: 56px;
+        height: 56px;
     }
 
     .btn-nav svg {
-        width: 24px;
-        height: 24px;
-        margin: 0;
+        width: 26px;
+        height: 26px;
     }
 
     .btn-flip {
-        flex: 1.2;
-        min-width: 0;
-        padding: 12px 20px;
+        padding: 14px 28px;
+        font-size: 1rem;
     }
 
     .secondary-controls {
-        gap: 8px;
-        padding: 0 1rem;
+        gap: 10px;
+        width: 100%;
+        max-width: 500px;
     }
 
     .btn-secondary {
         flex: 1;
-        min-width: 0;
-        padding: 10px 14px;
-        font-size: 0.85rem;
+        min-width: 140px;
+        padding: 12px 18px;
         justify-content: center;
     }
 
@@ -391,7 +363,7 @@
     }
 
     .card-container {
-        height: 280px;
+        height: 300px;
         margin-bottom: 1.2rem;
     }
 
@@ -414,37 +386,40 @@
     }
 
     .controls {
-        gap: 8px;
-        padding: 0 0.5rem;
+        gap: 10px;
     }
 
     .btn-nav {
-        padding: 12px;
-        min-width: 60px;
+        width: 52px;
+        height: 52px;
     }
 
     .btn-nav svg {
-        width: 28px;
-        height: 28px;
-    }
-
-    .btn-flip {
-        padding: 12px 16px;
-        font-size: 0.9rem;
-    }
-
-    .btn-flip svg {
         width: 24px;
         height: 24px;
     }
 
+    .btn-flip {
+        padding: 12px 24px;
+        font-size: 0.95rem;
+    }
+
+    .btn-flip span {
+        font-size: 0.9rem;
+    }
+
     .secondary-controls {
-        padding: 0 0.5rem;
+        width: 100%;
     }
 
     .btn-secondary {
-        padding: 10px 12px;
-        font-size: 0.8rem;
+        padding: 11px 16px;
+        font-size: 0.85rem;
+        min-width: 120px;
+    }
+
+    .btn-secondary span {
+        font-size: 0.85rem;
     }
 
     .keyboard-hints {

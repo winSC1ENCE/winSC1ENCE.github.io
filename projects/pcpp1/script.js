@@ -5,14 +5,22 @@ let cards = [];
 let idx = 0;
 let total = 0;
 
-// DOM Elements  
-const q = document.getElementById("q");
-const a = document.getElementById("a");
-const i1 = document.getElementById("i1");
-const i2 = document.getElementById("i2");
-const t1 = document.getElementById("tot1");
-const t2 = document.getElementById("tot2");
-const cardEl = document.getElementById("card");
+// DOM Elements werden nach dem Laden initialisiert
+let q, a, i1, i2, t1, t2, cardEl;
+
+// Initialisiere DOM-Elemente und Event-Listener
+function initializeApp() {
+    q = document.getElementById("q");
+    a = document.getElementById("a");
+    i1 = document.getElementById("i1");
+    i2 = document.getElementById("i2");
+    t1 = document.getElementById("tot1");
+    t2 = document.getElementById("tot2");
+    cardEl = document.getElementById("card");
+    
+    setupEventListeners();
+    loadCards();
+}
 
 // Lade Karten aus JSON-Datei
 async function loadCards() {
@@ -24,14 +32,16 @@ async function loadCards() {
         
         if (cards.length > 0) {
             render();
-            console.log(`✓ ${cards.length} Karten erfolgreich aus cards.json geladen!`);
+            console.log(`✓ ${cards.length} Karten erfolgreich geladen!`);
         } else {
             console.error('Keine Karten gefunden!');
+            q.textContent = 'Keine Karten gefunden!';
+            a.textContent = 'Die cards.json Datei ist leer.';
         }
     } catch (error) {
         console.error('Fehler beim Laden der Karten:', error);
-        q.textContent = 'Fehler beim Laden der Karten!';
-        a.textContent = 'Bitte überprüfen Sie die cards.json Datei. Fehler: ' + error.message;
+        q.textContent = 'Fehler beim Laden!';
+        a.textContent = 'Konnte cards.json nicht laden. Bitte Konsole prüfen (F12).';
     }
 }
 
@@ -47,8 +57,10 @@ function render() {
     t2.textContent = total;
 }
 
-// Card Click to Flip
-cardEl.addEventListener("click", () => cardEl.classList.toggle("flipped"));
+// Setup Event Listeners
+function setupEventListeners() {
+    // Card Click to Flip
+    cardEl.addEventListener("click", () => cardEl.classList.toggle("flipped"));
 
 // Button Events
 document.getElementById("flip").addEventListener("click", () => {
@@ -132,21 +144,22 @@ function handleSwipe() {
     }
 }
 
-// Keyboard Navigation
-document.addEventListener("keydown", (e) => {
-    if (e.key === "ArrowRight") {
-        idx = (idx + 1) % total;
-        cardEl.classList.remove("flipped");
-        render();
-    } else if (e.key === "ArrowLeft") {
-        idx = (idx - 1 + total) % total;
-        cardEl.classList.remove("flipped");
-        render();
-    } else if (e.key === " ") {
-        e.preventDefault();
-        cardEl.classList.toggle("flipped");
-    }
-});
+    // Keyboard Navigation
+    document.addEventListener("keydown", (e) => {
+        if (e.key === "ArrowRight") {
+            idx = (idx + 1) % total;
+            cardEl.classList.remove("flipped");
+            render();
+        } else if (e.key === "ArrowLeft") {
+            idx = (idx - 1 + total) % total;
+            cardEl.classList.remove("flipped");
+            render();
+        } else if (e.key === " ") {
+            e.preventDefault();
+            cardEl.classList.toggle("flipped");
+        }
+    });
+}
 
-// Lade Karten beim Start
-loadCards();
+// Starte App wenn DOM geladen ist
+document.addEventListener('DOMContentLoaded', initializeApp);
