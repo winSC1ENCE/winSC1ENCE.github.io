@@ -30,12 +30,47 @@
             </header>
 
             <div class="controls">
-                <button id="prev" class="btn-control">« Vorherige</button>
-                <button id="flip" class="btn-control">Umdrehen</button>
-                <button id="next" class="btn-control">Nächste »</button>
-                <button id="shuffle" class="btn-control">Mischen</button>
-                <button id="showall" class="btn-control">Alle anzeigen</button>
-                <button id="download" class="btn-control primary">⬇ Download</button>
+                <button id="prev" class="btn-nav" aria-label="Vorherige Karte">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                    <span>Zurück</span>
+                </button>
+                <button id="flip" class="btn-flip" aria-label="Karte umdrehen">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M1 4v6h6M23 20v-6h-6"></path>
+                        <path d="M20.49 9A9 9 0 0 0 5.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 0 1 3.51 15"></path>
+                    </svg>
+                    <span>Umdrehen</span>
+                </button>
+                <button id="next" class="btn-nav" aria-label="Nächste Karte">
+                    <span>Weiter</span>
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="secondary-controls">
+                <button id="shuffle" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="16 3 21 3 21 8"></polyline>
+                        <line x1="4" y1="20" x2="21" y2="3"></line>
+                        <polyline points="21 16 21 21 16 21"></polyline>
+                        <line x1="15" y1="15" x2="21" y2="21"></line>
+                        <line x1="4" y1="4" x2="9" y2="9"></line>
+                    </svg>
+                    Mischen
+                </button>
+                <button id="showall" class="btn-secondary">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <rect x="3" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="3" width="7" height="7"></rect>
+                        <rect x="14" y="14" width="7" height="7"></rect>
+                        <rect x="3" y="14" width="7" height="7"></rect>
+                    </svg>
+                    Alle anzeigen
+                </button>
             </div>
 
             <div class="card-container">
@@ -54,7 +89,7 @@
             <div id="allcards" class="allcards-grid"></div>
 
             <div class="keyboard-hints">
-                <p><strong>⌨️ Tastatursteuerung:</strong> Pfeiltasten zum Navigieren • Leertaste zum Umdrehen</p>
+                <p><strong>💡 Steuerung:</strong> Pfeiltasten oder wischen zum Navigieren • Leertaste oder tippen zum Umdrehen</p>
             </div>
         </div>
     </div>

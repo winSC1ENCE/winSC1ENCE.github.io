@@ -33,39 +33,132 @@
 /* Controls */
 .controls {
     display: flex;
-    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 1rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.secondary-controls {
+    display: flex;
     gap: 10px;
     margin-bottom: 2rem;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
-.btn-control {
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
+/* Navigation Buttons */
+.btn-nav {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 24px;
+    border-radius: 12px;
+    border: 2px solid #e0e0e0;
     background: white;
     cursor: pointer;
-    font-size: 0.95rem;
-    transition: all 0.3s ease;
-    font-weight: 500;
-    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: #2c3e50;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    min-width: 120px;
+    justify-content: center;
 }
 
-.btn-control:hover {
-    background: #f0f0f0;
-    border-color: #999;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.btn-control.primary {
-    background: #3498db;
+.btn-nav:hover {
+    background: #667eea;
     color: white;
-    border: none;
+    border-color: #667eea;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(102, 126, 234, 0.3);
 }
 
-.btn-control.primary:hover {
-    background: #2980b9;
+.btn-nav:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(102, 126, 234, 0.2);
+}
+
+.btn-nav svg {
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.btn-nav:hover svg {
+    transform: scale(1.1);
+}
+
+/* Flip Button */
+.btn-flip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 14px 28px;
+    border-radius: 12px;
+    border: none;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: white;
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.4);
+    min-width: 140px;
+    justify-content: center;
+}
+
+.btn-flip:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+}
+
+.btn-flip:active {
+    transform: translateY(0) scale(1);
+}
+
+.btn-flip svg {
+    width: 22px;
+    height: 22px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+}
+
+.btn-flip:hover svg {
+    animation-play-state: paused;
+}
+
+/* Secondary Buttons */
+.btn-secondary {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 18px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background: white;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    color: #555;
+}
+
+.btn-secondary:hover {
+    background: #f8f9fa;
+    border-color: #999;
+    color: #2c3e50;
+    transform: translateY(-1px);
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+.btn-secondary svg {
+    width: 18px;
+    height: 18px;
 }
 
 /* Card Container */
@@ -212,7 +305,7 @@
     }
 
     .card-container {
-        height: 280px;
+        height: 320px;
         max-width: 100%;
     }
 
@@ -229,14 +322,45 @@
     }
 
     .controls {
-        gap: 8px;
+        gap: 10px;
+        width: 100%;
+        padding: 0 1rem;
     }
 
-    .btn-control {
-        padding: 8px 12px;
-        font-size: 0.85rem;
+    .btn-nav {
         flex: 1;
-        min-width: calc(50% - 4px);
+        min-width: 0;
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .btn-nav span {
+        display: none;
+    }
+
+    .btn-nav svg {
+        width: 24px;
+        height: 24px;
+        margin: 0;
+    }
+
+    .btn-flip {
+        flex: 1.2;
+        min-width: 0;
+        padding: 12px 20px;
+    }
+
+    .secondary-controls {
+        gap: 8px;
+        padding: 0 1rem;
+    }
+
+    .btn-secondary {
+        flex: 1;
+        min-width: 0;
+        padding: 10px 14px;
+        font-size: 0.85rem;
+        justify-content: center;
     }
 
     .allcards-grid {
@@ -248,14 +372,14 @@
     }
 
     .keyboard-hints {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         padding: 0.8rem;
     }
 }
 
 @media (max-width: 480px) {
     .project-header h1 {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
 
     .project-header p {
@@ -267,12 +391,12 @@
     }
 
     .card-container {
-        height: 240px;
-        margin-bottom: 1.5rem;
+        height: 280px;
+        margin-bottom: 1.2rem;
     }
 
     .side {
-        padding: 16px;
+        padding: 18px;
     }
 
     .question {
@@ -289,10 +413,38 @@
         margin-top: 0.8rem;
     }
 
-    .btn-control {
-        padding: 7px 10px;
-        font-size: 0.75rem;
-        min-width: calc(50% - 4px);
+    .controls {
+        gap: 8px;
+        padding: 0 0.5rem;
+    }
+
+    .btn-nav {
+        padding: 12px;
+        min-width: 60px;
+    }
+
+    .btn-nav svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    .btn-flip {
+        padding: 12px 16px;
+        font-size: 0.9rem;
+    }
+
+    .btn-flip svg {
+        width: 24px;
+        height: 24px;
+    }
+
+    .secondary-controls {
+        padding: 0 0.5rem;
+    }
+
+    .btn-secondary {
+        padding: 10px 12px;
+        font-size: 0.8rem;
     }
 
     .keyboard-hints {

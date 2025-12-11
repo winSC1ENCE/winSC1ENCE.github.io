@@ -93,15 +93,44 @@ document.getElementById("showall").addEventListener("click", () => {
     }
 });
 
-document.getElementById("download").addEventListener("click", () => {
-    const blob = new Blob([document.documentElement.outerHTML], { type: "text/html" });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "pcpp1-oop-flashcards.html";
-    a.click();
-    URL.revokeObjectURL(url);
-});
+// Touch/Swipe Support for Mobile
+let touchStartX = 0;
+let touchEndX = 0;
+let touchStartY = 0;
+let touchEndY = 0;
+
+cardEl.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+}, false);
+
+cardEl.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    touchEndY = e.changedTouches[0].screenY;
+    handleSwipe();
+}, false);
+
+function handleSwipe() {
+    const swipeThreshold = 50;
+    const swipeDistanceX = touchEndX - touchStartX;
+    const swipeDistanceY = touchEndY - touchStartY;
+    
+    // Check if horizontal swipe is more significant than vertical
+    if (Math.abs(swipeDistanceX) > Math.abs(swipeDistanceY)) {
+        // Horizontal swipe
+        if (swipeDistanceX > swipeThreshold) {
+            // Swipe right - previous card
+            idx = (idx - 1 + total) % total;
+            cardEl.classList.remove("flipped");
+            render();
+        } else if (swipeDistanceX < -swipeThreshold) {
+            // Swipe left - next card
+            idx = (idx + 1) % total;
+            cardEl.classList.remove("flipped");
+            render();
+        }
+    }
+}
 
 // Keyboard Navigation
 document.addEventListener("keydown", (e) => {
