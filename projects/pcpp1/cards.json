@@ -1,876 +1,831 @@
 {
+  "modules": [
+    {
+      "id": 1,
+      "color": "#6EE7B7",
+      "accent": "#059669",
+      "icon": "🧬",
+      "short": "OOP",
+      "en": "Advanced OOP",
+      "de": "Fortgeschrittenes OOP"
+    },
+    {
+      "id": 2,
+      "color": "#93C5FD",
+      "accent": "#2563EB",
+      "icon": "📐",
+      "short": "PEP",
+      "en": "Best Practices & Standardization",
+      "de": "Best Practices & Standardisierung"
+    },
+    {
+      "id": 3,
+      "color": "#FCA5A5",
+      "accent": "#DC2626",
+      "icon": "🖼️",
+      "short": "GUI",
+      "en": "GUI Programming",
+      "de": "GUI-Programmierung"
+    },
+    {
+      "id": 4,
+      "color": "#FCD34D",
+      "accent": "#D97706",
+      "icon": "🌐",
+      "short": "Network",
+      "en": "Network Programming",
+      "de": "Netzwerk-Programmierung"
+    },
+    {
+      "id": 5,
+      "color": "#C4B5FD",
+      "accent": "#7C3AED",
+      "icon": "📁",
+      "short": "Files",
+      "en": "File Processing",
+      "de": "Dateiverarbeitung"
+    }
+  ],
   "cards": [
     {
-      "q": "Wie erstellt man eine neue Instanz einer Klasse in Python?",
-      "a": "Um eine neue Instanz einer Klasse in Python zu erstellen, muss man den Konstruktor der Klasse aufrufen, indem man den Namen der Klasse mit Klammern und optionalen Argumenten aufruft (z.B. Duck() für eine neue Ente-Instanz)."
-    },
-    {
-      "q": "Was bedeutet es, dass eine Klasse in Python ein Rezept oder eine Blaupause für ihre Instanzen ist?",
-      "a": "Eine Klasse ist wie ein Gebäudeentwurf, der die Ideen des Architekten darstellt. Es ist eine virtuelle Beschreibung von gemeinsamen Attributen und Methoden einer Gruppe von Objekten. Stellen Sie sich vor, dass Sie mehrere Häuser bauen möchten, und es gibt einen Entwurf oder eine Blaupause für das erste Haus (Klasse). Wenn Sie dieses Gebäude erstellen, erhalten Sie ein spezifisches Haus (Instanz), das von der ursprünglichen Blaupause abgeleitet ist."
-    },
-    {
-      "q": "Was ist ein Unterschied zwischen Instanzen und Objekten in Python?",
-      "a": "Ein Unterschied besteht darin, dass eine Instanz einer Klasse ist (ein spezifisches Exemplar oder eine Realisierung der Eigenschaften und Verhaltensweisen, die von ihrer Klasse definiert sind), während ein Objekt eine allgemeinere Bezeichnung für Datenstrukturen ist, die in Python verwendet werden (einschließlich Instanzen, Funktionen und Module)."
-    },
-    {
-      "q": "Wie wird eine Methode in Python definiert und aufgerufen?",
-      "a": "Eine Methode ist eine Funktion, die zu einer Klasse gehört. Um sie zu definieren, verwendet man den def-Befehl innerhalb der Klassenstruktur. Um eine Methode aufzurufen, wendet man .name() an, wobei 'name' der Methodenname ist und durch die Instanz (objekt) ersetzt wird."
-    },
-    {
-      "q": "Wie lautet die Syntax zur Definition einer Methode in Python?",
-      "a": "Eine Methode wird wie eine Funktion definiert, wobei der Methodenname mit dem Selbstverweis `self` als erstem Argument angegeben wird. Beispiel: def my_method(self, arg1): pass"
-    },
-    {
-      "q": "Welche Rolle spielt der Typ in Python?",
-      "a": "In Python ist ein Typ eine Art von Datenstruktur, die bestimmte Attribute und Methoden besitzt. Es gibt verschiedene Typen wie Zahlen (Int und Float), Strings, Listen, Tuple, Sets und Dictionaries."
-    },
-    {
-      "q": "Wie kann man in Python eine Instanzvariable erstellen?",
-      "a": "Eine Instanzvariable wird erstellt, indem sie einem Objekt direkt zugewiesen wird, zum Beispiel: `self.name = 'John'` oder später über die Setter-Methode des Objekts."
-    },
-    {
-      "q": "Wie greift man auf eine Instanzvariable zu?",
-      "a": "Mit dem Punkt-Operator (.) oder dem __getitem__()-Dienstprogramm. Beispiel: inst_var = obj.inst_var; inst_var2 = obj.__getitem__('inst_var2')"
-    },
-    {
-      "q": "Wie kann man in Python die Instanzvariablen eines Objekts auflisten?",
-      "a": "Das geht mit der integrierten Funktion __dict__ des jeweiligen Objekts. Beispiel: d1.__dict__ gibt den Inhalt von d1 aus."
-    },
-    {
-      "q": "Wie kann man den Wert einer Klassenvariablen in Python verändern?",
-      "a": "Durch Verwendung der Selbstverweis-Funktion (self) und die Klassenvariable direkt zu modifizieren, zum Beispiel: `class MyClass:`  ```python` my_var = 10  def change_val(self):     self.my_var += 5 ```"
-    },
-    {
-      "q": "Wie greift man auf eine Klassenvariable zu, ohne eine Instanz zu erstellen?",
-      "a": "Um auf eine Klassenvariable in Python zuzugreifen, verwendet man den Klassennamen gefolgt von dem Variablennamen. Zum Beispiel: Demo.class_var."
-    },
-    {
-      "q": "Welchen Wert gibt `type(Duck)` zurück, wenn Duck eine Klasse ist?",
-      "a": "`type(Duck)` gibt den Typ der Variablen 'Duck' als 'type'-Objekt oder 'classobj'-Subklasse des Typs 'object' zurück."
-    },
-    {
-      "q": "Was sind Klassenvariablen in Python und wozu werden sie verwendet?",
-      "a": "Eine Klassenvariable ist eine Klasseneigenschaft, die nur in einer Kopie vorhanden ist und außerhalb jeder Klasseninstanz gespeichert wird. Sie werden daher im Allgemeinen für jede Instanz den gleichen Wert zugewiesen. Sie können verwendet werden, um feste oder veränderliche Informationen über die gesamte Klasse zu speichern."
-    },
-    {
-      "q": "Wie erstellt man in Python eine Klassenvariable?",
-      "a": "Mithilfe des Schlüsselworts `class`, gefolgt von dem Klassennamen, der öffnenden Klammer `{`, und den gewünschten Variablen und Methoden."
-    },
-    {
-      "q": "Wie kann man in Python auf eine Klassenvariable über die Klasse zugreifen, anstatt eine Instanzvariable zu erstellen?",
-      "a": "Um auf eine Klassenvariable über die Klasse zuzugreifen und sie festzulegen oder zu ändern, sollte man den Punkt-Operator (.) verwenden. Zum Beispiel: `Klasse.Variablenname = neuer_Wert`."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen Klassen- und Instanzvariablen in Python?",
-      "a": "Klassenvariablen werden für jede Instanz einer Klasse geteilt, während jede Instanz ihre eigenen Instanzvariablen besitzt. Eine Methode zur Erreichung von Klassenvariablen ist durch die Nutzung des Klassenobjekts."
-    },
-    {
-      "q": "Wie initialisiert man eine Klassenvariable in Python und wie greift man darauf zu?",
-      "a": "Zur Initialisierung einer Klassenvariablen verwendet man den Namen der Klasse gefolgt von zwei Unterstrichen, beispielsweise `__name__`. Um auf eine Klassenvariable zuzugreifen, benutzt man die Syntax `KlassenName.__name__`."
-    },
-    {
-      "q": "Wie greift man auf eine Instanzvariable zu, ohne eine Instanz einer Klasse zu erstellen?",
-      "a": "Das ist nicht möglich. Um auf eine Instanzvariable zuzugreifen, muss eine Instanz der betreffenden Klasse erstellt werden."
-    },
-    {
-      "q": "Wie verwendet man in Python eine Klassenvariable einer Superklasse, um die Anzahl aller Objekte zu zählen, die aus Unterklassen erstellt wurden?",
-      "a": "In Python kann man eine Klassenvariable einer Superklasse verwenden, um die Anzahl aller Objekte zu zählen, die aus Unterklassen erstellt wurden. Dazu wird in der Konstruktor-Methode (__init__-Methode) der Unterklasse auf die __init__-Methode der Superklasse zugegriffen und dort die Anzahl aller Objekte erhöht."
-    },
-    {
-      "q": "Welche Operatoren sind in Python verfügbar und welche Funktionen erfüllen sie?",
-      "a": "Python unterstützt verschiedene Operatoren wie arithmetische ( +, -, *, /, %, **), Vergleichsoperatoren ( ==, !=, >, <, >=, <=), Logikoperatoren (and, or, not) und spezielle Operatoren (is, is not, in, not in). Sie erfüllen verschiedene Funktionen wie Zahlendatenoperationen, Vergleich von Werten, Auswahl von Optionen und Prüfung auf Anwesenheit in einer Aufzählung."
-    },
-    {
-      "q": "Welche Syntax verwendet man in Python zur Erstellung einer Funktion?",
-      "a": "Eine Funktion in Python wird durch das Schlüsselwort def und anschließender Klammern (round brackets) definiert. Das erste Argument in der Klammer ist die Eingabe, während alle weiteren Argumente werden optional sein können."
-    },
-    {
-      "q": "Was bedeutet die Anwendung des `+`-Operators auf zwei Objekte der Person-Klasse in Python?",
-      "a": "Wenn der `+`-Operator auf zwei Instanzen der Person-Klasse angewendet wird, werden ihre Gewichtsattribute summiert und ein neues Objekt mit dem summierten Gewicht erstellt. Das Verhalten des Operators hängt jedoch von der Anwendungsdomäne ab."
-    },
-    {
-      "q": "Wie deklariert man in Python eine Funktion, die mehrere Werte zurückgibt?",
-      "a": "Eine Funktion gibt in Python mehrere Werte durch Tuple-Decomposition zurück. Beispielsweise: `def func(): return 1, 2, 'Hello'` kann mit `a, b, c = func()` aufgerufen werden."
-    },
-    {
-      "q": "Welche magischen Methoden sind in Python für die Anwendung von Funktionen und Operatoren verantwortlich, wenn der Interpreter sie entdeckt?",
-      "a": "Diese Methoden werden auch als Spezialmethoden bezeichnet. Sie werden benutzt, um spezifische Vorgänge wie den Aufruf von Operatoren (z.B. '+') oder Funktionen zwischen verschiedenen Objekttypen zu verarbeiten."
-    },
-    {
-      "q": "Welche spezielle Methode ist erforderlich, um die Python-Kernsyntax für Objektaddition in einer Person-Klasse einzuhalten?",
-      "a": "Die __add__()-Methode ist erforderlich. Um beispielsweise Objektaddition in der Person-Klasse zu ermöglichen, sollte der Code so aussehen: Klassenperson: def __init__(self, Gewicht, Alter, Gehalt):     self.weight = Gewicht     self.age = Alter     self.salary = Gehalt def __add__(self, other):     return Person(self.weight + other.weight, self.age + other.age, self.salary + other.salary) p1 = Person(30, 40, 50) p2 = Person(35, 45, 55) print(p1 + p2)"
-    },
-    {
-      "q": "Welche Unterschiede gibt es zwischen dem `is`- und `==`-Operator in Python?",
-      "a": "Der `is`-Operator prüft, ob zwei Variablen auf dasselbe Objekt verweisen (mit derselben ID), während der `==`-Operator die Werte beider Variablen vergleicht."
-    },
-    {
-      "q": "Welche Rolle spielt die Methode __add__() bei der Implementierung von Operatoren für Klassen in Python?",
-      "a": "Die Methode __add__() wird verwendet, um den +-Operator für Klassen zu implementieren. Sie gibt lediglich ein Ergebnis zurück und ändert keine Objektattribute."
-    },
-    {
-      "q": "Was ist die richtige Syntax für die Erstellung einer Funktion in Python?",
-      "a": "Funktionen werden durch das Schlüsselwort 'def' eingeleitet, gefolgt von dem Funktionsnamen und Klammern (), innerhalb derer sich Argumente befinden können. Hier ist ein Beispiel: `def greeting():`"
-    },
-    {
-      "q": "Wie kann man die magischen Methoden eines Objekts in Python identifizieren?",
-      "a": "Das Attribut '__dict__' gibt Zugriff auf die magischen Methoden eines Objekts. Hier ist ein Beispiel: `obj.__dict__.keys()`."
-    },
-    {
-      "q": "Welche Vergleichsmethoden gibt es in Python und wofür werden sie verwendet?",
-      "a": "Python bietet verschiedene Vergleichsmethoden wie __lt__ (less than), __le__ (less than or equal to), __eq__ (equal to), __ne__ (not equal to), __gt__ (greater than) und __ge__ (greater than or equal to). Sie werden verwendet, um Custom-Objekte mit Operatoren <, <=, ==, !=, > und >= zu vergleichen. Die Methoden sollten jeweils ein self-Argument nehmen und True oder False als Ergebnis zurückgeben, abhängig vom Vergleich der beteiligten Objekte."
-    },
-    {
-      "q": "Welche magische Methode in Python wird aufgerufen, wenn der Gleichheitsoperator (==) verwendet wird?",
-      "a": "Die __eq__(self, other) Magische Methode. Sie vergleicht den Wert des aktuellen Objekts mit dem eines anderen und gibt true zurück, wenn sie gleich sind."
-    },
-    {
-      "q": "Was ist die Syntax für eine Funktionsdeklaration in Python?",
-      "a": "Eine Funktion wird durch das Schlüsselwort 'def' gefolgt von einem Namensgeber und einer Klammerliste erstellt, die ihre Argumente enthält. Beispiel: def greet(name):  print('Hello', name)"
-    },
-    {
-      "q": "Was sind die Hauptunterschiede zwischen den Typkonvertierungsmethoden int(), float() und hex() in Python?",
-      "a": "int() konvertiert einen Wert in einen Integer, während float() dieselbe Funktion für Fließkommazahlen ausführt. hex() hingegen erstellt eine hexadezimale Zeichenkette des übergebenen Werts."
-    },
-    {
-      "q": "Welche Syntax verwendet man in Python zur Erstellung einer Klasse?",
-      "a": "Ein Python-Klasse wird durch den Keyword 'class' erstellt und enthält Methoden und Attribute. Beispiel: class Duck:"
-    },
-    {
-      "q": "Was ist Vererbung in Python und wie kann eine Unterklasse Merkmale (Methoden und Attribute) einer Oberklasse erben?",
-      "a": "Vererbung ist ein wichtiges Konzept in der objektorientierten Programmierung, das es ermöglicht, eine neue Klasse basierend auf einer bestehenden Klasse zu erstellen. Um Merkmale (Methoden und Attribute) von einer Oberklasse in einer Unterklasse zu erben, verwendet man den Basisklassennamen gefolgt von zwei Doppelpunkten (:) direkt nach dem Subjekt in der Definition der Unterklasse. Beispiel: `class Unterklasse(Oberklasse):...` Hier erbt die Unterklasse alle Merkmale (Methoden und Attribute) der Oberklasse."
-    },
-    {
-      "q": "Wie unterscheidet sich die Einzelvererbung von der Mehrfachvererbung in Python?",
-      "a": "Einzelvererbung: In Python ist es durch @inheritance möglich, dass eine Subklasse nur eine Superklasse hat. Dadurch erbt sie alle Attribute und Methoden dieser einen Superklasse. Mehrfachvererbung: Hier können mehrere Superklassen von einer Subklasse geerbt werden, wobei diese ihre Attribute und Methoden vererbt bekommen. Die Anwendungsfälle sind u.a. bei umfassenden Code-Strukturen, bei denen eine Subklasse Merkmale mehrerer Superklassen kombinieren möchte."
-    },
-    {
-      "q": "Wie kann man in Python eine Mehrfachvererbung implementieren und welche möglichen Probleme können dabei auftreten?",
-      "a": "In Python kann man mehr als eine Basisklasse in einer neuen Klasse vererben, indem man die Basisklassen durch Kommas getrennt anführt. Zum Beispiel: class MixedClass(Base1, Base2):... Um jedoch Mehrfachvererbung sicher und praktikabel einzusetzen, sollte man darauf achten, dass keine Namenskollisionen zwischen den Basisklassen auftreten. Die Funktion super() kann hierbei verwendet werden, um Methoden aus verschiedenen Basisklassen korrekt aufzurufen."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen Einzelvererbung und Mehrfachvererbung in Python?",
-      "a": "Einzelvererbung bedeutet, dass eine Klasse nur von einer anderen Klasse erbt, während Mehrfachvererbung ermöglicht, dass eine Klasse von mehr als einer Basisklasse erbt. Ein Beispiel für Einzelvererbung wäre 'class Dog(Animal):', und ein Beispiel für Mehrfachvererbung wäre 'class Dog(Canine, Animal):'."
-    },
-    {
-      "q": "In einem Mehrfachvererbungsszenario, bei dem Klasse D von B und C erbt und die info()-Methode aufgerufen wird, welche Methode würde ausgeführt?",
-      "a": "Die info()-Methode aus der ersten Superklasse (in diesem Fall die info()-Methode der Klasse A). Bei Mehrfachvererbung sucht Python von links nach rechts in den übergeordneten Klassen und führt die erste gefundene Methode aus."
-    },
-    {
-      "q": "Wie führt MRO-Inkonsistenz in Python zu Problemen?",
-      "a": "MRO-Inkonsistenz (Method Resolution Order) kann dazu führen, dass verschiedene Ansichten des Inheritance-Graphs entstehen und die Ergebnisse von Methodenauflösung unvorhersehbar werden. Um solche Probleme zu verhindern, sollte MRO-Optimierung verwendet werden."
-    },
-    {
-      "q": "Wie wird MRO-Inkonsistenz in Python behandelt und welche Änderungen können zu diesem Problem führen?",
-      "a": "MRO-Inkonsistenz kann auftreten, wenn eine subtile Änderung an der Definition einer Klasse vorgenommen wird. In komplexen Klassenhierarchien kann die Hinzufügung oder Änderung von Basisklassen zu diesem Problem führen. Um MRO-Inkonsistenz zu beheben, sollte man auf die Konsistenz der Methodenauflösungsreihenfolge achten und mögliche Veränderungen an der Klassenstruktur überprüfen."
-    },
-    {
-      "q": "Welche Hauptunterschiede gibt es zwischen Einzelvererbung und Mehrfachvererbung in Python?",
-      "a": "Einzelvererbung (Single Inheritance) bezieht sich auf die Erbschaft von Methoden und Attributen einer Basisklasse. Dagegen beinhaltet Mehrfachvererbung (Multiple Inheritance) das Erben von Merkmalen aus mehreren verschiedenen Basisklassen."
-    },
-    {
-      "q": "Welche Reihenfolge sollte bei der Erstellung von Klassen D und E eingehalten werden, um unterschiedliches Verhalten zu erreichen, basierend auf MRO?",
-      "a": "Die Reihenfolge der Basisklassen sollte vertauscht werden, damit sich die Vererbung in den beiden Klassen völlig unterscheidet. Klasse D sollte B und C beinhalten, während Klasse E von C und B geerbt wird."
-    },
-    {
-      "q": "Wie implementiert man Vererbung in Python?",
-      "a": "In Python werden durch die Keyword 'class' Klassen definiert und durch das ':' Zeichen ihre Methoden und Attribute festgelegt. Um Vererbung zu implementieren, fügt man dem 'class'-Statement das Keyword 'inherit' an, gefolgt von dem übergeordneten Objekt (Parent Class) in runden Klammern."
-    },
-    {
-      "q": "Wie funktioniert Polymorphismus in Python, und wozu ist es nützlich?",
-      "a": "Polymorphismus ist die Bereitstellung einer einzigen Schnittstelle für Objekte unterschiedlichen Typs, sodass verschiedene Typen einheitlich behandelt werden können. In Python erstellt man abstrakte Methoden, um verschiedene Typen mit einem gemeinsamen Namen zu verwenden und so eine praktische Schnittstelle zu schaffen. Zum Beispiel kann eine Funktion 'print' benutzt werden, um entweder einen String oder eine Ganzzahl auszugeben."
-    },
-    {
-      "q": "Wie erstellt man eine Basisklasse in Python, die von einer abgeleiteten Klasse geerbt wird?",
-      "a": "Um eine Basisklasse in Python zu erstellen, von der eine abgeleitete Klasse erbt, verwendet man den Befehl 'class'. Die Basisklasse sollte alle gemeinsamen Attribute und Methoden enthalten. Um die Basisklasse zur erbenden Klasse hinzuzufügen, fügt man in den Konstruktor der erbenden Klasse die Anweisung 'super().__init__()' ein, um die Basisklasse aufzurufen und ihre Methoden auszuführen."
-    },
-    {
-      "q": "Wie kann Vererbung in Python verwendet werden, um Polymorphismus zu erreichen?",
-      "a": "In Python kann Vererbung durch die Definition einer Unterklasse und Erbe von Basisklassenmethoden erreicht werden. Um Polymorphismus zu erreichen, sollte man basierte Methoden überschreiben oder erweitern, sodass verschiedene Typen derselben Operation verwenden können."
-    },
-    {
-      "q": "Wie ist das Ergebnis von type(Duck)(), wenn Duck eine Instanz einer basisklasse ist, die von Ducktyping abgeleitet wurde?",
-      "a": "Es gibt einen TypeError, da Typisierung auf Basis des Verhaltens und nicht der Herkunft erfolgt."
-    },
-    {
-      "q": "Was ist das Prinzip des Duck-Typing und wie steht es im Zusammenhang mit Polymorphismus?",
-      "a": "Duck-Typing ist ein Ansatz zur Ententypisierung, bei dem die Eignung eines Objekts durch seine Attribute und Methoden bestimmt wird, statt durch seinen tatsächlichen Typ. In Bezug auf Polymorphismus ermöglicht es eine allgemeinere Methode, verschiedene Arten von Objekten mit gemeinsamen Schnittstellen zu behandeln."
-    },
-    {
-      "q": "Wie wird Polymorphismus in Python durch Methodenüberladen erreicht?",
-      "a": "Polymorphismus in Python kann durch Methodenüberladen erreicht werden, bei dem verschiedene Klassen die gleiche Methode implementieren. Die richtige Methode wird zur Laufzeit über die Typinformation des Objekts aufgerufen, was zu einer polymorphen Funktionalität führt."
-    },
-    {
-      "q": "Was ist die erweiterte Funktionsargumentsyntax in Python und wann kann sie verwendet werden?",
-      "a": "Die erweiterte Funktionsargumentsyntax in Python ermöglicht es, mehrere Argumente an einer Funktion als eine Aufzählung zu übergeben. Sie ist besonders nützlich bei variablen Anzahl von Argumenten und kann durch *args und **kwargs verwendet werden."
-    },
-    {
-      "q": "Wie übergeben Sie Argumente in einer bestimmten Reihenfolge und wie geben Sie Argumente ohne Schlüsselwörter an?",
-      "a": "Man gibt Argumente in einer festen Reihenfolge durch Übermittlung von Werten in derselben Reihenfolge wie in der Funktionsdefinition definiert an. Um Argumente ohne Schlüsselwörter zu übergeben, muss man die Argumente in der gleichen Reihenfolge wie in der Funktionsdefinition angegeben übersenden."
-    },
-    {
-      "q": "Was ist die Bedeutung von *, ** und **kwargs in Funktionsargumentsyntax in Python?",
-      "a": "*, ** und **kwargs sind Argumentkonventionen in Python: * bedeutet 'alle weiteren Argumente', ** ist ein Keyword-Argument-Dict und **kwargs ist eine variable Anzahl an Argumenten als Dictionary."
-    },
-    {
-      "q": "Wie werden *args und **kwargs in Python verwendet, um eine beliebige Anzahl zusätzlicher Argumente zu verarbeiten?",
-      "a": "*args ist ein spezieller Bezeichner für ein Tupel aller über die erwarteten Argumente hinausgehenden Argumente. Es ist letztes Argument in einer Funktionsdefinition und sammelt alle zusätzlichen, positionsabhängigen Argumente. **kwargs ist ein spezieller Bezeichner für ein Dictionary aller über die erwarteten Argumente hinausgehenden Argumente, die als Key-Value-Paare übergeben werden."
-    },
-    {
-      "q": "Wie werden Argumente in Python an eine Funktion übergeben, wenn sie anschließend an eine andere Funktion weitergeleitet werden sollen?",
-      "a": "Das kann durch das *-Operator erreicht werden. Beispiel: Eine Funktion f1 nimmt Eingaben entgegen und leitet sie an f2 weiter, die sie verarbeitet. Dafür könnte f1 wie folgt aussehen: def f1(x, y): return f2(*x, *y). Hier wird das Tuple (x, y) in seine einzelnen Elemente zerlegt und als getrennte Argumente an f2 übergeben."
-    },
-    {
-      "q": "Wie werden die Argumente in der Funktion super_combiner() behandelt, wenn sie mit echten Argumenten aufgerufen wird?",
-      "a": "In diesem Fall werden alle Argumente, die nicht als Schlüsselwörter übergeben werden (Tupel und Wörterbuch), von der super_combiner()-Funktion verarbeitet. Die super_combiner()-Funktion soll dabei alle Positionsargumente verarbeiten. Das erste Argument wird jedoch als Tupel an my_args und die restlichen Argumente werden als zusätzliche Argumente an my_kwargs übergeben."
-    },
-    {
-      "q": "Wie lautet die korrekte Syntax zur Erstellung eines Funktionsarguments mit Standardwert in Python?",
-      "a": "Das Argument sollte durch '=' getrennt werden, zum Beispiel: `def function(arg1=value)`."
-    },
-    {
-      "q": "Wie werden *args und **kwargs in der Funktionsdefinition von combiner() verwendet?",
-      "a": "In combiner() werden *args und **kwargs benutzt, um verschiedene Arten von Argumenten zu akzeptieren. *args ist ein Tuple, das beliebig viele zusätzliche Positionsargumente speichert. **kwargs ist ein Dictionary, das beliebig viele zusätzliche Schlüsselwortargumente speichert. Die Funktion combiner() nimmt zwei obligatorische Positionierungsarguments (a, b), mehrere zusätzliche Positionierungsarguments (args) und ein obligatorisches Standard-Schlüsselwortargument (c=20) an. Diese Argumente werden dann an die Funktion super_combiner() übergeben, die sie als my_args, my_c und my_kwargs abarbeitet."
-    },
-    {
-      "q": "Wie kann man in Python eine Funktion dekorieren, um zusätzliche Aktionen auszuführen?",
-      "a": "Man dekoriert eine Funktion, indem man sie als Argument an die Dekorationsfunktion übergeben und den Return-Wert aufruft. Beispiel: `@deco_func def my_func():... my_func()`"
-    },
-    {
-      "q": "Welche Rolle spielt das @staticmethod Dekorator?",
-      "a": "@staticmethod ermöglicht es Methoden, die keine Selbstreferenz erfordern und keine Instanzvariablen verwenden, als statische Methoden zu deklarieren. Sie haben keinen Zugriff auf self als Argument."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen einer Funktion und einem Funktionsdekorateur in Python?",
-      "a": "Eine Funktion ist eine Reihe von Anweisungen, die einen gegebenen Satz von Eingabewerten akzeptiert, verarbeitet und auf diese Weise ein Ergebnis erzeugt. Ein Funktionsdekorateur ist ein spezieller Typ von Objekt in Python, der eine andere Funktion modifizieren kann, bevor sie ausgeführt wird."
-    },
-    {
-      "q": "Wie deklariert man einen Python-Dekorator, der Funktionen annotiert und ihre Ergebnisse umkehrt?",
-      "a": "Ein Dekorator, der Ergebnisse umkehrt, könnte wie folgt deklariert werden: `def reverse(func):     def wrapper():         return func()[-1]      return wrapper `"
-    },
-    {
-      "q": "Wie dekoriert man eine Funktion in Python und welchen Vorteil bietet dieser Ansatz?",
-      "a": "Dekoratoren sind eine spezielle Art von Funktionen, die eine andere Funktion als Argument nehmen. Sie ermöglichen es, Code hinzuzufügen oder zu verändern, ohne die Hauptlogik einer Funktion zu beeinträchtigen. Die dekorierte Funktion wird durch die Anwendung des Dekorators ersetzt, der die Originale umschlingt und erweitert. Diese Technik bietet eine einfache und flexible Möglichkeit zur Erweiterung von Funktionen oder Objekten ohne Veränderungen an deren Code."
-    },
-    {
-      "q": "Wie lautet die Syntax für ein Funktionsdekorator in Python?",
-      "a": "Ein Dekorator ist eine spezielle Funktion, die eine andere Funktion ummantelt und erweitert. Die Syntax ist: `@deco` before the function definition where `deco` is the name of the decorator function. It allows us to wrap another function in order to extend the behavior of the wrapped function, without permanently modifying it."
-    },
-    {
-      "q": "Was kann ein Python-Dekorator als Argument erhalten und wie wirkt sich das auf seine Funktionalität aus?",
-      "a": "Ein Dekorator in Python kann seine eigene Argumente akzeptieren, die normalerweise Konfigurationsoptionen für den Dekorator sind. Diese Argumente werden an die Funktion übergeben, die durch das Dekorator verziert ist. Zum Beispiel: @foo(5) def my_func(): pass. Hier nimmt der Dekorator @foo() die Zahl 5 als Argument und wendet sie auf die Funktion my_func() an."
-    },
-    {
-      "q": "Wie kann man in Python einem Dekorator eigene Attribute übergeben und wie sieht die Syntax dafür aus?",
-      "a": "Der Dekorator erhält seine Argumente durch eine zusätzliche Funktion, die erwartet wird. Die Argumente werden dem Dekoratoren als Argumente übergeben, zum Beispiel: Warehouse_decorator('kraft'). Innerhalb des Dekorators können diese Argumente dann verwendet werden."
-    },
-    {
-      "q": "Wie erstellt man mehrere Decoratoren in einer Reihenfolge?",
-      "a": "Durch die Stapelung von Decoratoren werden sie nacheinander ausgeführt, beginnend mit dem äußersten. Beispielsweise kann man mehrere Decoratoren anwenden, indem man @decorator1(arg1) @decorator2(arg2) ... oberhalb der Funktion angibt, wobei decorator1 und decorator2 jeweils eigene Argumente enthalten."
-    },
-    {
-      "q": "Wie funktioniert das Stapeln von Dekoratoren in Python?",
-      "a": "In Python können mehrere Dekoratoren auf ein aufrufbares Objekt angewendet werden. Die Reihenfolge, in der die Dekoratoren im Code angegeben sind, bestimmt die Abarbeitungsreihenfolge. Der erste deklarierte Dekorator wird zuerst ausgeführt und übernimmt dann die Kontrolle über den zweiten Dekorator. Bei einer mehrfachen Dekoration werden alle Dekoratoren in der angegebenen Reihenfolge aufgerufen, wobei das letzte Element die eigentliche Funktion ausführt und anschließend wieder die Kontrolle über die anderen Dekoratoren übergibt."
-    },
-    {
-      "q": "Welche Funktionen bietet das datetime-Modul in Python?",
-      "a": "Das datetime-Modul in Python ermöglicht die Verarbeitung von Datums- und Zeitwerten. Hier sind einige wichtige Funktionen: now() gibt das aktuelle Datum und Uhrzeit, date() erstellt ein date-Objekt mit dem angegebenen Tag, time() erstellt ein time-Objekt mit der angegebenen Uhrzeit und datetime() erstellt ein datetime-Objekt mit dem angegebenen Datum und Zeit."
-    },
-    {
-      "q": "Wie kann man die aktuelle Uhrzeit in Python abrufen und welche Syntax verwendet man dafür?",
-      "a": "Mit der Methode now() des datetime-Moduls. Der Code dafür lautet: `datetime.now()`."
-    },
-    {
-      "q": "Was ist die Aufgabe des Dekorators in diesem Python-Code?",
-      "a": "Der Dekorator überwacht die Zeit der Funktionsausführungen und gibt den Zeitstempel in einer menschlich lesbaren Zeichenfolge aus, wie zum Beispiel '2019-11-05 08:33:22'."
-    },
-    {
-      "q": "Wie dekoriert man Funktionen innerhalb einer Klasse in Python?",
-      "a": "In Python können Funktionen innerhalb einer Klasse mit der @classmethod-Dekoration als Klassenmethode markiert werden. Sie erhalten die Klasseninstanz als erstes Argument, meist 'cls'. Die Syntax lautet: class MyClass(): @classmethod def my_func(cls, arg1):"
-    },
-    {
-      "q": "Wie definiert man einen Funktionsdekorator als Klasse in Python?",
-      "a": "Ein Funktionsdekorator kann in Python als eine spezielle Klasse namens Dekorateur erstellt werden, die über die __call__-Methode verfügt. Diese Methode ermöglicht es der Klasse, aufrufbar zu sein und damit die Rolle eines Funktionsdekorators zu übernehmen."
-    },
-    {
-      "q": "Wie erstellt man einen Python-Dekorator, der ein Argument akzeptiert?",
-      "a": "Ein Dekorator wird erstellt, indem eine Funktion als Argument übergeben und mit @dekoratoren_name dekoriert wird. Zum Beispiel: def dekorator(f): return f. Wenn das Argument für die Anwendung des Dekorators benötigt wird, kann es an die Funktion innerhalb der Dekorierungsführung übergeben werden."
-    },
-    {
-      "q": "Wie kann man in Python Dekorateure erstellen, die Argumente akzeptieren?",
-      "a": "In Python können Dekorateure Argumente akzeptieren, indem sie als Funktionen mit Argumenten definiert werden. Zum Beispiel: def Warehouse_decorator(material):  def wrapper(unsere_funktion): ... Wenn Sie die @warehouse_decorator('kraft') -Anmerkung auf eine Funktion wie pack_books anwenden, übergibt Python den 'kraft'-String als Argument an den Dekorator und verwendet diesen Wert in der wrapper-Funktion. Diese Technik ermöglicht es Ihnen, verschiedene Versionen des gleichen Dekorators zu erstellen, die unterschiedliche Verhaltensweisen basierend auf dem übergebenen Argument haben."
-    },
-    {
-      "q": "Wie definiert man einen einfachen Python-Klassendekorator?",
-      "a": "Ein einfacher Python-Klassendekorator ist eine Funktion, die eine andere Funktion annimmt und modifiziert. Um ihn zu erstellen, wird in der Dekoratorenfunktion `@wraps(wrapped)` verwendet, um Meta-Daten wie den Namen und die Dokumentation des dekorierten Objekts beizubehalten."
-    },
-    {
-      "q": "Wie implementiert man einen Klassendekorator in Python?",
-      "a": "Ein Klassendekorator in Python wird durch Dekorieren der Klassenanweisung mit dem Dekorator-Symbol '@' erreicht, gefolgt von der Funktionsdeklaration. Der Dekorator sollte die Klasse entgegennehmen und eine neue, modifizierte Klassendefinition zurückgeben."
-    },
-    {
-      "q": "Was sind Dekorateure in Python und wie werden sie verwendet?",
-      "a": "Dekorateure sind spezielle Funktionen, die mit dem @-Symbol zur Verschönerung von anderen Funktionen oder Methoden eingesetzt werden. Sie ermöglichen es, zusätzliches Verhalten zu einem Codeblock hinzuzufügen, ohne diesen direkt verändern zu müssen. Beispiel: @logged(‘function_name’) def my_function(): pass"
-    },
-    {
-      "q": "Wie erstellt man in Python einen Funktionsdekorator, der eine Funktion mit zusätzlichen Informationen verknüpft?",
-      "a": "Ein Dekorator ist ein spezielles Designmuster in Python. Um einen Funktionsdekorator zu erstellen, verwendet man die `@`-Annotation und definiert eine neue Funktion, die den zu dekorierenden Code umhüllt. Hier ist ein einfaches Beispiel: `def decorator_function(func): def wrapper(*args, **kwargs): return func(*args, **kwargs) return wrapper`"
-    },
-    {
-      "q": "Wie dekoriert man in Python eine Funktion, um Warnungen auszugeben, wenn das Attribut 'mileage' gelesen wird?",
-      "a": "Man dekoriert die __getattribute__-Methode der Klasse mit einer Funktion, die überprüft, ob das Attribut mileage abgerufen wird. Wenn ja, gibt sie eine Warnung aus und lässt den eigentlichen Aufruf an die ursprüngliche Methode zu."
-    },
-    {
-      "q": "Wie erstellt man eine Funktionsdekoration, die einen decorator-spezifischen Argumenten akzeptiert?",
-      "a": "Mit einer dekoratorenfabrik: `def my_decorator(arg1):     def decorator(func):         # do something with arg1 and func         return func     return decorator`"
-    },
-    {
-      "q": "Wie kann man in Python eine Funktion mit einem Dekorator erweitern?",
-      "a": "Durch den Einsatz von `@dekorator` direkt über der Funktionsdeklaration. Hier ist ein Beispiel:   def dekorator(func):     def wrapper():         print('Verhalten des Dekorators')         func()     return wrapper  @dekorator def my_function():     print('Das ist die Funktion')"
-    },
-    {
-      "q": "Welche verschiedenen Arten von Methoden gibt es in Python und wie werden sie deklariert?",
-      "a": "Methoden in Python können als Klassenmethoden (`@classmethod`), Instanzmethoden (`@staticmethod`) oder generische Methoden (ohne Dekorator) deklariert werden. Klassenmethoden erhalten die Klasse als erstes Argument, während Instanzmethoden die Instanz als erstes Argument erhalten."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen Methoden und Funktionen in Python?",
-      "a": "Methoden sind Funktionen, die an Objekte (Instanzen) gebunden sind. Sie haben Zugriff auf Attributes des Objekts und erhalten das Objekt als Argument (oft 'self'). Funktionen sind ungebundene Funktionen, die keine spezifischen Zugriff auf Attribute haben."
-    },
-    {
-      "q": "Wie ist die Syntax für eine statische Methode in Python?",
-      "a": "Eine statische Methode wird durch @staticmethod und ihre Definition mithilfe von def deklariert, z.B.: `@staticmethod def my_static_method():...`"
-    },
-    {
-      "q": "Wie erstellt man eine Klassenmethode in Python und welche Rolle spielt das erste Argument @classmethod?",
-      "a": "Eine Klassenmethode wird mit dem Präfix @classmethod deklariert und hat als erst argument self.class zur Verfügung, das den Zugriff auf die Klasse ermöglicht."
-    },
-    {
-      "q": "Wie wird eine Klassenmethode in Python definiert?",
-      "a": "Eine Klassenmethode wird in Python durch Dekoration mit `@classmethod` und Übergabe von `cls` als Argument deklariert. Beispiel: `@classmethod def class_method(cls):...`"
-    },
-    {
-      "q": "Wie erstellt man eine Klassenmethode in Python?",
-      "a": "Ein ' @classmethod ' dekoriert die Methode, um sie zur Klassenmethode zu machen. Innerhalb der Methode kann mit dem Argument 'cls' auf Klassenvariablen und -methoden zugegriffen werden."
-    },
-    {
-      "q": "Wie deutet man eine Python-Methode als Klassenmethode und greift auf Klassenvariablen zu?",
-      "a": "Durch Dekorieren mit @classmethod. In der Methode verwendet man 'cls' anstelle des Objektverweises, um Zugriff auf die Klassenvariable zu erhalten."
-    },
-    {
-      "q": "Welche Syntax verwendet man in Python, um eine Klassenmethode zu deklarieren?",
-      "a": "Ein @classmethod-Dekorator wird direkt über die Methode angewendet, gefolgt von einer self-Argument und eventuellen weiteren Argumenten. Beispiel: @classmethod def example_class_method(cls):"
-    },
-    {
-      "q": "Wie kann man in Python die Klassenmethode als alternativen Konstruktor verwenden, um ein zusätzliches Argument zu verarbeiten?",
-      "a": "In Python kann man die Klassenmethode als alternativen Konstruktor verwenden, indem man eine Klassenmethode erstellt und sie mit zwei Parametern (einschließlich_marke(vin, brand)) aufruft. Die Methode __init__ wird zur Erstellung eines Objekts unter Verwendung des Standard-Konstruktors verwendet, während die Klassenmethode eine zusätzliche Aufgabe übernimmt, wie zum Beispiel das Ergänzen der Instanzvariable brand und das Zurückgeben des neuen Objekts."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen statischen und normalen Methoden in Python?",
-      "a": "Statische Methoden sind Funktionen, die keinen Zugriff auf Instanzvariablen oder -methoden haben. Sie werden mit dem @staticmethod-Dekorator markiert und werden direkt über die Klasse aufgerufen. Normale Methoden hingegen haben Zugriff auf Instanzvariablen und -methoden und werden über Objekte aufgerufen."
-    },
-    {
-      "q": "Wie erstellt man eine statische Methode in Python und was zeichnet diese aus?",
-      "a": "Um eine statische Methode in Python zu erstellen, verwendet man den @staticmethod Dekorator vor der Definition der Methode. Statische Methoden haben keine Zugriff auf Objektzustände oder Klassenstrukturen und werden benötigt, wenn ein Programmer eine generische Funktionalität zur Verfügung stellen möchte, die jedoch keine spezifischen Informationen über ein Objekt oder seine Klasse benötigt."
-    },
-    {
-      "q": "Welchen Zweck erfüllen statische Methoden in Python, und wie werden sie deklariert?",
-      "a": "Statische Methoden sind Methoden, die keine spezifischen Objekt- oder Klassenvariablen verwenden. Sie sind hilfreich für generische Dienstleistungen oder zur Verwendung von Factory Patterns. Um eine statische Methode zu deklarieren, fügt man das @staticmethod-Dekorator vor der Methodendefinition ein, zum Beispiel `@staticmethod def method_name(param1, param2): ...`"
-    },
-    {
-      "q": "Wie erstellt man eine statische Methode in Python, die zur Validierung der Länge einer Zeichenfolge verwendet wird, bevor ein Objekt erstellt wird?",
-      "a": "Statische Methoden werden durch den @staticmethod-Dekorator markiert und können innerhalb einer Klasse definiert werden. In diesem Fall sollte die Bankkontoklasse eine statische Methode namens validate_account_number haben, die die Länge der Zeichenfolge überprüft. Die Syntax ist: @staticmethod def validate_account_number(account_number): return len(account_number) == 20"
-    },
-    {
-      "q": "Welche Unterschiede gibt es zwischen statischen und Klassenmethoden in Python?",
-      "a": "Statische Methoden sind im wahrsten Sinne des Wortes statisch, da sie keine Selbstreferenz (self) verwenden und keine Attribute der Klasse ändern. Klassenmethoden sind an die Klasse gebundene Methoden, die als @classmethod dekoriert sind und Zugriff auf die Klasse zur Verfügung stellen."
-    },
-    {
-      "q": "Wie lautet der erste Parameter in einer Klassenmethode und wie dekoriert man eine Klassen- oder statische Methode?",
-      "a": "Der erste Parameter in einer Klassenmethode ist 'cls'. Eine Klassenmethode wird mit '@classmethod' und eine statische Methode mit '@staticmethod' dekoriert."
-    },
-    {
-      "q": "Wie definiert man ein abstraktes Attribut in Python?",
-      "a": "Ein abstraktes Attribut wird durch die Deklaration einer Methode ohne Implementierung und anschließende Verwendung des decorators @abstractmethod definiert. Hier ist ein Beispiel: class MyClass():     @abstractmethod def my_abstract_method(self):         pass"
-    },
-    {
-      "q": "Wie kann man eine abstrakte Klasse in Python erstellen und welche Rolle spielt das abc-Modul?",
-      "a": "Abstrakte Klassen werden erstellt, indem die Dekorateurfunktion `@abstractmethod` auf die zu implementierenden Methoden angewendet wird. Das Modul `abc` muss importiert und die Basisklasse von `ABCMeta` abgeleitet werden."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen einer abstrakten Methode und einer normalen Methode in Python?",
-      "a": "Eine abstrakte Methode hat keine Implementierung, während eine normale Methode implementiert werden muss. Abstrakte Methoden können nur in abstrakten Klassen verwendet werden und stellen eine Schnittstelle für Subklassen dar, um sicherzustellen, dass sie bestimmte Funktionen haben."
-    },
-    {
-      "q": "Wie implementiert man ein abstraktes Musikformat in einer Python-Anwendung?",
-      "a": "Erstellen Sie eine abstrakte Basisklasse, die Methoden wie 'open', 'play', 'get_details' usw. definiert. Implementieren Sie für jedes unterstützte Format konkrete Klassen, die von dieser Basisklasse erben und den gesetzten Vertrag erfüllen."
-    },
-    {
-      "q": "Was ist der Hauptunterschied zwischen abstrakten Klassen und Methodenüberschreibung in Python?",
-      "a": "Abstrakte Klassen sind Vorlagen für konkrete Klassen, die verwendet werden, um ein gemeinsames Verhalten oder Merkmale verschiedener Konstrukte zu modellieren. Sie enthalten abstrakte Methoden (ohne Implementierung) und fordern ihre konkreten Subklassen zur Implementierung dieser Methoden auf. Methodenüberschreibung hingegen bezieht sich auf das Ersetzen einer Methode in einer Kind-Klasse, die von einer Basis-Klasse geerbt wurde. Es erlaubt Anpassungen des Verhaltens und der Eigenschaften einer Basisklasse innerhalb einer Subklasse."
-    },
-    {
-      "q": "Welche Unterschiede gibt es zwischen abstrakten Klassen und Methodenüberschreibung in Python?",
-      "a": "Abstrakte Klassen enthalten eine oder mehrere abstrakte Methoden, die in Unterklassen implementiert werden müssen. Methodenüberschreibung hingegen ermöglicht es, Methoden aus übergeordneten Klassen zu überschreiben und so spezifische Verhaltensweisen für eine bestimmte Instanz zu definieren."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen abstrakten Klassen und Methodenüberschreibung in Python?",
-      "a": "Abstrakte Klassen enthalten eine oder mehrere abstrakte Methoden, die von abgeleiteten Klassen überschrieben werden müssen. Methodenüberschreibung hingegen erlaubt es, bestimmte Methoden einer Basisklasse in einer Ableitungsklasse zu modifizieren oder zu erweitern."
-    },
-    {
-      "q": "Wie deklariert man eine abstrakte Methode in einer abstrakten Basisklasse mithilfe des abc-Moduls?",
-      "a": "Eine abstrakte Methode wird durch Dekorieren mit @abstractmethod deklariert, das von dem abc-Modul bereitgestellt wird. Beispiel: class AbstractClass(ABC):   @abstractmethod def my_abstract_method(self): ..."
-    },
-    {
-      "q": "Wie erstellt man in Python ein abstraktes Basisklasse und implementiert seine Methoden in einer Subklasse?",
-      "a": "Ein abstraktes Basisklasse wird mit der `abc`-Bibliothek erstellt, indem Sie die Klasse von abc.ABC erben und dann AbcMethoden mit @abstractmethod deklarieren. In einer Subklasse können diese Methoden überschrieben werden, um das gewünschte Verhalten zu implementieren. Beispielsweise: `from abc import ABC, abstractmethod; class Base(ABC): @abstractmethod def foo(self): pass; class Subclass(Base): def foo(self): return 'bar'`"
-    },
-    {
-      "q": "Welche Rolle spielen abstrakte Klassen und Methodenüberschreibung in Python?",
-      "a": "Abstrakte Klassen und Methodenüberschreibung sind wichtige Konzepte zur Modellierung von Vererbung in Python. Abstrakte Klassen werden definiert, um eine gemeinsame Schnittstelle für mehrere Subklassen zu bieten und stellen ein Gerüst oder Blaupause für andere Klassen dar. Methodenüberschreibung erlaubt es, Funktionen in einer Subklasse zu überschreiben, die von einer übergeordneten abstrakten Klasse geerbt wurden."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen abstrakten Klassen und Methodenüberschreibung in Python?",
-      "a": "Abstrakte Klassen sind eine Art von Klassen, die keine vollständige Implementierung haben und benötigen, dass ihre Subklassen alle oder einige ihre Methoden überschreiben. Methodenüberschreibung hingegen ist das Überschreiben einer Methode in einer Unterklasse, um spezifisches Verhalten zu implementieren."
-    },
-    {
-      "q": "Wie kann man in Python eine abstrakte Methode in einer abgeleiteten Klasse überschreiben?",
-      "a": "Um eine abstrakte Methode in einer abgeleiteten Klasse zu überschreiben, muss die Methode in der Basisklasse mit dem @abc.abstractmethod-Dekorator markiert sein. Die abgeleitete Klasse sollte die Methode ohne Dekorator implementieren und den gewünschten Code darin einfügen."
-    },
-    {
-      "q": "Wie werden abstrakte Klassen in Python verwendet und wie unterscheiden sie sich von Methodenüberschreibung?",
-      "a": "Abstrakte Klassen sind eine Art von Basisklasse, die keine Instanzen erstellt werden können und zumindest eine abstrakte Methode enthalten. Sie werden verwendet, um ein gemeinsames Interface oder Standardverhalten für Subklassen zu erzwingen. Methodenüberschreibung hingegen ermöglicht es einer Subklasse, eine geerbte Methode neu zu definieren, wobei die Unterschieden in Syntax, Verhalten und Anwendungsfällen variieren können."
-    },
-    {
-      "q": "Wie kann man in Python eine Mehrfachvererbung von abstrakten Klassen implementieren?",
-      "a": "Das geht, indem alle von den Superklassen geerbten abstrakten Methoden durch die Bereitstellung konkreter Methodenimplementierungen überschrieben werden."
-    },
-    {
-      "q": "Wie implementiert man Attributkapselung in Python-Klassen?",
-      "a": "Mithilfe des __ (Doppelunterstrich) zur Kennzeichnung von privaten Attributen und Methoden in Klassen. Beispiel: class MyClass: def __init__(self): self.__my_var = 10. Um Zugriff auf private Attribute zu erhalten, kann man spezielle Getter- und Setter-Methoden erstellen (z.B. def get_my_var(self): return self.__my_var)."
-    },
-    {
-      "q": "Welche Rolle spielt Attributkapselung in Python und wie kann sie zur Sicherung von Objektattributen eingesetzt werden?",
-      "a": "Attributkapselung in Python ist ein Mechanismus, der es ermöglicht, bestimmte Attribute und Methoden innerhalb einer Klasse zu verbergen. Um dies zu erreichen, werden die Attribute privat gehalten und sind somit nicht direkt zugänglich. Stattdessen werden öffentlich zugängliche Methoden angeboten, über die andere Objekte die Werte abrufen und ändern können. Dadurch lässt sich ein gewisser Grad an Privatsphäre für Attribute erzwingen."
-    },
-    {
-      "q": "Wie ist die Syntax zur Definition einer öffentlichen, privaten und geschützten Eigenschaft in Python?",
-      "a": "Öffentliche Eigenschaft: property(fget=None, fset=None, fdel=None) Private Eigenschaft: _property Geschützte Eigenschaft: __property"
-    },
-    {
-      "q": "Was ist Kapselung in Python und wie kann sie zur Verwaltung von Attribute-Werten und Methoden eingesetzt werden?",
-      "a": "Kapselung ist eine Konzept, das den Zugriff auf bestimmte Attribute oder Methoden eines Objekts durch andere Teile des Programms einschränkt. Sie kann zur Verwaltung von Attributwerten und Methoden eingesetzt werden, indem sie sicherstellt, dass die inneren Mechanismen eines Objekts geschützt sind und dass externe Anwendungen nur über bestimmte Schnittstellen darauf zugreifen können."
-    },
-    {
-      "q": "Wie kann man in Python eine öffentliche, geschützte und private Variable deklarieren?",
-      "a": "Öffentlich: variable = value; Geschützt (protected): _variable = value; Privat (private): __variable = value"
-    },
-    {
-      "q": "Wie wird der Dekorator @property in Python verwendet, um den Zugriff auf ein Attribut zu steuern?",
-      "a": "Der Dekorator @property ist eine spezielle Funktion, die dem Attribut automatisch einen Getter-Methode verleiht. Die Methode wird aufgerufen, wenn ein anderes Objekt den Wert des Attributes lesen möchte. Es sollte vor der Setter-Methode (für das Festlegen des Attributwerts) und vor der Deleter-Methode (für das Löschen des Attributs) definiert werden."
-    },
-    {
-      "q": "Wie erstellt man eine kapselnde Klasse in Python?",
-      "a": "Um Kapselung in Python zu erreichen, sollten Sie alle Attribute und Methoden einer Klasse als private Elemente deklarieren und spezielle Getter- und Setter-Methoden erstellen, um Zugriff auf diese privaten Elemente zu ermöglichen. Dazu verwenden Sie das spezielle Präfix _ (Unterstrich) oder __ (Doppelunterstrich) in Variablen- und Methodennamen."
-    },
-    {
-      "q": "Welche Syntax verwendet Python zur Erstellung einer Subklasse durch Vererbung?",
-      "a": "Subklassen werden in Python durch die Verwendung von :code:`class SubClassName(SuperClassName): ...` erstellt."
-    },
-    {
-      "q": "Was ist das Ergebnis einer Vererbungsbeziehung zwischen Basis- und Unterklasse in Python?",
-      "a": "Eine Unterklasse erbt alle Methoden und Eigenschaften der Basisklasse, wodurch sie alles geerbte ausweiten kann. Das Ergebnis ist eine spezialisiertere Klasse, die fest mit der Basisklasse gekoppelt ist."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen Komposition und Vererbung in Python?",
-      "a": "Komposition und Vererbung sind beides Techniken zur Code-Wiederverwendung, aber während bei Vererbung eine Subklasse die Attribute und Methoden einer übergeordneten Klasse erbt, nutzt Komposition zwei unabhängige Klassen, in denen eine das Attribut oder die Methode der anderen besitzt. Vererbung hat mehrere Hierarchie-Ebenen, während Komposition flache Strukturen bevorzugt."
-    },
-    {
-      "q": "Erkläre den Unterschied zwischen Komposition und Vererbung in Python.",
-      "a": "Vererbung ist ein Mechanismus, bei dem eine Klasse die Eigenschaften und Methoden einer anderen Klasse erbt. Im Gegensatz dazu basiert Komposition darauf, dass ein Objekt aus verschiedenen anderen Objekten besteht, wobei jedes dieser Objekte eigene Eigenschaften und Methoden zur Verfügung stellt. Beispielsweise kann eine Laptop-Klasse eine Netzwerkkarte als Mitglied haben, anstatt die Netzwerkkarte-Funktionen von einer Basis-Klasse zu erben."
-    },
-    {
-      "q": "Erkläre den Unterschied zwischen Komposition und Vererbung in Python.",
-      "a": "Komposition bezieht sich auf das Erstellen von Objekten, die Eigenschaften anderer Objekte verwenden. Dies führt zu einem 'Hat-ein'-Relationship. Vererbung bezieht sich darauf, eine Subklasse von einer anderen Klasse zu erstellen und so den Attributen und Methoden der Basisklasse Zugriff zu gewähren. Das führt zu einem 'Ist-ein'-Relationship."
-    },
-    {
-      "q": "Wie funktioniert die Komposition in Python?",
-      "a": "In Python werden in der Regel komplexe Objekte durch Zusammensetzung erstellt, d.h., sie bestehen aus mehreren einfachen Objekten (Komponenten). Hierbei ist die Hauptklasse nicht von den Attribute-Komponenten abgeleitet und besitzt keine Erbverbindung zur Komponente. Die Klasse verfügt nur über eine Instanz variable, welche auf das Attribut-Objekt verweist. Ein Beispiel dafür wäre die Verwendung eines Motorobjekts in einer Auto-Klasse: die start() Methode wäre polymorph und würde in Abhängigkeit vom konkreten Motortyp (Benzinmotor oder Dieselmotor) die jeweilige start() Methode aufrufen."
-    },
-    {
-      "q": "Was ist die Hauptidee hinter der Verwendung von Vererbung in Python?",
-      "a": "Vererbung ermöglicht es, Eigenschaften und Methoden einer Basisklasse an eine Subklasse zu übertragen, wodurch redundanten Code vermieden und die Wartbarkeit verbessert wird. Beispielsweise kann ein `Person`-Objekt Vererbung verwenden, um Eigenschaften wie `Name` und `Alter` zu haben, während eine Subklasse `Arbeiter` zusätzliche spezifische Methoden für ihre Anwendungsfälle erhält."
-    },
-    {
-      "q": "Wie werden die Begriffe 'Komposition' und 'Vererbung' im Kontext der Softwareentwicklung verwendet?",
-      "a": "Komposition bezieht sich auf das Erstellen von Objekten, indem Sie andere Objekte als Komponenten einbetten. Vererbung hingegen ist eine Möglichkeit, die Eigenschaften und Methoden einer Basisklasse an eine abgeleitete Klasse zu übertragen."
-    },
-    {
-      "q": "Welchen Vorteil hat die Komposition gegenüber der Vererbung in Python?",
-      "a": "Komposition ermöglicht es, Funktionen und Attribute verschiedener Klassen kombiniert zu nutzen, während Vererbung eine Hierarchie von Klassen schafft. Die Komposition ist flexibler und erlaubt die Änderung des Verhaltens der komponierten Klassen zur Laufzeit."
-    },
-    {
-      "q": "Welche Python-Techniken sollten verwendet werden, um 'ist ein' oder 'hat ein'-Beziehungen in einem Code darzustellen?",
-      "a": "Verwenden Sie Vererbung für 'ist ein' und Zusammensetzung für 'hat ein'-Beziehungen. Behandeln Sie beide Techniken als ergänzende Lösungsmethoden, um Programmierprobleme zu lösen."
-    },
-    {
-      "q": "Welche Vorteile und Nachteile hat die Komposition im Vergleich zur Vererbung in Python?",
-      "a": "Komposition bietet Flexibilität, da eine Klasse Elemente verschiedener Typen enthalten kann. Vererbung führt jedoch oft zu sauberem Code und ist einfacher anzuwenden. Ein Beispiel für Komposition wäre eine 'Auto'-Klasse, die aus verschiedenen Objekten wie Motor, Reifen usw. besteht, während in der Vererbung 'Auto' von einer 'Fahrzeug'-Klasse abgeleitet wäre."
-    },
-    {
-      "q": "Welche Vorteile bietet die Verwendung von Komposition gegenüber Vererbung in diesem Codebeispiel?",
-      "a": "Die Komposition ermöglicht es, das Design des Computers zu erweitern, ohne seine Hauptstruktur zu verändern. In diesem Fall kann man verschiedene Typen von Connections hinzufügen (z.B.: Dialup, ADSL, Ethernet) und die Computerklassen können diese Verbindungsklasse zur Erweiterung ihrer Funktionen nutzen, ohne die Hauptstruktur zu verändern."
-    },
-    {
-      "q": "Wie erben integrierte Klassen in Python Eigenschaften?",
-      "a": "Integrierte Klassen können keine Attribute und Methoden erben. Um Eigenschaften von integrierten Klassen wie z.B. list, dict oder str zu nutzen, sollten Sie entweder die Objekte als Attribute speichern oder eigene Subklassen erstellen, die die gewünschten Eigenschaften übernehmen."
-    },
-    {
-      "q": "Wie erstellt man eine integrierte Klasse in Python, die Eigenschaften von einer übergeordneten Klasse erbt?",
-      "a": "Mit dem super()-Keyword und der Syntax 'class MyClass(ParentClass):' können Sie eine neue Klasse erstellen, die Eigenschaften von einer integrierten oder benutzerdefinierten übergeordneten Klasse erbt. Zum Beispiel: class MyList(list): def __init__(self): super().__init__()  Hier erstellt MyList eine neue Klasse, die Eigenschaften und Methoden der list-Klasse erbt."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen dem Erben von Eigenschaften in integrierten Klassen und normalen Klassen in Python?",
-      "a": "Eigenschaften von integrierten Klassen (z.B. int, str, list) werden nicht erbt, während normale Klassen Eigenschaften erben. Um Eigenschaften von integrierten Klassen zu nutzen, muss man die Methoden und Attribute der Basisklasse direkt aufrufen, z.B.: `str.__add__('a', 'b')` anstelle von `'a' + 'b'`."
-    },
-    {
-      "q": "Welche Eigenschaften erben integrierte Klassen in Python?",
-      "a": "Integrierte Klassen erben alle Methoden und Attribute von ihren Basisklassen, einschließlich magischer Methoden wie __init__(), __setitem__() und check_value_type(). Die überschriebene Methode __setitem__ führt die Prüfung mit der check_value_type()-Methode durch, bevor sie die tatsächliche Aufgabe übernimmt."
-    },
-    {
-      "q": "Wie erbt eine integrierte Klasse in Python Eigenschaften von einer übergeordneten (built-in) Klasse?",
-      "a": "Mithilfe von inheritance. Mithilfe von 'class SubClass(SuperClass):' können Eigenschaften und Methoden der SuperClass geerbt werden, so dass sie in der SubClass verfügbar sind."
-    },
-    {
-      "q": "Wie kann man die Verwendung einer in Unterklassen unterteilten integrierten Liste zur Überprüfung der Werte verwenden, wenn dem Wörterbuch neue Elemente hinzugefügt werden?",
-      "a": "Eine Möglichkeit besteht darin, eine 'Nur-Ganzzahl-Liste' zu erstellen und dabei die Typen von Elementen zu überprüfen, die zur Liste hinzugefügt werden. Verwenden Sie bei der Hinzufügung neuer Elemente zur integrierten Liste spezifische Bedingungen oder Funktionen zum Überprüfen der Werte."
-    },
-    {
-      "q": "Was ist die Syntax und das Verhalten der Erbschaft von Eigenschaften integrierter Klassen in Python?",
-      "a": "Die Syntax zur Erbschaft von Eigenschaften integrierter Klassen ist durch die Erstellung einer Subklasse, die den Namen der übergeordneten Klasse aufweist und mit `()` abgeschlossen wird. Die Erbschaft führt zu einem Verhalten, bei dem die Subklasse übernommene Attribute und Methoden von der übergeordneten Klasse erbt und zusätzlich eigene Merkmale hinzufügen kann."
-    },
-    {
-      "q": "Was sind die Schritte zur Erstellung einer Funktion, die IBAN-Validierung durchführt und eine spezifische Ausnahmeklasse verwendet?",
-      "a": "Eine Funktion zum Validieren von IBAN-Nummern erstellt man, indem man eine neue Ausnahmeklasse einführt und das alte Snippet in eine Funktion verpackt. Anschließend formuliert man die letzte Bedingung um und verwendet sie als Hilfsfunktion. Die Ergebnisse lassen sich durch Hinzufügen einer Schleife überprüfen, wobei darauf geachtet wird, dass der erste IBAN-Wert so geändert wird, dass eine Ausnahme ausgelöst wird."
-    },
-    {
-      "q": "Wie kann man eine Methode aus einer integrierten Python-Klasse übernehmen und mit einer spezifischen Funktionalität erweitern?",
-      "a": "Man kann das Attribut `__dict__` nutzen, um die Methoden der Elternklasse in der Unterklasse sichtbar zu machen. Anschließend kann man diese Methoden überladen und anpassen."
-    },
-    {
-      "q": "Wie erstellt man eine eigene Klasse, die von einer integrierten Python-Klasse erbt?",
-      "a": "Um eine eigene Klasse zu erstellen, die von einer integrierten Python-Klasse erbt, nutzen Sie die Syntax ClassName(ParentClassName). Zum Beispiel: Klasse IBANDict(dict):. Hier erstellt 'IBANDict' eine neue Klasse namens IBANDict, die von der integrierten dict-Klasse erbt."
-    },
-    {
-      "q": "Wie kann man in Python eine integrierte Klasse wie eine Liste, ein Tupel oder ein Wörterbuch in einer Unterklasse umwandeln?",
-      "a": "Durch Unterklassifizierung. Diese Technik erlaubt es, die Funktionalität der Basisklasse zu behalten und gleichzeitig zusätzliche Methoden und Attribute hinzuzufügen."
-    },
-    {
-      "q": "Welche Methode kann verwendet werden, um eine benutzerdefinierte Ausnahme zu erheben und welche Argumente nimmt sie entgegen?",
-      "a": "Die raise-Methode wird verwendet, um eine benutzerdefinierte Ausnahme zu erheben. Sie nimmt ein Argument (die Exception) in Form einer Exception-Klasse oder eines Exception-Instanzobjekts an."
-    },
-    {
-      "q": "Was sind verkettete Ausnahmen in Python und wozu werden sie verwendet?",
-      "a": "Verkettete Ausnahmen sind eine Kette von Ausnahmen, die während der Ausführung eines Programms auftreten können. Sie werden verwendet, um den Ablauf einer Anwendung zu steuern und auf verschiedene Fehlerarten reagieren zu können. Verkettete Ausnahmen ermöglichen eine feinere Steuerung des Exception-Handling und helfen, komplexere Fehlersituationen besser abzudecken."
-    },
-    {
-      "q": "Wie erstellt man eine benutzerdefinierte Ausnahme in Python?",
-      "a": "Mithilfe des `class`-Statements und der Vererbung von `Exception`. Beispiel: `class CustomError(Exception): pass`"
-    },
-    {
-      "q": "Wie löst Python eine Ausnahme aus und was passiert, wenn keine Handler für diese Ausnahme gefunden wird?",
-      "a": "Python führt das Programm normalerweise aus und stoppt es bei einer Situation, die es nicht bewältigen kann. Es erstellt dann eine besondere Art von Daten, eine Ausnahme, die als an bekannt ist. Wenn keine Handler gefunden werden, wird das Programm abgebrochen und es erscheint eine Fehlermeldung."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen normalen und benannten Ausnahmen in Python?",
-      "a": "Benannte Ausnahmen erlauben es, zusätzliche Informationen über die Ausnahme zu speichern. Sie werden durch das Anfügen eines Argumentes an den Exception-Konstruktor erstellt."
-    },
-    {
-      "q": "Wie greift man auf benannte Attribute einer ausgelösten Ausnahme in Python zu?",
-      "a": "Um auf benannte Attribute einer ausgelösten Ausnahme zuzugreifen, sollte der Code eine try...except-Anweisung verwenden, die nach dem Ausnahmenamen eine Variable angeben kann. In diesem Beispiel ist es ein e_variable. Die Variable ist an eine Ausnahmeinstanz mit den darin gespeicherten Argumenten gebunden, welche über das args-Attribut des e_variable-Objekts erreicht werden können."
-    },
-    {
-      "q": "Welche Attribute hat die UnicodeError-Ausnahme, und welche Informationen geben diese über den Unicode-Fehler preis?",
-      "a": "Die UnicodeError-Ausnahme verfügt über die Attribute 'Kodierung', 'Grund', 'Objekt', 'beginnen' und 'Ende'. Der Wert von 'Kodierung' gibt den Namen der Kodierung an, die den Fehler ausgelöst hat. Das Attribut 'Grund' enthält eine Beschreibung des spezifischen Codec-Fehlers. Das Attribut 'Objekt' ist das Objekt, auf welches sich die Kodierung oder Dekodierung bezieht. Die Attribute 'beginnen' und 'Ende' geben den ersten und letzten Index ungültiger Daten im Objekt an."
-    },
-    {
-      "q": "Was sind verkettete Ausnahmen und wozu werden sie in Python verwendet?",
-      "a": "Verkettete Ausnahmen sind ein Mechanismus, um den Verursacher einer Exception zu identifizieren. Sie werden verwendet, um die Wurz-Exception anzuzeigen, die zur Haupt-Exception führte, und bieten so einen Kontext für das Auftreten von Exceptions."
-    },
-    {
-      "q": "Was ist die Syntax und Funktion von verketteten Ausnahmen in Python?",
-      "a": "Verkettete Ausnahmen werden in Python durch Exception Chaining erreicht. Wenn eine vorherige Ausnahme während der Behandlung einer weiteren Ausnahme verloren gehen soll, kann der Code die Informationen über diese verbundene Ausnahme für den weiteren Code verfügbar machen. Dies ermöglicht es dem Code, auf Fehlerursachen und -verhalten zu reagieren und angemessen zu reagieren."
-    },
-    {
-      "q": "Was sind implizit verkettete Ausnahmen in Python und wie werden sie verwendet?",
-      "a": "Implizit verkettete Ausnahmen sind eine Erweiterung von Python, die mehrere Fehler-Nachrichten in einer verbundenen Kette darstellen. Sie werden durch den Mechanismus '__cause__' realisiert und können wie folgt genutzt werden: 'try-except'-Anweisungen verarbeiten die oberste Ausnahme, während '__cause__' zur Analyse der zugrunde liegenden Ausnahmen verwendet wird. Bei einer implizit verketteten Ausnahme ist es wichtig, dass die ursprüngliche Ausnahme als Attribut '__cause__' gespeichert ist und das Modul sys den Zugriff auf alle verknüpften Ausnahmen erlaubt."
-    },
-    {
-      "q": "Wie lautet die Meldung des IndexError-Tracebacks, der durch den obigen Code verursacht wird?",
-      "a": "IndexError: Listenindex außerhalb des gültigen Bereichs"
-    },
-    {
-      "q": "Wie erstellt man eine implizit verkettete Ausnahme in Python?",
-      "a": "Durch importieren des `exceptions`-Moduls und Setzen von `__cause__`, wie zum Beispiel: `try:`   `raise Exception('Erste Ausnahme') from ValueError()`"
-    },
-    {
-      "q": "Wie kann das ursprüngliche Ausnahmeobjekt referenziert werden, das von einer inneren Ausnahme in Edube Interactive ausgegeben wird?",
-      "a": "Das ursprüngliche Ausnahmeobjekt e kann über das __context__-Attribut der inneren Ausnahme f referenziert werden. Beispiel: e = f.__context__"
-    },
-    {
-      "q": "Wie werden explizit verkettete Ausnahmen in Python erstellt und gehandhabt?",
-      "a": "Explizit verkettete Ausnahmen werden mithilfe des `raise from`-Statements in Python erstellt. Um eine neue Ausnahme mit einer bereits ausgelösten, älteren Ausnahme als Wurzel zu verknüpfen, verwendet man die Syntax: `raise NewException() from OldException()`. Dies ermöglicht es, mehrere verbundene Fehler in einer Kette zu erfassen und zu behandeln."
-    },
-    {
-      "q": "Wie erstellt man explizit verkettete Ausnahmen in Python?",
-      "a": "Man kann verkettete Ausnahmen durch das Hinzufügen einer `__cause__`-Variable zur __init__()-Methode oder __enter__()-Method des Kontextmanagers erstellen. Hier ist ein Beispiel: try except: raise Exception('Erste Ausnahme') from Exception('Zweite Ausnahme')"
-    },
-    {
-      "q": "Welche Eigenschaften besitzt die RocketNotReadyError-Ausnahme in Python?",
-      "a": "Die RocketNotReadyError-Ausnahme ist eine spezifische Exception in Python, die zur Erklärung des Fehlers verwendet wird, dass die Rakete zum Start nicht bereit ist. Sie besitzt das Attribut __Ursache__, welches den spezifischen Grund für den Fehler angibt."
-    },
-    {
-      "q": "Was bedeutet 'explizit verkettete Ausnahmen' in Python, und wie wendet man sie an?",
-      "a": "Explizit verkettete Ausnahmen sind ein Mechanismus zur Ketten- und Hierarchie-Bildung von Ausnahmen in Python. Man erstellt eine spezifische Ausnahme mit einer expliziten '__cause__'-Eigenschaft, die auf den ursprünglichen Erroreinfluss verweist. Die Syntax zur Verwendung lautet: `raise SomeException from CausingException`."
-    },
-    {
-      "q": "Wie sind zwei verschiedene Ausnahmetypen in Edube Interactive verkettet und welche Fehlerursachen haben sie?",
-      "a": "Durch Polymorphismus und explizite Verkettung werden zwei verschiedene Ausnahmetypen, RocketNotReadyError: „Besatzung ist unvollständig“ verursacht durch „Listenindex außerhalb des gültigen Bereichs“ und RocketNotReadyError: „Problem mit der Tankanzeige“, verursacht durch „Division durch Null“. Sie werden korrekt gehandhabt, indem einige Details hinter dem Ausnahmeobjekt RocketNotReadyError verbergen."
-    },
-    {
-      "q": "Wie kann man die Traceback-Attribute nutzen, um Informationen über eine Fehlermeldung in Python zu erhalten?",
-      "a": "Mithilfe des traceback-Moduls können Sie Attribute wie tb_next, tb_frame und tb_lasti auswerten, um Informationen über den Fehlerort, die Datei und Zeile sowie den Code-Stack zur Zeit des Fehlers zu erhalten. Beispiel: `import traceback; print(traceback.extract_tb(e.__traceback__)[0])` gibt die erste Zeile in der Exception e aus."
-    },
-    {
-      "q": "Wie kann man in Python das Traceback-Attribut eines Ausnahmeobjekts manipulieren?",
-      "a": "In Python können Sie ein Traceback-Objekt bearbeiten, indem Sie auf das __traceback__-Attribut jedes Ausnahmeobjekts zugreifen. Beispielsweise könnten Sie das Attribute ändern, um die Stacktrace zu verändern."
-    },
-    {
-      "q": "Was ist das Traceback-Attribut in Python und wozu dient es?",
-      "a": "Das Traceback-Attribut ist eine Eigenschaft von Ausnahmen in Python, welche die Informationen über den Ort und die Umstände der Erhebung einer Exception beinhalten. Es hilft beim Debuggen von Fehlern, indem es aufzeigt, welche Funktionen und Dateien zur Erzeugung des Fehlers beigetragen haben."
-    },
-    {
-      "q": "Wie kann man in Python den Traceback eines Fehlers analysieren und ausgeben?",
-      "a": "Man kann die format_tb()-Methode verwenden, um eine Liste von Zeichenfolgen zu erhalten, die den Traceback beschreiben. Mithilfe der print_tb()-Methode können diese direkt in die Standardausgabe gedruckt werden."
-    },
-    {
-      "q": "Wie kopiert man ein Objekt in Python mit tiefen Kopien und wann ist dies notwendig?",
-      "a": "Man kopiert ein Objekt durch den deepcopy()-Befehl, der das Shallow Copying vermeidet. Dieser Fall tritt auf, wenn ein Objekt aus weiteren Objekten besteht, die in einem tiefen Hierarchielevel enthalten sind. Man sollte eine tiefe Kopie verwenden, um zu verhindern, dass Änderungen an den inneren Objekten des Originals geändert werden."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen flacher und tiefer Kopie von Python-Objekten?",
-      "a": "Flache Kopien erstellen eine neue Identität für das kopierte Objekt, während die Werte beibehalten werden. Tiefe Kopien erstellen auch neue Identitäten für alle inneren Objekte."
-    },
-    {
-      "q": "Wie erstellt man eine tiefe Kopie eines Python-Objekts?",
-      "a": "Mithilfe von copy.deepcopy(obj) aus dem Modul copy."
-    },
-    {
-      "q": "Wie ist der Unterschied zwischen einer flachen und einer tiefen Kopie von Objekten in Python?",
-      "a": "Eine flache Kopie erstellt eine neue Variable, die auf das gleiche Speicherobjekt wie das ursprüngliche Objekt verweist. Ändert man ein Attribut des ursprünglichen Objekts, ändert sich dies auch im kopierten Objekt. Eine tiefe Kopie erstellt ein neues Objekt und kopiert alle Attribute, einschließlich aller Unterstrukturen und Verweise. Änderungen am ursprünglichen Objekt haben keine Auswirkung auf das kopierte Objekt."
-    },
-    {
-      "q": "Wie kann man in Python eine flache Kopie eines Objekts erstellen und wann ist dies sinnvoll?",
-      "a": "Mit dem Operator '=' oder der Funktion copy() aus dem Modul copy werden flache Kopien erstellt. Sie sind nützlich, wenn man eine unabhängige Version eines Objekts benötigt und keine tiefen Kopien von Sub-Objekten benötigt."
-    },
-    {
-      "q": "Wie erstellt man in Python eine flache Kopie eines Objekts?",
-      "a": "Mithilfe der funktionalen Programmierung: `new_list = old_list[:]`, wobei `old_list` die auszukopierende Liste ist und `new_list` die neue, kopierte Version. Dadurch wird eine flache Kopie erstellt, bei der weiterhin beide Variablen auf dasselbe Objekt verweisen."
-    },
-    {
-      "q": "Wie lautet die Syntax für eine flache Kopie in Python?",
-      "a": "copy_shallow = object[:]"
-    },
-    {
-      "q": "Welchen Unterschied gibt es zwischen dem `==` und `is` Operator in Python?",
-      "a": "Der `==` Operator vergleicht die Werte beider Operanden, während der `is` Operator überprüft, ob sich beide Operanden auf dasselbe Objekt beziehen."
-    },
-    {
-      "q": "Welche Methoden werden in Python verwendet, um flache und tiefe Kopien von Objekten zu erstellen?",
-      "a": "copy() verwendet eine flache Kopie, während deepcopy() aus dem Modul copy eine tiefe Kopie erstellt. In einer flachen Kopie werden Referenzen auf die Originalelemente kopiert, während bei tiefer Kopie alle Elemente und ihre Unterstrukturen dupliziert werden."
-    },
-    {
-      "q": "Was ist die Syntax und Bedeutung von `[:]` in Python, um eine flache Kopie eines zusammengesetzten Objekts zu erstellen?",
-      "a": "Der Code `[::]` erstellt eine flache Kopie eines zusammengesetzten Objekts. Hierbei werden alle Elemente des Originals dupliziert, während die tiefen Ebenen (Listen, Wörterbücher oder Klasseninstanzen) weiterhin durch Referenzen auf das Originalspeicherort verknüpft sind."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen flachem und tiefem Kopiervorgang in Python?",
-      "a": "Flaches Kopieren erstellt eine neue Variable, die auf den gleichen Speicher wie das Original verweist. Tiefes Kopieren erstellt eine neue Variable mit einem unabhängigen Speicher und kopiert auch alle Elemente in der Tiefe."
-    },
-    {
-      "q": "Wie erstellt man eine flache Kopie eines zusammengesetzten Objekts in Python, und was sind ihre Einschränkungen?",
-      "a": "Um eine flache Kopie zu erstellen, kann die Methode list() oder das Aufrufen [:] verwendet werden. Flache Kopien erstellt nur eine Ebene tief neue Objekte und füllt sie mit Verweisen auf bereits vorhandene Objekte. Das Ergebnis ist, dass Änderungen an den Kopien die Originale beeinflussen, da sie weiterhin die gleichen Objekte teilen."
-    },
-    {
-      "q": "Welche Funktionen werden in Python zur Erstellung von flachen und tiefen Kopien verwendet?",
-      "a": "Die Funktionen `copy.copy()` und `copy.deepcopy()` werden in Python verwendet, um flache und tiefe Kopien zu erstellen. Der Befehl `copy.copy()` führt eine flache Kopie durch, während `copy.deepcopy()` eine tiefe Kopie erstellt."
-    },
-    {
-      "q": "Wie erstellt man in Python eine unabhängige Kopie eines zusammengesetzten Objekts wie einer Liste oder eines Wörterbuchs?",
-      "a": "Durch Verwendung von deepcopy() Funktion, die vom Python-Modul „copy“ bereitgestellt wird. Diese Funktion erstellt ein neues zusammengesetztes Objekt und fügt rekursiv Kopien der im Original gefundenen Objekte ein."
-    },
-    {
-      "q": "Welche Faktoren können die Leistung der `deepcopy()`-Funktion von edube Interactive beeinflussen?",
-      "a": "Die Leistung der `deepcopy()`-Funktion kann von der Größe und Komplexität des Objekts, das kopiert werden soll, sowie von der Anzahl verknüpfter Elemente abhängen."
-    },
-    {
-      "q": "Wie vergleicht man die Leistung der Funktion deepcopy() in Edube Interactive für das Kopieren eines großen zusammengesetzten Objekts?",
-      "a": "Testen Sie es lokal auf Ihrem Computer: Der erste Ansatz ist eine Referenzkopie (schnell, keine Objekte erstellt), der zweite ist eine flache Kopie (langsamer als erster, 1.000.000 Referenzen erstellt) und der dritte ist eine tiefe Kopie (umfangreichster Vorgang, 3.000.000 Objekte erstellt)."
-    },
-    {
-      "q": "Wie kann man in Python eine tiefe Kopie eines Compounds erstellen?",
-      "a": "Mit dem Befehl import copy und copy.deepcopy(objekt) lässt sich eine tiefe Kopie eines Objekts erstellen."
-    },
-    {
-      "q": "Wie erstellt man eine tiefe Kopie eines Verbindungsobjekts in Python?",
-      "a": "Mit dem Befehl `copy.deepcopy()`, zum Beispiel: `my_copied_dict = copy.deepcopy(original_dict)`"
-    },
-    {
-      "q": "Was ist der Unterschied zwischen deepcopy() und flach kopieren von Objekten in Python?",
-      "a": "deepcopy() erstellt und speichert neue Instanzen von Quellobjekten, während bei flachen Kopiervorgängen nur Verweise auf die ursprüngliche Speicheradresse gespeichert werden. Deep Copy kopiert das gesamte Objekt einschließlich aller verschachtelten Objekte und ist ein Beispiel für praktische Rekursion, kann jedoch Probleme verursachen, wenn zyklische Referenzen enthalten sind."
-    },
-    {
-      "q": "Wie serialisiert man ein Python-Objekt mithilfe des Pickle-Moduls?",
-      "a": "Mit dem Befehl `pickle.dump()` kann ein Python-Objekt in eine Datei serialisiert werden, zum Beispiel: `with open('objekt.pkl', 'wb') as f: pickle.dump(objekt, f)`. Um das Objekt zu deserialisieren, verwendet man den Befehl `pickle.load()`, beispielsweise so: `with open('objekt.pkl', 'rb') as f: objekt = pickle.load(f)`."
-    },
-    {
-      "q": "Wie liest man eine Datei im Binärmodus in Python und deserialisiert die Daten mit dem Pickle-Modul?",
-      "a": "Das Pickle-Modul wird importiert, dann öffnet man die Datei im Binärmodus und verknüpft das Dateihandle damit. Nacheinander werden einige Datenabschnitte gelesen und mit der load()-Funktion deserialisiert. Die Objekte werden anschließend untersucht."
-    },
-    {
-      "q": "Wie führt man eine Serialisierung von Python-Objekten mit dem Pickle-Modul durch?",
-      "a": "Mit pickle.dump(objekt, fileobjekt) kann ein Python-Objekt in einen Dateistream serialisiert werden. Um es zu deserialisieren, verwendet man pickle.load(fileobjekt)."
-    },
-    {
-      "q": "Wie serialisiert das pickle.dumps()-Modul ein Python-Objekt?",
-      "a": "Das pickle.dumps()-Modul erwartet ein Initialobjekt, gibt jedoch kein Bytes-Objekt zurück. Stattdessen wird ein Fehler geworfen, wenn man versucht, es auf ein Bytes-Objekt anzuwenden."
-    },
-    {
-      "q": "Wie serialisiert man ein Python-Objekt mit dem Pickle-Modul?",
-      "a": "Das Pickle-Modul ist ein Standardmodul in Python, das zur Serialize von Objekten verwendet wird. Um ein Python-Objekt zu serialisieren, nutzen Sie die pickle.dump() Methode und übergeben Sie den Namen des Dateiobjekts und das Objekt als Argumente."
-    },
-    {
-      "q": "Wie kann man in Python eine Funktion serialisieren, wenn es bei der Verwendung von Pickle zu einem Fehler kommt?",
-      "a": "Man sollte den Namen der Funktion anstelle eines Werts auswählen, da Funktionen nur nach Namensreferenz und nicht nach Wert ausgewählt werden. Ähnliches gilt für Klassen durch benannte Referenzen, wobei dieselben Einschränkungen in Unpickling-Umgebungen gelten."
-    },
-    {
-      "q": "Wie serialisiert man ein Python-Objekt mithilfe des Pickle-Moduls?",
-      "a": "Das Serialisieren von Python-Objekten mit dem Pickle-Modul erfolgt durch Aufruf der Methode dump(), die das Objekt in den Speicher schreibt. Der erste Schritt ist, ein File-Objekt für das Schreiben zu öffnen und anschließend das pickle.dump()-Kommando aufzurufen, um das Objekt als Binary Data im Dateisystem abzulegen."
-    },
-    {
-      "q": "Wie serialisiert man Python-Objekte, wie zum Beispiel Funktionen, mit dem Pickle-Modul?",
-      "a": "Mit dem Pickle-Modul können Sie Python-Objekte in eine Datei speichern und später aus der Datei abrufen. Um eine Funktion zu serialisieren, müssen Sie den dump()-Methoden übergeben, gefolgt von einer Datei (in diesem Fall 'function.pckl') im Binary Write Mode ('wb'). Hier ist ein Beispiel: mit open('function.pckl', 'wb') as file_out: pickle.dump(f1, file_out). Um die serialisierte Funktion aus der Datei abzurufen, verwenden Sie die load()-Methode und übergeben Sie eine Datei (in diesem Fall 'function.pckl') im Binary Read Mode ('rb'). Hier ist ein Beispiel: with open('function.pckl', 'rb') as file_in: data = pickle.load(file_in)."
-    },
-    {
-      "q": "Wie serialisiert man ein Python-Objekt und schreibt es in eine Datei mithilfe des Pickle-Moduls?",
-      "a": "Das Modul pickle erlaubt die Serialisierung von Python-Objekten. Um ein Objekt in eine Datei zu speichern, kann man den Befehl pickle.dump(objekt, file) verwenden, wobei objekt das zu serialisierende Objekt und file der Name der Zieldatei ist."
-    },
-    {
-      "q": "Wie serialisiert man ein Python-Objekt mit dem Pickle-Modul?",
-      "a": "Mit dem Pickle-Modul werden Python-Objekte serialisiert, indem die Funktion pickle.dump() verwendet wird. In diesem Beispiel wird ein Objekt der Klasse Gurke (cucu) in einer Datei namens cucumber.pckl gespeichert: mit open('cucumber.pckl', 'wb') as file_out: pickle.dump(cucu, file_out). Um das Objekt wiederherzustellen, kann die Funktion pickle.load() verwendet werden."
-    },
-    {
-      "q": "Wie kann man ein Python-Objekt serialisieren und deserialisieren mithilfe des Pickle-Moduls?",
-      "a": "Mit dem Pickle-Modul kann man Objekte serialisieren, indem man die Funktion `pickle.dump()` auf das Zielobjekt anwendet und eine Datei öffnet, in die es geschrieben werden soll. Anschließend kann das Objekt deserialisiert werden, indem man die Funktion `pickle.load()` ausführt und dabei die Datei angibt, aus der gelesen werden soll."
-    },
-    {
-      "q": "Welche Unterschiede gibt es zwischen den Pickle- und JSON-Formaten bei der Serialisierung von Python-Objekten?",
-      "a": "Pickle ist ein spezifisches Python-Format, während JSON universeller und in verschiedenen Sprachen nutzbar ist. Pickle kann leistungsfähiger sein, da seine Implementierung besser auf Python optimiert ist. Allerdings ist Pickle anfällig für fehlerhafte oder böswillige Daten und kann zwischen verschiedenen Python-Versionen variieren."
-    },
-    {
-      "q": "Wie werden Python-Objekte mithilfe des Shelve-Moduls serialisiert?",
-      "a": "Das Shelve-Modul in Python implementiert ein Serialisierungswörterbuch, das Gegenstände in einer Datei oder Datenbank ablegen und über Schlüssel darauf zugreifen lässt. Die Wörterbuchschlüssel müssen gewöhnliche Zeichenfolgen sein, da die zugrunde liegende Datenbank (dbm) dies erfordert."
-    },
-    {
-      "q": "Wie verwendet man das Shelve-Modul in Python zur Serialisierung von Objekten?",
-      "a": "Das Shelve-Modul in Python ist ein Werkzeug zur serialisierten Speicherung von Objekten auf der Festplatte. Um es zu nutzen, muss zuerst eine Instanz des Shelf-Objekts erstellt werden, die den Pfad und den Namen des Dateipakets angibt. Anschließend können Objekte zur speicherbaren Shelf-Instanz hinzugefügt oder von dieser abgerufen werden."
-    },
-    {
-      "q": "Welche Flags können für das Öffnen einer Shelve-Datei verwendet werden, und wie wirken sie sich auf die Datei aus?",
-      "a": "Es gibt vier Flag-Parameter: 'r', 'w', 'c' und 'n'. 'r' öffnet die Datenbank zum Lesen, 'w' öffnet zur Lektüre und Schreibung. 'c' öffnet zur Lektüre und Schreibung und erstellt eine neue Datei, wenn keine vorhanden ist (Standardwert). 'n' erstellt immer eine neue, leere Datenbank zur Lektüre und Schreibung."
-    },
-    {
-      "q": "Wie kann man ein Python-Objekt persistent machen, indem man das Shelve-Modul verwendet?",
-      "a": "Das Shelve-Modul in Python erlaubt es, Objekte persistent zu speichern. Um ein Objekt persistent zu speichern, muss eine Datei mit dem Befehl `shelve.open()` geöffnet werden. Anschließend kann das Objekt durch den Befehl `objekt.update(dict)` in die Datei geschrieben werden. Um das Objekt aus der Datei zu laden, muss sie mit dem Befehl `shelve.open()` geöffnet und anschließend kann das Objekt mit `shelf_file[key]` geladen werden."
-    },
-    {
-      "q": "Wie erstellt man ein Shelve-Objekt in Python?",
-      "a": "Mithilfe des Moduls 'shelve'. Sie rufen die Funktion shelve.open() auf, um ein neues Shelve-Objekt zu erstellen, oder spezifizieren den Namen einer vorhandenen Datei, um ein Shelve-Objekt darauf zu lassen. Beispiel: my_shelf = shelve.open('my_shelf')"
-    },
-    {
-      "q": "Was ist eine Metaklasse in Python?",
-      "a": "Eine Metaklasse ist eine Klasse, die benutzt wird, um den Code einer anderen Klasse zu generieren. Sie erlaubt es, das Verhalten und die Struktur von Klassen zu ändern oder anzupassen."
-    },
-    {
-      "q": "Wie können Metaklassen verwendet werden, um die Verhaltensweise einer Klasse zu ändern?",
-      "a": "Metaklassen in Python sind spezielle Klassen, die verwendet werden, um den Code und das Verhalten von anderen Klassen zu ändern. Sie erben von `type` und können über `metaclass`-Argument in einer Klassendeklaration festgelegt werden. Metaklassen erlauben es, das Verhalten der __new__(), __init__() oder __call__() Methoden einer erstellten Klasse zu ändern."
-    },
-    {
-      "q": "Wie definiert man eine Metaklasse in Python, um auf Attribute und Methoden einer Basisklasse zuzugreifen?",
-      "a": "Eine Metaklasse wird durch Definition einer Unterklasse von `type` erstellt. Um Zugriff auf Attribute und Methoden einer Basisklasse zu erhalten, können Sie die `__new__()`-Methode überschreiben und den Zugriff über `mcs.__dict__['name'] = value` ermöglichen."
-    },
-    {
-      "q": "Welche Rolle spielt eine Metaklasse in Python und wie ist ihre Funktionalität von der eines Klassendekorators zu unterscheiden?",
-      "a": "Eine Metaklasse ist eine Klasse, die zur Anpassung der Klasseninstanziierung verwendet wird. Im Gegensatz zu Klassendekoratoren, welche angewendet werden, wenn Klassen instanziiert werden, leiten Metaklassen die Klasseninstanziierung an dedizierte Logik in den Metaklassen weiter. Dabei erfolgt die Anwendung von Metaklassen, wenn Klassendefinition gelesen werden, lange bevor Klassen instanziiert werden."
-    },
-    {
-      "q": "In Python ist eine Klasse welchen Typs?",
-      "a": " Eine Klasse ist von dem Typ 'type'. Beispielsweise: `type(Duck) == type`"
-    },
-    {
-      "q": "Welche Klassen sind in Python Instanzen von Typ?",
-      "a": "In Python sind integrierte Klassen und die Metaklasse Instanzen von Typ, wie im obigen Beispiel gezeigt."
-    },
-    {
-      "q": "Welche speziellen Attribute gibt es in Python und was repräsentieren sie?",
-      "a": "__name__ repräsentiert den Namen einer Variablen oder Funktion, __class__ gibt die Klasse an, zu der ein Objekt gehört, __bases__ gibt die Basisklassen einer Klasse an, und __dict__ enthält die Attributwerte eines Objekts."
-    },
-    {
-      "q": "Was ist der Unterschied zwischen __name__, __class__ und __bases__ in Python?",
-      "a": "__name__ enthält den Namen einer Klasse, __class__ gibt Informationen über die Klasse einer Instanz an, während __bases__ ein Tupel mit Basisklassen einer Klasse ist."
-    },
-    {
-      "q": "Was gibt die Funktion `type()` in Python als Ergebnis zurück?",
-      "a": "Die `type()`-Funktion gibt den Typ des übergebenen Arguments als ein spezifisches Objekt vom Typ <class 'type'> zuruck, das Informationen über den Typ und seine Attribute bereitstellt."
-    },
-    {
-      "q": "Was gibt die Funktion type() in Python für verschiedene Typen wie int, str und bool zurück?",
-      "a": "Die Funktion type() gibt den Typ eines Elements als class-Objekt zurück. Zum Beispiel: `type(1)` gibt <class 'int'> aus, `type('a')` gibt <class 'str'> aus und `type(True)` gibt <class 'bool'> aus."
-    },
-    {
-      "q": "Was gibt die Python-Funktion `type()` zurück, wenn sie auf eine Klasse angewendet wird?",
-      "a": "Die `type()`-Funktion gibt den Typ einer Variablen, Funktion oder Klasse als einzelnes Element (z.B., <class 'object'> für die int-Klasse) oder als Tuple (z.B., (<class 'object'>,)) zurück, abhängig von der Anzahl und Typen der übergebenen Argumente."
-    },
-    {
-      "q": "Was ist das Ziel des Moduls `types` in Python?",
-      "a": "Das Modul 'types' bietet Funktionen und Typen, die Informationen über Objekttypen liefern. Einer der Haupttypfunktionen ist `type()`, die den Typ eines gegebenen Objekts ermittelt."
-    },
-    {
-      "q": "Was ist das Ergebnis der Methode bark in der Hund-Klasse, die mithilfe von Python's Typfunktion erstellt wurde?",
-      "a": "Die Methode bark gibt den Text 'Wuff, wuff' aus."
-    },
-    {
-      "q": "Was sind die Hauptunterschiede zwischen type() und isinstance() in Python?",
-      "a": "type() gibt den Typ einer Variablen oder Klasse als String zurück, während isinstance() überprüft, ob ein Objekt einer bestimmten Klasse gehört und boolescher Wert (wahr/falsch) als Ergebnis liefert."
-    },
-    {
-      "q": "Was ist die Rolle von metaclasses in Python, insbesondere die Verwendung von Typ-Funktionen?",
-      "a": "Metaclasses sind Klassen, die verwendet werden, um andere Klassen zu erstellen. Sie erweitern die Fähigkeiten von normalen Klassen und ermöglichen es uns, das Verhalten und die Attribute einer Klasse bei der Erstellung zu steuern. Typ-Funktionen werden verwendet, um eine spezielle Metaklasse namens Type zu erstellen, die verwendet wird, um andere metaclasses zu instanziieren."
-    },
-    {
-      "q": "Was ist eine Metaklasse in Python und wie erstellt man eine?",
-      "a": "Eine Metaklasse ist eine Klasse, die zur Erstellung von anderen Klassen verwendet wird. Um eine Metaklasse zu erstellen, muss man eine eigene Metaklasse basierend auf `type` oder einer benutzerdefinierten Basisklasse erstellen und mit der gewünschten Syntax anpassen."
-    },
-    {
-      "q": "Wie kann man in Python eine Metaklasse erstellen, die sicherstellt, dass alle Klassen über eine bestimmte Methode verfügen?",
-      "a": "In Python können Sie eine Basisklasse erstellen und alle Ihre Klassen daraus erben lassen. Dann können Sie in der Basisklasse die Methode implementieren, die für alle Klassen obligatorisch ist."
-    },
-    {
-      "q": "Wie kann man in Python dynamisch ein Attribut für eine Klasse erzeugen, ohne es vorab zu deklarieren?",
-      "a": "Mithilfe von __setattr__() und __getattribute__(). Beispiel: class Duck: pass; setattr(Duck, 'fly', lambda self: print('I am flying!'))"
-    },
-    {
-      "q": "Wozu dienen Metaklassen in Python?",
-      "a": "Metaklassen ermöglichen es, die Schaffung und Verwendung von Klassen zu beeinflussen. Sie werden verwendet, um automatische Änderungen an Klassen vorzunehmen oder Dekoratoren effizienter einzusetzen."
+      "id": 1,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is the difference between a class and an instance?",
+        "de": "Was ist der Unterschied zwischen einer Klasse und einer Instanz?"
+      },
+      "a": {
+        "en": "A **class** is a blueprint or template (virtual concept). An **instance** is a concrete realization of that class in memory – also called an object. Example:\n```python\nclass Duck:\n    pass\ndonald = Duck()  # donald is an instance\n```",
+        "de": "Eine **Klasse** ist ein Bauplan oder Template (virtuelles Konzept). Eine **Instanz** ist eine konkrete Realisierung dieser Klasse im Speicher – auch Objekt genannt. Beispiel:\n```python\nclass Duck:\n    pass\ndonald = Duck()  # donald ist eine Instanz\n```"
+      }
+    },
+    {
+      "id": 2,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is the difference between a class variable and an instance variable?",
+        "de": "Was ist der Unterschied zwischen Klassen- und Instanzvariable?"
+      },
+      "a": {
+        "en": "**Class variable**: defined in the class body, shared by all instances.\n**Instance variable**: defined in `__init__` via `self`, unique per instance.\n```python\nclass Counter:\n    count = 0          # class variable\n    def __init__(self):\n        self.value = 0 # instance variable\n```",
+        "de": "**Klassenvariable**: im Klassenrumpf definiert, von allen Instanzen geteilt.\n**Instanzvariable**: in `__init__` über `self` definiert, eindeutig pro Instanz.\n```python\nclass Counter:\n    count = 0          # Klassenvariable\n    def __init__(self):\n        self.value = 0 # Instanzvariable\n```"
+      }
+    },
+    {
+      "id": 3,
+      "module": 1,
+      "tag": "code",
+      "q": {
+        "en": "What are magic (dunder) methods? Name 5 important ones.",
+        "de": "Was sind Magic- (Dunder-)Methoden? Nenne 5 wichtige."
+      },
+      "a": {
+        "en": "Methods with double underscores before/after the name. They implement built-in Python behaviors:\n\n| Method | Purpose |\n|---|---|\n| `__init__` | Constructor |\n| `__str__` | `str()` / `print()` |\n| `__repr__` | Developer representation |\n| `__len__` | `len()` |\n| `__eq__` | `==` comparison |\n| `__add__` | `+` operator |\n| `__getitem__` | `obj[key]` |",
+        "de": "Methoden mit doppelten Unterstrichen vor/nach dem Namen. Sie implementieren eingebaute Python-Verhaltensweisen:\n\n| Methode | Zweck |\n|---|---|\n| `__init__` | Konstruktor |\n| `__str__` | `str()` / `print()` |\n| `__repr__` | Entwickler-Repr. |\n| `__len__` | `len()` |\n| `__eq__` | `==`-Vergleich |\n| `__add__` | `+`-Operator |\n| `__getitem__` | `obj[key]` |"
+      }
+    },
+    {
+      "id": 4,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "Explain the difference between @classmethod and @staticmethod.",
+        "de": "Erkläre den Unterschied zwischen @classmethod und @staticmethod."
+      },
+      "a": {
+        "en": "**@classmethod**: receives the class (`cls`) as first argument, can access/modify class state. Used for alternative constructors.\n**@staticmethod**: receives no implicit argument, behaves like a regular function inside the class namespace. No access to class or instance.\n```python\nclass MyClass:\n    @classmethod\n    def from_string(cls, s): return cls()\n    @staticmethod\n    def helper(): return 42\n```",
+        "de": "**@classmethod**: erhält die Klasse (`cls`) als erstes Argument, kann Klassenzustand lesen/ändern. Für alternative Konstruktoren.\n**@staticmethod**: erhält kein implizites Argument, verhält sich wie normale Funktion im Klassennamensraum. Kein Zugriff auf Klasse oder Instanz.\n```python\nclass MyClass:\n    @classmethod\n    def aus_string(cls, s): return cls()\n    @staticmethod\n    def hilfe(): return 42\n```"
+      }
+    },
+    {
+      "id": 5,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is a decorator and how does it work?",
+        "de": "Was ist ein Dekorator und wie funktioniert er?"
+      },
+      "a": {
+        "en": "A decorator is a function that takes another function as argument, wraps it, and returns the wrapped version. It uses the `@` syntax as syntactic sugar.\n```python\ndef my_decorator(func):\n    def wrapper(*args, **kwargs):\n        print('Before')\n        result = func(*args, **kwargs)\n        print('After')\n        return result\n    return wrapper\n\n@my_decorator\ndef greet(): print('Hello')\n# equivalent to: greet = my_decorator(greet)\n```",
+        "de": "Ein Dekorator ist eine Funktion, die eine andere Funktion als Argument nimmt, sie umschließt und die umschlossene Version zurückgibt. Das `@`-Symbol ist syntaktischer Zucker.\n```python\ndef mein_dekorator(func):\n    def wrapper(*args, **kwargs):\n        print('Vorher')\n        result = func(*args, **kwargs)\n        print('Nachher')\n        return result\n    return wrapper\n\n@mein_dekorator\ndef begruesse(): print('Hallo')\n```"
+      }
+    },
+    {
+      "id": 6,
+      "module": 1,
+      "tag": "code",
+      "q": {
+        "en": "How does Python's Method Resolution Order (MRO) work? What algorithm does it use?",
+        "de": "Wie funktioniert Pythons Method Resolution Order (MRO)? Welchen Algorithmus verwendet es?"
+      },
+      "a": {
+        "en": "Python uses the **C3 Linearization** algorithm to determine in which order base classes are searched when looking up a method. Use `ClassName.mro()` or `__mro__` to inspect.\n```python\nclass A: pass\nclass B(A): pass\nclass C(A): pass\nclass D(B, C): pass\nprint(D.__mro__)\n# (<D>, <B>, <C>, <A>, <object>)\n```\nRule: child before parent, left before right.",
+        "de": "Python verwendet den **C3-Linearisierungsalgorithmus**, um zu bestimmen, in welcher Reihenfolge Basisklassen bei der Methodensuche durchsucht werden. `ClassName.mro()` oder `__mro__` zeigt die Reihenfolge.\n```python\nclass A: pass\nclass B(A): pass\nclass C(A): pass\nclass D(B, C): pass\nprint(D.__mro__)\n# (<D>, <B>, <C>, <A>, <object>)\n```\nRegel: Kind vor Eltern, links vor rechts."
+      }
+    },
+    {
+      "id": 7,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is an Abstract Base Class (ABC) and when do you use it?",
+        "de": "Was ist eine abstrakte Basisklasse (ABC) und wann wird sie verwendet?"
+      },
+      "a": {
+        "en": "An ABC is a class that cannot be instantiated directly and forces subclasses to implement certain methods. Use `abc.ABC` or `abc.ABCMeta` + `@abstractmethod`.\n```python\nfrom abc import ABC, abstractmethod\n\nclass Shape(ABC):\n    @abstractmethod\n    def area(self): pass\n\nclass Circle(Shape):\n    def area(self): return 3.14 * r**2\n\n# Shape()  → TypeError!\n```",
+        "de": "Eine ABC ist eine Klasse, die nicht direkt instanziiert werden kann und Unterklassen zwingt, bestimmte Methoden zu implementieren. Verwende `abc.ABC` + `@abstractmethod`.\n```python\nfrom abc import ABC, abstractmethod\n\nclass Form(ABC):\n    @abstractmethod\n    def flaeche(self): pass\n\nclass Kreis(Form):\n    def flaeche(self): return 3.14 * r**2\n\n# Form()  → TypeError!\n```"
+      }
+    },
+    {
+      "id": 8,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What are the four pillars of OOP?",
+        "de": "Was sind die vier Säulen der OOP?"
+      },
+      "a": {
+        "en": "1. **Encapsulation** – bundling data and methods, hiding implementation\n2. **Abstraction** – hiding complexity, exposing interfaces\n3. **Inheritance** – reusing code via parent-child class relationships\n4. **Polymorphism** – same interface, different behaviors\n\n```python\n# Polymorphism example:\nfor animal in [Dog(), Cat(), Bird()]:\n    animal.speak()  # each calls its own speak()\n```",
+        "de": "1. **Kapselung** – Daten und Methoden bündeln, Implementierung verbergen\n2. **Abstraktion** – Komplexität verbergen, Interfaces exponieren\n3. **Vererbung** – Code-Wiederverwendung via Eltern-Kind-Klassen\n4. **Polymorphismus** – gleiches Interface, verschiedene Verhaltensweisen\n\n```python\n# Polymorphismus Beispiel:\nfor tier in [Hund(), Katze(), Vogel()]:\n    tier.sprich()  # jedes ruft seine eigene sprich()-Methode auf\n```"
+      }
+    },
+    {
+      "id": 9,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is the difference between composition and inheritance?",
+        "de": "Was ist der Unterschied zwischen Komposition und Vererbung?"
+      },
+      "a": {
+        "en": "**Inheritance** = IS-A relationship. A subclass IS-A type of the parent.\n**Composition** = HAS-A relationship. A class CONTAINS another class as a component.\n\n```python\n# Inheritance (is-a)\nclass Dog(Animal): pass\n\n# Composition (has-a)\nclass Car:\n    def __init__(self):\n        self.engine = Engine()  # Car HAS-A Engine\n```\n**Composition** is generally preferred over inheritance for flexibility.",
+        "de": "**Vererbung** = IST-EIN-Beziehung. Eine Unterklasse IST EIN Typ des Elternteils.\n**Komposition** = HAT-EIN-Beziehung. Eine Klasse ENTHÄLT eine andere Klasse als Komponente.\n\n```python\n# Vererbung (ist-ein)\nclass Hund(Tier): pass\n\n# Komposition (hat-ein)\nclass Auto:\n    def __init__(self):\n        self.motor = Motor()  # Auto HAT EINEN Motor\n```\n**Komposition** wird allgemein gegenüber Vererbung bevorzugt."
+      }
+    },
+    {
+      "id": 10,
+      "module": 1,
+      "tag": "exam",
+      "q": {
+        "en": "🎓 EXAM: What is true about composition? [Choose 1]\nA. Extends class capabilities by modifying existing components\nB. Allows a class to be projected as a container of different classes\nC. Promotes code reusability while inheritance promotes encapsulation\nD. Cannot be used together with inheritance",
+        "de": "🎓 PRÜFUNG: Was trifft auf Komposition zu? [1 Antwort]\nA. Erweitert Klassenfähigkeiten durch Modifikation bestehender Komponenten\nB. Erlaubt einer Klasse, als Container verschiedener Klassen zu fungieren\nC. Fördert Wiederverwendbarkeit, während Vererbung Kapselung fördert\nD. Kann nicht zusammen mit Vererbung verwendet werden"
+      },
+      "a": {
+        "en": "✅ **Answer: B**\n\nComposition allows a class to be projected as a container of different classes (HAS-A relationship). It CAN be combined with inheritance (D is wrong). Option C has the concepts reversed – inheritance promotes reusability.",
+        "de": "✅ **Antwort: B**\n\nKomposition ermöglicht es einer Klasse, als Container verschiedener Klassen zu fungieren (HAT-EIN-Beziehung). Sie KANN mit Vererbung kombiniert werden (D ist falsch). Option C vertauscht die Konzepte – Vererbung fördert Wiederverwendbarkeit."
+      }
+    },
+    {
+      "id": 11,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is exception chaining? What is the difference between implicit and explicit chaining?",
+        "de": "Was ist Exception Chaining? Was ist der Unterschied zwischen impliziter und expliziter Verkettung?"
+      },
+      "a": {
+        "en": "Exception chaining links exceptions to preserve context.\n\n**Implicit chaining** – happens automatically when an exception occurs inside an `except` block. The original exception is stored in `__context__`.\n\n**Explicit chaining** – uses `raise X from Y`. The cause is stored in `__cause__`.\n```python\ntry:\n    int('abc')\nexcept ValueError as e:\n    raise RuntimeError('Conversion failed') from e  # explicit\n```",
+        "de": "Exception Chaining verknüpft Ausnahmen, um den Kontext zu bewahren.\n\n**Implizite Verkettung** – passiert automatisch, wenn eine Ausnahme in einem `except`-Block auftritt. Die ursprüngliche Ausnahme wird in `__context__` gespeichert.\n\n**Explizite Verkettung** – verwendet `raise X from Y`. Die Ursache wird in `__cause__` gespeichert.\n```python\ntry:\n    int('abc')\nexcept ValueError as e:\n    raise RuntimeError('Konvertierung fehlgeschlagen') from e\n```"
+      }
+    },
+    {
+      "id": 12,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is the `@property` decorator and how does it implement encapsulation?",
+        "de": "Was ist der `@property`-Dekorator und wie implementiert er Kapselung?"
+      },
+      "a": {
+        "en": "The `@property` decorator creates a managed attribute (getter). Combined with `.setter` and `.deleter` it provides controlled access to private attributes.\n```python\nclass Temperature:\n    def __init__(self):\n        self._celsius = 0\n    \n    @property\n    def celsius(self):\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, value):\n        if value < -273.15:\n            raise ValueError('Below absolute zero!')\n        self._celsius = value\n```",
+        "de": "Der `@property`-Dekorator erstellt ein verwaltetes Attribut (Getter). Kombiniert mit `.setter` und `.deleter` bietet er kontrollierten Zugriff auf private Attribute.\n```python\nclass Temperatur:\n    def __init__(self):\n        self._celsius = 0\n    \n    @property\n    def celsius(self):\n        return self._celsius\n    \n    @celsius.setter\n    def celsius(self, wert):\n        if wert < -273.15:\n            raise ValueError('Unter absolutem Nullpunkt!')\n        self._celsius = wert\n```"
+      }
+    },
+    {
+      "id": 13,
+      "module": 1,
+      "tag": "code",
+      "q": {
+        "en": "What is the difference between shallow copy and deep copy?",
+        "de": "Was ist der Unterschied zwischen shallow copy und deep copy?"
+      },
+      "a": {
+        "en": "**Shallow copy** (`copy.copy()`): creates a new object but references to nested objects remain shared.\n**Deep copy** (`copy.deepcopy()`): creates a fully independent copy including all nested objects.\n```python\nimport copy\norig = [[1, 2], [3, 4]]\nshallow = copy.copy(orig)\ndeep = copy.deepcopy(orig)\n\nshallow[0].append(99)  # affects orig!\ndeep[0].append(99)    # doesn't affect orig\n```",
+        "de": "**Flache Kopie** (`copy.copy()`): erstellt ein neues Objekt, aber Referenzen auf verschachtelte Objekte bleiben geteilt.\n**Tiefe Kopie** (`copy.deepcopy()`): erstellt eine vollständig unabhängige Kopie inkl. aller verschachtelten Objekte.\n```python\nimport copy\norig = [[1, 2], [3, 4]]\nflach = copy.copy(orig)\ntief = copy.deepcopy(orig)\n\nflach[0].append(99)  # beeinflusst orig!\ntief[0].append(99)   # beeinflusst orig nicht\n```"
+      }
+    },
+    {
+      "id": 14,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is object serialization? How do `pickle` and `shelve` differ?",
+        "de": "Was ist Objektserialisierung? Wie unterscheiden sich `pickle` und `shelve`?"
+      },
+      "a": {
+        "en": "**Serialization** = converting an object to a byte stream for storage or transmission.\n\n**pickle**: Low-level module. Serialize/deserialize Python objects to/from bytes or file.\n```python\nimport pickle\nwith open('data.pkl', 'wb') as f:\n    pickle.dump(obj, f)\n```\n**shelve**: High-level wrapper over pickle. Provides a dictionary-like persistent storage.\n```python\nimport shelve\nwith shelve.open('mydb') as db:\n    db['key'] = obj  # auto-pickled\n```",
+        "de": "**Serialisierung** = Konvertierung eines Objekts in einen Byte-Stream zur Speicherung oder Übertragung.\n\n**pickle**: Low-Level-Modul. Serialisiert/deserialisiert Python-Objekte zu/von Bytes oder Datei.\n```python\nimport pickle\nwith open('daten.pkl', 'wb') as f:\n    pickle.dump(obj, f)\n```\n**shelve**: High-Level-Wrapper über pickle. Bietet wörterbuchähnliche persistente Speicherung.\n```python\nimport shelve\nwith shelve.open('meindb') as db:\n    db['schluessel'] = obj  # wird auto-gepickelt\n```"
+      }
+    },
+    {
+      "id": 15,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is a metaclass in Python?",
+        "de": "Was ist eine Metaklasse in Python?"
+      },
+      "a": {
+        "en": "A metaclass is a **class of a class**. It defines how a class itself is created and behaves. `type` is the default metaclass for all Python classes.\n\n```python\nclass Meta(type):\n    def __new__(mcs, name, bases, namespace):\n        # Custom class creation logic\n        return super().__new__(mcs, name, bases, namespace)\n\nclass MyClass(metaclass=Meta):\n    pass\n```\nUse cases: ORM frameworks, API registration, enforcing interfaces.",
+        "de": "Eine Metaklasse ist eine **Klasse einer Klasse**. Sie definiert, wie eine Klasse selbst erstellt und verhält. `type` ist die Standard-Metaklasse für alle Python-Klassen.\n\n```python\nclass Meta(type):\n    def __new__(mcs, name, bases, namespace):\n        # Benutzerdefinierte Klassenerstellungslogik\n        return super().__new__(mcs, name, bases, namespace)\n\nclass MeineKlasse(metaclass=Meta):\n    pass\n```\nAnwendungsfälle: ORM-Frameworks, API-Registrierung, Interface-Durchsetzung."
+      }
+    },
+    {
+      "id": 16,
+      "module": 1,
+      "tag": "code",
+      "q": {
+        "en": "What are `__slots__` and when should you use them?",
+        "de": "Was sind `__slots__` und wann sollte man sie verwenden?"
+      },
+      "a": {
+        "en": "`__slots__` restricts the attributes an instance can have, replacing the default `__dict__` with a fixed-size structure. Benefits: less memory, faster attribute access.\n```python\nclass Point:\n    __slots__ = ('x', 'y')  # only x and y allowed\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n# p.z = 1  → AttributeError!\n```\nUse when creating many instances with a fixed set of attributes.",
+        "de": "`__slots__` schränkt die Attribute ein, die eine Instanz haben kann. Ersetzt das Standard-`__dict__` durch eine Festgrößen-Struktur. Vorteile: weniger Speicher, schnellerer Attributzugriff.\n```python\nclass Punkt:\n    __slots__ = ('x', 'y')  # nur x und y erlaubt\n    def __init__(self, x, y):\n        self.x = x\n        self.y = y\n# p.z = 1  → AttributeError!\n```\nVerwendung bei vielen Instanzen mit fester Attributmenge."
+      }
+    },
+    {
+      "id": 17,
+      "module": 1,
+      "tag": "exam",
+      "q": {
+        "en": "🎓 EXAM: Which OOP pillar does the following code represent?\n```python\nfor shape in [Circle(), Square(), Triangle()]:\n    print(shape.area())\n```\nA. Serialization  B. Inheritance  C. Encapsulation  D. Polymorphism",
+        "de": "🎓 PRÜFUNG: Welche OOP-Säule repräsentiert folgender Code?\n```python\nfor form in [Kreis(), Quadrat(), Dreieck()]:\n    print(form.flaeche())\n```\nA. Serialisierung  B. Vererbung  C. Kapselung  D. Polymorphismus"
+      },
+      "a": {
+        "en": "✅ **Answer: D – Polymorphism**\n\nThe same method `area()` is called on different objects. Each object responds according to its own type/class implementation. This is the essence of polymorphism: same interface, different behaviors.",
+        "de": "✅ **Antwort: D – Polymorphismus**\n\nDieselbe Methode `flaeche()` wird auf verschiedenen Objekten aufgerufen. Jedes Objekt antwortet gemäß seiner eigenen Typ-/Klassenimplementierung. Das ist die Essenz von Polymorphismus: gleiches Interface, verschiedene Verhaltensweisen."
+      }
+    },
+    {
+      "id": 18,
+      "module": 1,
+      "tag": "code",
+      "q": {
+        "en": "How does `super()` work in Python and why is it important?",
+        "de": "Wie funktioniert `super()` in Python und warum ist es wichtig?"
+      },
+      "a": {
+        "en": "`super()` returns a proxy object that delegates method calls to the parent class. It respects MRO, which is crucial for cooperative multiple inheritance.\n```python\nclass Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def __init__(self, name, breed):\n        super().__init__(name)  # calls Animal.__init__\n        self.breed = breed\n```\nWithout `super()`, parent `__init__` won't be called, possibly leaving the object incomplete.",
+        "de": "`super()` gibt ein Proxy-Objekt zurück, das Methodenaufrufe an die Elternklasse delegiert. Es respektiert die MRO, was für kooperative Mehrfachvererbung wichtig ist.\n```python\nclass Tier:\n    def __init__(self, name):\n        self.name = name\n\nclass Hund(Tier):\n    def __init__(self, name, rasse):\n        super().__init__(name)  # ruft Tier.__init__ auf\n        self.rasse = rasse\n```\nOhne `super()` wird der Eltern-`__init__` nicht aufgerufen, was das Objekt unvollständig lässt."
+      }
+    },
+    {
+      "id": 19,
+      "module": 1,
+      "tag": "tip",
+      "q": {
+        "en": "What is the name mangling convention in Python for private attributes?",
+        "de": "Was ist die Name-Mangling-Konvention für private Attribute in Python?"
+      },
+      "a": {
+        "en": "**Single underscore** `_name`: convention for 'protected' – not enforced, just a signal.\n**Double underscore** `__name`: triggers **name mangling** – Python renames it to `_ClassName__name` internally. This prevents accidental override in subclasses.\n```python\nclass Vault:\n    def __init__(self):\n        self.__secret = 42  # becomes _Vault__secret\n\nv = Vault()\n# v.__secret  → AttributeError\n# v._Vault__secret  → 42  (still accessible)\n```",
+        "de": "**Einfacher Unterstrich** `_name`: Konvention für 'protected' – nicht durchgesetzt, nur ein Signal.\n**Doppelter Unterstrich** `__name`: löst **Name Mangling** aus – Python benennt es intern in `_KlassenName__name` um. Verhindert versehentliche Überschreibung in Unterklassen.\n```python\nclass Tresor:\n    def __init__(self):\n        self.__geheimnis = 42  # wird zu _Tresor__geheimnis\n\nv = Tresor()\n# v.__geheimnis  → AttributeError\n# v._Tresor__geheimnis  → 42  (trotzdem zugänglich)\n```"
+      }
+    },
+    {
+      "id": 20,
+      "module": 1,
+      "tag": "concept",
+      "q": {
+        "en": "What is a generator and how does it differ from a regular function?",
+        "de": "Was ist ein Generator und wie unterscheidet er sich von einer normalen Funktion?"
+      },
+      "a": {
+        "en": "A generator is a function that uses `yield` instead of `return`. It produces values lazily (one at a time) and maintains its state between calls.\n```python\ndef countdown(n):\n    while n > 0:\n        yield n  # pauses here, returns n\n        n -= 1\n\nfor i in countdown(3):\n    print(i)  # prints 3, 2, 1\n```\nBenefits: memory-efficient (doesn't store all values), useful for infinite sequences.",
+        "de": "Ein Generator ist eine Funktion, die `yield` statt `return` verwendet. Er produziert Werte träge (eines nach dem anderen) und behält seinen Zustand zwischen Aufrufen.\n```python\ndef countdown(n):\n    while n > 0:\n        yield n  # pausiert hier, gibt n zurück\n        n -= 1\n\nfor i in countdown(3):\n    print(i)  # gibt 3, 2, 1 aus\n```\nVorteile: speichereffizient, nützlich für unendliche Sequenzen."
+      }
+    },
+    {
+      "id": 21,
+      "module": 2,
+      "tag": "concept",
+      "q": {
+        "en": "What is a PEP and what does PEP stand for?",
+        "de": "Was ist ein PEP und wofür steht PEP?"
+      },
+      "a": {
+        "en": "**PEP = Python Enhancement Proposal**\n\nA PEP is a design document providing information to the Python community or describing a new feature, process, or environment. PEPs serve as the primary mechanism for proposing major new features, collecting community input, and documenting design decisions.\n\nKey PEPs:\n- **PEP 1** – Purpose and Guidelines\n- **PEP 8** – Style Guide\n- **PEP 20** – Zen of Python\n- **PEP 257** – Docstring Conventions",
+        "de": "**PEP = Python Enhancement Proposal** (Python-Verbesserungsvorschlag)\n\nEin PEP ist ein Designdokument, das der Python-Community Informationen liefert oder ein neues Feature, einen Prozess oder eine Umgebung beschreibt. PEPs sind der Hauptmechanismus für das Vorschlagen neuer Features.\n\nWichtige PEPs:\n- **PEP 1** – Zweck und Richtlinien\n- **PEP 8** – Style Guide\n- **PEP 20** – Zen of Python\n- **PEP 257** – Docstring-Konventionen"
+      }
+    },
+    {
+      "id": 22,
+      "module": 2,
+      "tag": "concept",
+      "q": {
+        "en": "What are the 3 types of PEPs?",
+        "de": "Was sind die 3 Typen von PEPs?"
+      },
+      "a": {
+        "en": "1. **Standards Track PEP**: describes a new language feature or implementation change.\n2. **Informational PEP**: describes design issues, guidelines, or general information – no new feature.\n3. **Process PEP**: describes a process around Python (how decisions are made, etc.).\n\nPEP 8 and PEP 257 are **Informational** PEPs.",
+        "de": "1. **Standards Track PEP**: beschreibt ein neues Sprachfeature oder Implementierungsänderung.\n2. **Informational PEP**: beschreibt Designprobleme, Richtlinien oder allgemeine Informationen – kein neues Feature.\n3. **Process PEP**: beschreibt einen Prozess rund um Python (wie Entscheidungen getroffen werden, etc.).\n\nPEP 8 und PEP 257 sind **Informational** PEPs."
+      }
+    },
+    {
+      "id": 23,
+      "module": 2,
+      "tag": "concept",
+      "q": {
+        "en": "What are the key rules of PEP 8 for indentation and line length?",
+        "de": "Was sind die Schlüsselregeln von PEP 8 für Einrückung und Zeilenlänge?"
+      },
+      "a": {
+        "en": "**Indentation**: Use **4 spaces** per indentation level. Never use tabs.\n**Line length**: Maximum **79 characters** for code, **72** for docstrings/comments.\n**Blank lines**: 2 blank lines between top-level definitions, 1 blank line between methods.\n\n```python\n# PEP 8 compliant:\ndef my_function(\n        arg1,  # 4-space indent for continuation\n        arg2):\n    return arg1 + arg2\n```",
+        "de": "**Einrückung**: Verwende **4 Leerzeichen** pro Einrückungsebene. Niemals Tabs.\n**Zeilenlänge**: Maximum **79 Zeichen** für Code, **72** für Docstrings/Kommentare.\n**Leerzeilen**: 2 Leerzeilen zwischen Top-Level-Definitionen, 1 zwischen Methoden.\n\n```python\n# PEP 8 konform:\ndef meine_funktion(\n        arg1,  # 4-Leerzeichen Einrückung für Fortsetzung\n        arg2):\n    return arg1 + arg2\n```"
+      }
+    },
+    {
+      "id": 24,
+      "module": 2,
+      "tag": "code",
+      "q": {
+        "en": "What are PEP 8 naming conventions?",
+        "de": "Was sind die PEP 8 Namenskonventionen?"
+      },
+      "a": {
+        "en": "| Item | Convention | Example |\n|---|---|---|\n| Variables | `snake_case` | `my_variable` |\n| Functions | `snake_case` | `compute_area()` |\n| Classes | `CamelCase` | `MyClass` |\n| Constants | `UPPER_SNAKE` | `MAX_VALUE` |\n| Modules | `snake_case` | `my_module.py` |\n| Private | `_leading_underscore` | `_internal` |\n| Name-mangled | `__double` | `__secret` |\n| Dunder | `__double_both__` | `__init__` |",
+        "de": "| Element | Konvention | Beispiel |\n|---|---|---|\n| Variablen | `snake_case` | `meine_variable` |\n| Funktionen | `snake_case` | `berechne_flaeche()` |\n| Klassen | `CamelCase` | `MeineKlasse` |\n| Konstanten | `UPPER_SNAKE` | `MAX_WERT` |\n| Module | `snake_case` | `mein_modul.py` |\n| Privat | `_fuehrender_us` | `_intern` |\n| Name-mangled | `__doppelt` | `__geheimnis` |\n| Dunder | `__doppelt_beide__` | `__init__` |"
+      }
+    },
+    {
+      "id": 25,
+      "module": 2,
+      "tag": "concept",
+      "q": {
+        "en": "Recite the Zen of Python (PEP 20) – at least 5 principles.",
+        "de": "Rezitiere den Zen of Python (PEP 20) – mindestens 5 Prinzipien."
+      },
+      "a": {
+        "en": "```\nimport this\n```\nKey principles:\n1. Beautiful is better than ugly.\n2. Explicit is better than implicit.\n3. Simple is better than complex.\n4. Complex is better than complicated.\n5. Readability counts.\n6. Errors should never pass silently.\n7. There should be one obvious way to do it.\n8. Now is better than never.\n9. If implementation is hard to explain, it's a bad idea.\n10. Namespaces are one honking great idea!",
+        "de": "```\nimport this\n```\nSchlüsselprinzipien:\n1. Schön ist besser als hässlich.\n2. Explizit ist besser als implizit.\n3. Einfach ist besser als komplex.\n4. Komplex ist besser als kompliziert.\n5. Lesbarkeit zählt.\n6. Fehler sollten niemals stillschweigend übergangen werden.\n7. Es sollte einen offensichtlichen Weg geben, es zu tun.\n8. Jetzt ist besser als nie.\n9. Wenn die Implementierung schwer zu erklären ist, ist es eine schlechte Idee.\n10. Namensräume sind eine großartige Idee!"
+      }
+    },
+    {
+      "id": 26,
+      "module": 2,
+      "tag": "code",
+      "q": {
+        "en": "What are the PEP 257 conventions for docstrings?",
+        "de": "Was sind die PEP 257 Konventionen für Docstrings?"
+      },
+      "a": {
+        "en": "**One-liner** (simple functions):\n```python\ndef add(a, b):\n    \"\"\"Return the sum of a and b.\"\"\"\n    return a + b\n```\n**Multi-line** (complex functions):\n```python\ndef fetch_data(url, timeout=30):\n    \"\"\"Fetch data from a URL.\n\n    Args:\n        url: The URL to fetch from.\n        timeout: Seconds to wait (default 30).\n\n    Returns:\n        The response data as a string.\n    \"\"\"\n```\nRules: Use triple double-quotes. First line is a summary. Closing `\"\"\"` on its own line.",
+        "de": "**Einzeiler** (einfache Funktionen):\n```python\ndef addiere(a, b):\n    \"\"\"Gibt die Summe von a und b zurück.\"\"\"\n    return a + b\n```\n**Mehrzeilig** (komplexe Funktionen):\n```python\ndef hole_daten(url, timeout=30):\n    \"\"\"Holt Daten von einer URL.\n\n    Args:\n        url: Die URL zum Abrufen.\n        timeout: Wartezeit in Sekunden (Standard 30).\n\n    Returns:\n        Die Antwortdaten als String.\n    \"\"\"\n```\nRegeln: Dreifache Anführungszeichen. Erste Zeile ist Zusammenfassung. Schließendes `\"\"\"` auf eigener Zeile."
+      }
+    },
+    {
+      "id": 27,
+      "module": 2,
+      "tag": "tip",
+      "q": {
+        "en": "What is the difference between `#` comments and docstrings in Python?",
+        "de": "Was ist der Unterschied zwischen `#`-Kommentaren und Docstrings in Python?"
+      },
+      "a": {
+        "en": "**`#` comments**: Inline explanations for code. Ignored by the interpreter. Not accessible at runtime.\n```python\nx = 42  # The answer to everything\n```\n**Docstrings** (`\"\"\"...\"\"\"`): Documentation for modules, classes, functions. Accessible via `__doc__` attribute and `help()` at runtime.\n```python\ndef greet():\n    \"\"\"Greet the user.\"\"\"\n    pass\nprint(greet.__doc__)  # 'Greet the user.'\n```",
+        "de": "**`#`-Kommentare**: Inline-Erklärungen für Code. Werden vom Interpreter ignoriert. Nicht zur Laufzeit zugänglich.\n```python\nx = 42  # Die Antwort auf alles\n```\n**Docstrings** (`\"\"\"...\"\"\"`): Dokumentation für Module, Klassen, Funktionen. Über `__doc__`-Attribut und `help()` zur Laufzeit zugänglich.\n```python\ndef begruesse():\n    \"\"\"Begrüsst den Benutzer.\"\"\"\n    pass\nprint(begruesse.__doc__)  # 'Begrüsst den Benutzer.'\n```"
+      }
+    },
+    {
+      "id": 28,
+      "module": 2,
+      "tag": "exam",
+      "q": {
+        "en": "🎓 EXAM: Which PEP defines the Style Guide for Python Code?\nA. PEP 1  B. PEP 8  C. PEP 20  D. PEP 257",
+        "de": "🎓 PRÜFUNG: Welcher PEP definiert den Style Guide für Python Code?\nA. PEP 1  B. PEP 8  C. PEP 20  D. PEP 257"
+      },
+      "a": {
+        "en": "✅ **Answer: B – PEP 8**\n\n- PEP 1: Purpose and Guidelines for PEPs themselves\n- **PEP 8**: Style Guide for Python Code ✓\n- PEP 20: The Zen of Python (`import this`)\n- PEP 257: Docstring Conventions",
+        "de": "✅ **Antwort: B – PEP 8**\n\n- PEP 1: Zweck und Richtlinien für PEPs selbst\n- **PEP 8**: Style Guide für Python Code ✓\n- PEP 20: Der Zen of Python (`import this`)\n- PEP 257: Docstring-Konventionen"
+      }
+    },
+    {
+      "id": 29,
+      "module": 2,
+      "tag": "tip",
+      "q": {
+        "en": "What are type hints in Python and which PEP introduced them?",
+        "de": "Was sind Type Hints in Python und welcher PEP hat sie eingeführt?"
+      },
+      "a": {
+        "en": "**PEP 484** introduced type hints. They are optional annotations that document expected types.\n```python\ndef greet(name: str) -> str:\n    return f'Hello, {name}'\n\nfrom typing import List, Optional\ndef process(items: List[int], limit: Optional[int] = None) -> bool:\n    ...\n```\nNote: Python does NOT enforce type hints at runtime. Use tools like `mypy` for static type checking.",
+        "de": "**PEP 484** hat Type Hints eingeführt. Sie sind optionale Annotationen, die erwartete Typen dokumentieren.\n```python\ndef begruesse(name: str) -> str:\n    return f'Hallo, {name}'\n\nfrom typing import List, Optional\ndef verarbeite(elemente: List[int], limit: Optional[int] = None) -> bool:\n    ...\n```\nHinweis: Python erzwingt Type Hints NICHT zur Laufzeit. Verwende Tools wie `mypy` für statische Typprüfung."
+      }
+    },
+    {
+      "id": 30,
+      "module": 2,
+      "tag": "code",
+      "q": {
+        "en": "What is the `__all__` variable in a module and why is it used?",
+        "de": "Was ist die `__all__`-Variable in einem Modul und warum wird sie verwendet?"
+      },
+      "a": {
+        "en": "`__all__` is a list that defines the public API of a module. It controls what is exported when `from module import *` is used.\n```python\n# mymodule.py\n__all__ = ['public_func', 'PublicClass']\n\ndef public_func(): pass\nclass PublicClass: pass\ndef _private_func(): pass  # not exported\n```\nBest practice: always define `__all__` to make module boundaries explicit.",
+        "de": "`__all__` ist eine Liste, die die öffentliche API eines Moduls definiert. Sie steuert, was bei `from modul import *` exportiert wird.\n```python\n# meinmodul.py\n__all__ = ['oeffentliche_funktion', 'OeffentlicheKlasse']\n\ndef oeffentliche_funktion(): pass\nclass OeffentlicheKlasse: pass\ndef _private_funktion(): pass  # nicht exportiert\n```\nBest Practice: Immer `__all__` definieren, um Modulgrenzen explizit zu machen."
+      }
+    },
+    {
+      "id": 31,
+      "module": 3,
+      "tag": "concept",
+      "q": {
+        "en": "What is tkinter and how do you create a basic window?",
+        "de": "Was ist tkinter und wie erstellt man ein einfaches Fenster?"
+      },
+      "a": {
+        "en": "**tkinter** is Python's standard GUI library, a wrapper around the Tk toolkit. It's cross-platform (Windows, macOS, Linux).\n```python\nimport tkinter as tk\n\nroot = tk.Tk()          # create main window\nroot.title('My App')    # set title\nroot.geometry('400x300') # set size\n\n# ... add widgets ...\n\nroot.mainloop()  # start event loop\n```\n`mainloop()` is critical – it keeps the window open and processes events.",
+        "de": "**tkinter** ist Pythons Standard-GUI-Bibliothek, ein Wrapper um das Tk-Toolkit. Es ist plattformübergreifend (Windows, macOS, Linux).\n```python\nimport tkinter as tk\n\nroot = tk.Tk()             # Hauptfenster erstellen\nroot.title('Meine App')    # Titel setzen\nroot.geometry('400x300')   # Grösse setzen\n\n# ... Widgets hinzufügen ...\n\nroot.mainloop()  # Event-Loop starten\n```\n`mainloop()` ist entscheidend – es hält das Fenster offen und verarbeitet Events."
+      }
+    },
+    {
+      "id": 32,
+      "module": 3,
+      "tag": "concept",
+      "q": {
+        "en": "What are the 3 geometry managers in tkinter?",
+        "de": "Was sind die 3 Geometry Manager in tkinter?"
+      },
+      "a": {
+        "en": "1. **pack()**: Simple, stacks widgets in a direction (`side=LEFT/RIGHT/TOP/BOTTOM`). Good for simple layouts.\n```python\nbtn.pack(side=tk.LEFT, padx=5)\n```\n2. **grid()**: Places widgets in a table (rows/columns). Best for form-like layouts.\n```python\nlabel.grid(row=0, column=0, sticky='w')\n```\n3. **place()**: Absolute positioning with x/y coordinates. Precise but not responsive.\n```python\nbtn.place(x=100, y=50)\n```\n⚠️ Never mix pack() and grid() in the same container!",
+        "de": "1. **pack()**: Einfach, stapelt Widgets in einer Richtung (`side=LEFT/RIGHT/TOP/BOTTOM`). Gut für einfache Layouts.\n```python\nbtn.pack(side=tk.LEFT, padx=5)\n```\n2. **grid()**: Platziert Widgets in einer Tabelle (Zeilen/Spalten). Bestes für formularähnliche Layouts.\n```python\nlabel.grid(row=0, column=0, sticky='w')\n```\n3. **place()**: Absolute Positionierung mit x/y-Koordinaten. Präzise, aber nicht responsiv.\n```python\nbtn.place(x=100, y=50)\n```\n⚠️ Niemals pack() und grid() im selben Container mischen!"
+      }
+    },
+    {
+      "id": 33,
+      "module": 3,
+      "tag": "code",
+      "q": {
+        "en": "List 8 common tkinter widgets and their purpose.",
+        "de": "Nenne 8 häufige tkinter Widgets und ihren Zweck."
+      },
+      "a": {
+        "en": "| Widget | Purpose |\n|---|---|\n| `Label` | Display text or image |\n| `Button` | Clickable button |\n| `Entry` | Single-line text input |\n| `Text` | Multi-line text input |\n| `Frame` | Container for grouping |\n| `Canvas` | Drawing surface |\n| `Checkbutton` | Toggle checkbox |\n| `Radiobutton` | Mutually exclusive option |\n| `Listbox` | Scrollable list |\n| `Scale` | Slider/range input |\n| `Combobox` (ttk) | Dropdown selector |",
+        "de": "| Widget | Zweck |\n|---|---|\n| `Label` | Text oder Bild anzeigen |\n| `Button` | Klickbarer Button |\n| `Entry` | Einzeilige Texteingabe |\n| `Text` | Mehrzeilige Texteingabe |\n| `Frame` | Container zum Gruppieren |\n| `Canvas` | Zeichenfläche |\n| `Checkbutton` | Checkbox zum Umschalten |\n| `Radiobutton` | Gegenseitig ausschliessende Option |\n| `Listbox` | Scrollbare Liste |\n| `Scale` | Schieberegler |\n| `Combobox` (ttk) | Dropdown-Auswahl |"
+      }
+    },
+    {
+      "id": 34,
+      "module": 3,
+      "tag": "concept",
+      "q": {
+        "en": "What are tkinter variable classes (StringVar, IntVar etc.) and why use them?",
+        "de": "Was sind tkinter Variablen-Klassen (StringVar, IntVar etc.) und warum werden sie verwendet?"
+      },
+      "a": {
+        "en": "Tkinter variable classes create **observable variables** that automatically update linked widgets when changed.\n\n| Class | For type |\n|---|---|\n| `StringVar` | str |\n| `IntVar` | int |\n| `DoubleVar` | float |\n| `BooleanVar` | bool |\n\n```python\nvar = tk.StringVar()\nvar.set('Hello')\nentry = tk.Entry(root, textvariable=var)\n# Entry automatically shows 'Hello'\n# and var updates when user types\nprint(var.get())  # reads current value\n```",
+        "de": "Tkinter Variablen-Klassen erstellen **beobachtbare Variablen**, die verknüpfte Widgets automatisch aktualisieren.\n\n| Klasse | Für Typ |\n|---|---|\n| `StringVar` | str |\n| `IntVar` | int |\n| `DoubleVar` | float |\n| `BooleanVar` | bool |\n\n```python\nvar = tk.StringVar()\nvar.set('Hallo')\neingabe = tk.Entry(root, textvariable=var)\n# Entry zeigt automatisch 'Hallo'\n# und var aktualisiert sich beim Tippen\nprint(var.get())  # liest aktuellen Wert\n```"
+      }
+    },
+    {
+      "id": 35,
+      "module": 3,
+      "tag": "code",
+      "q": {
+        "en": "How does event binding work in tkinter? Show an example.",
+        "de": "Wie funktioniert Event-Binding in tkinter? Zeige ein Beispiel."
+      },
+      "a": {
+        "en": "Use `.bind(event, handler)` to bind an event to a callback function.\n```python\ndef on_click(event):\n    print(f'Clicked at {event.x}, {event.y}')\n\nroot.bind('<Button-1>', on_click)   # left mouse click\nroot.bind('<KeyPress-Return>', on_enter)  # Enter key\nroot.bind('<Motion>', on_mouse_move)  # mouse movement\n\n# Unbind\nroot.unbind('<Button-1>')\n# Unbind all events of all types from all widgets:\nroot.unbind_all('<Button-1>')\n```\nEvent string format: `<Modifier-Type-Detail>`",
+        "de": "Verwende `.bind(event, handler)`, um ein Event an eine Callback-Funktion zu binden.\n```python\ndef bei_klick(event):\n    print(f'Geklickt bei {event.x}, {event.y}')\n\nroot.bind('<Button-1>', bei_klick)   # linke Maustaste\nroot.bind('<KeyPress-Return>', bei_enter)  # Enter-Taste\nroot.bind('<Motion>', bei_mausbewegung)  # Mausbewegung\n\n# Binding entfernen\nroot.unbind('<Button-1>')\n# Alle Events aller Typen von allen Widgets entfernen:\nroot.unbind_all('<Button-1>')\n```\nEvent-Format: `<Modifier-Typ-Detail>`"
+      }
+    },
+    {
+      "id": 36,
+      "module": 3,
+      "tag": "exam",
+      "q": {
+        "en": "🎓 EXAM: What is true about the `unbind_all()` method? (Select TWO)\nA. It can be invoked from any widget\nB. It can only be invoked from the main window widget\nC. It is parameterless\nD. It causes all widgets to disappear",
+        "de": "🎓 PRÜFUNG: Was trifft auf die `unbind_all()`-Methode zu? (2 Antworten)\nA. Kann von jedem Widget aufgerufen werden\nB. Kann nur vom Hauptfenster-Widget aufgerufen werden\nC. Sie hat keine Parameter\nD. Sie lässt alle Widgets verschwinden"
+      },
+      "a": {
+        "en": "✅ **Answer: A and C**\n\n- **A ✓**: `unbind_all()` is a method of widget objects and can be called on ANY widget.\n- **B ✗**: Not restricted to the main window.\n- **C ✓**: `unbind_all()` takes no parameters (except optionally the event sequence).\n- **D ✗**: It only removes event bindings, widgets remain visible.",
+        "de": "✅ **Antwort: A und C**\n\n- **A ✓**: `unbind_all()` ist eine Methode von Widget-Objekten und kann von JEDEM Widget aufgerufen werden.\n- **B ✗**: Nicht auf das Hauptfenster beschränkt.\n- **C ✓**: `unbind_all()` hat keine Parameter (ausser optional die Event-Sequenz).\n- **D ✗**: Es entfernt nur Event-Bindings, Widgets bleiben sichtbar."
+      }
+    },
+    {
+      "id": 37,
+      "module": 3,
+      "tag": "concept",
+      "q": {
+        "en": "What is event-driven programming and how does tkinter implement it?",
+        "de": "Was ist ereignisgesteuertes Programmieren und wie implementiert es tkinter?"
+      },
+      "a": {
+        "en": "**Event-driven programming**: The program flow is determined by user actions (events) rather than sequential code execution. The program waits for events and responds.\n\ntkinter implements this via the **event loop** (`mainloop()`):\n1. Application starts, sets up widgets and bindings\n2. `mainloop()` starts – enters an infinite loop\n3. User performs an action → event is generated\n4. tkinter dispatches event to the appropriate handler\n5. Handler runs, then loop continues waiting",
+        "de": "**Ereignisgesteuertes Programmieren**: Der Programmfluss wird durch Benutzeraktionen (Events) bestimmt, nicht durch sequentielle Codeausführung. Das Programm wartet auf Events und antwortet.\n\ntkinter implementiert dies über den **Event-Loop** (`mainloop()`):\n1. Anwendung startet, richtet Widgets und Bindings ein\n2. `mainloop()` startet – tritt in eine Endlosschleife\n3. Benutzer führt Aktion aus → Event wird generiert\n4. tkinter sendet Event an den entsprechenden Handler\n5. Handler läuft, dann wartet die Schleife weiter"
+      }
+    },
+    {
+      "id": 38,
+      "module": 3,
+      "tag": "code",
+      "q": {
+        "en": "How do you use the tkinter Canvas widget? What can you draw?",
+        "de": "Wie verwendet man das tkinter Canvas Widget? Was kann man zeichnen?"
+      },
+      "a": {
+        "en": "Canvas is a 2D drawing surface.\n```python\ncanvas = tk.Canvas(root, width=400, height=300, bg='white')\ncanvas.pack()\n\n# Drawing methods:\ncanvas.create_line(0, 0, 200, 100, fill='blue', width=2)\ncanvas.create_rectangle(50, 50, 200, 150, fill='red')\ncanvas.create_oval(50, 50, 200, 150, fill='green')\ncanvas.create_text(100, 100, text='Hello', font=('Arial', 14))\ncanvas.create_image(0, 0, image=photo, anchor='nw')\n\n# Move/delete items:\nitem_id = canvas.create_rectangle(...)\ncanvas.move(item_id, dx, dy)\ncanvas.delete(item_id)  # or 'all'\n```",
+        "de": "Canvas ist eine 2D-Zeichenfläche.\n```python\nleinwand = tk.Canvas(root, width=400, height=300, bg='white')\nleinwand.pack()\n\n# Zeichenmethoden:\nleinwand.create_line(0, 0, 200, 100, fill='blue', width=2)\nleinwand.create_rectangle(50, 50, 200, 150, fill='red')\nleinwand.create_oval(50, 50, 200, 150, fill='green')\nleinwand.create_text(100, 100, text='Hallo', font=('Arial', 14))\nleinwand.create_image(0, 0, image=foto, anchor='nw')\n\n# Items bewegen/löschen:\nelement_id = leinwand.create_rectangle(...)\nleinwand.move(element_id, dx, dy)\nleinwand.delete(element_id)  # oder 'all'\n```"
+      }
+    },
+    {
+      "id": 39,
+      "module": 3,
+      "tag": "concept",
+      "q": {
+        "en": "What are tkinter dialog boxes? Name the main types.",
+        "de": "Was sind tkinter Dialog-Boxen? Nenne die Haupttypen."
+      },
+      "a": {
+        "en": "Dialogs are pre-built popup windows.\n\n**messagebox** (from `tkinter.messagebox`):\n```python\nfrom tkinter import messagebox\nmessagebox.showinfo('Title', 'Message')\nmessagebox.showwarning('Warn', 'Warning!')\nmessagebox.showerror('Error', 'Something failed')\nmessagebox.askyesno('Q', 'Continue?')  # returns bool\n```\n**filedialog** (from `tkinter.filedialog`):\n```python\nfrom tkinter import filedialog\npath = filedialog.askopenfilename()\npath = filedialog.asksaveasfilename()\n```\n**simpledialog**: basic input dialog (string, int, float)",
+        "de": "Dialoge sind vorgefertigte Popup-Fenster.\n\n**messagebox** (aus `tkinter.messagebox`):\n```python\nfrom tkinter import messagebox\nmessagebox.showinfo('Titel', 'Nachricht')\nmessagebox.showwarning('Warnung', 'Achtung!')\nmessagebox.showerror('Fehler', 'Etwas ist fehlgeschlagen')\nmessagebox.askyesno('Frage', 'Weiter?')  # gibt bool zurück\n```\n**filedialog** (aus `tkinter.filedialog`):\n```python\nfrom tkinter import filedialog\npfad = filedialog.askopenfilename()\npfad = filedialog.asksaveasfilename()\n```\n**simpledialog**: einfacher Eingabedialog (string, int, float)"
+      }
+    },
+    {
+      "id": 40,
+      "module": 3,
+      "tag": "tip",
+      "q": {
+        "en": "What is the difference between tkinter and ttk?",
+        "de": "Was ist der Unterschied zwischen tkinter und ttk?"
+      },
+      "a": {
+        "en": "**tkinter**: Original widget set. Appearance is platform-inconsistent, looks dated on modern systems.\n**ttk** (Themed tkinter): Introduced in Python 2.7/3.1. Uses the OS's native styling engine for a modern look.\n\n```python\nimport tkinter as tk\nfrom tkinter import ttk\n\nroot = tk.Tk()\n\n# Classic\nbtn1 = tk.Button(root, text='Classic')  \n# Themed\nbtn2 = ttk.Button(root, text='Themed')  \n```\nttk adds: `Combobox`, `Treeview`, `Notebook` (tabs), `Progressbar`, `Separator`",
+        "de": "**tkinter**: Ursprünglicher Widget-Satz. Aussehen ist plattforminkonsistent, wirkt veraltet.\n**ttk** (Themed tkinter): In Python 2.7/3.1 eingeführt. Verwendet das native Styling-System des OS für modernes Aussehen.\n\n```python\nimport tkinter as tk\nfrom tkinter import ttk\n\nroot = tk.Tk()\n\n# Klassisch\nbtn1 = tk.Button(root, text='Klassisch')  \n# Themed\nbtn2 = ttk.Button(root, text='Themed')  \n```\nttk fügt hinzu: `Combobox`, `Treeview`, `Notebook` (Tabs), `Progressbar`, `Separator`"
+      }
+    },
+    {
+      "id": 41,
+      "module": 4,
+      "tag": "concept",
+      "q": {
+        "en": "What does REST stand for and what are its key principles?",
+        "de": "Wofür steht REST und was sind seine Schlüsselprinzipien?"
+      },
+      "a": {
+        "en": "**REST = REpresentational State Transfer**\n\nKey principles (constraints):\n1. **Client-Server**: Separation of concerns between UI and data storage.\n2. **Stateless**: Each request must contain all necessary information.\n3. **Cacheable**: Responses should define themselves as cacheable or not.\n4. **Uniform Interface**: Consistent resource identification via URIs.\n5. **Layered System**: Client doesn't know if it's talking to the actual server.\n6. **Code on Demand** (optional): Server can send executable code.",
+        "de": "**REST = REpresentational State Transfer** (Repräsentationale Zustandsübertragung)\n\nSchlüsselprinzipien (Constraints):\n1. **Client-Server**: Trennung von UI und Datenspeicherung.\n2. **Zustandslos**: Jede Anfrage muss alle notwendigen Informationen enthalten.\n3. **Cachefähig**: Antworten sollen sich als cachefähig oder nicht definieren.\n4. **Einheitliches Interface**: Konsistente Ressourcenidentifikation über URIs.\n5. **Geschichtetes System**: Client weiss nicht, ob er mit dem eigentlichen Server spricht.\n6. **Code on Demand** (optional): Server kann ausführbaren Code senden."
+      }
+    },
+    {
+      "id": 42,
+      "module": 4,
+      "tag": "code",
+      "q": {
+        "en": "What are the HTTP methods and what does CRUD map to?",
+        "de": "Was sind die HTTP-Methoden und wie mapped CRUD darauf?"
+      },
+      "a": {
+        "en": "| HTTP Method | CRUD Operation | Description |\n|---|---|---|\n| `GET` | **R**ead | Retrieve resource |\n| `POST` | **C**reate | Create new resource |\n| `PUT` | **U**pdate | Replace resource |\n| `PATCH` | **U**pdate | Partial update |\n| `DELETE` | **D**elete | Delete resource |\n\n```python\nimport requests\nresp = requests.get('https://api.example.com/users/1')\nresp = requests.post('https://api.example.com/users', json={'name': 'Alice'})\nresp = requests.put('https://api.example.com/users/1', json={'name': 'Bob'})\nresp = requests.delete('https://api.example.com/users/1')\n```",
+        "de": "| HTTP-Methode | CRUD-Operation | Beschreibung |\n|---|---|---|\n| `GET` | **L**esen | Ressource abrufen |\n| `POST` | **E**rstellen | Neue Ressource erstellen |\n| `PUT` | **A**ktualisieren | Ressource ersetzen |\n| `PATCH` | **A**ktualisieren | Teilweise Aktualisierung |\n| `DELETE` | **L**öschen | Ressource löschen |\n\n```python\nimport requests\nresp = requests.get('https://api.example.com/benutzer/1')\nresp = requests.post('https://api.example.com/benutzer', json={'name': 'Alice'})\nresp = requests.put('https://api.example.com/benutzer/1', json={'name': 'Bob'})\nresp = requests.delete('https://api.example.com/benutzer/1')\n```"
+      }
+    },
+    {
+      "id": 43,
+      "module": 4,
+      "tag": "concept",
+      "q": {
+        "en": "What is a socket and how do you create a TCP server/client in Python?",
+        "de": "Was ist ein Socket und wie erstellt man einen TCP-Server/Client in Python?"
+      },
+      "a": {
+        "en": "A **socket** is a software endpoint for network communication. Python's `socket` module provides low-level networking.\n```python\n# SERVER\nimport socket\nserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nserver.bind(('localhost', 8080))\nserver.listen(5)\nconn, addr = server.accept()  # blocking call\ndata = conn.recv(1024)        # receive data\nconn.send(b'Hello!')          # send response\nconn.close()\n\n# CLIENT\nclient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nclient.connect(('localhost', 8080))\nclient.send(b'Hi server!')\nresponse = client.recv(1024)\nclient.close()\n```",
+        "de": "Ein **Socket** ist ein Software-Endpunkt für Netzwerkkommunikation. Pythons `socket`-Modul bietet Low-Level-Netzwerkfunktionen.\n```python\n# SERVER\nimport socket\nserver = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nserver.bind(('localhost', 8080))\nserver.listen(5)\nverbindung, adresse = server.accept()  # blockierender Aufruf\ndaten = verbindung.recv(1024)          # Daten empfangen\nverbindung.send(b'Hallo!')             # Antwort senden\nverbindung.close()\n\n# CLIENT\nclient = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\nclient.connect(('localhost', 8080))\nclient.send(b'Hi Server!')\nantwort = client.recv(1024)\nclient.close()\n```"
+      }
+    },
+    {
+      "id": 44,
+      "module": 4,
+      "tag": "concept",
+      "q": {
+        "en": "What are HTTP status codes? Give examples for each range.",
+        "de": "Was sind HTTP-Statuscodes? Gib Beispiele für jeden Bereich."
+      },
+      "a": {
+        "en": "| Range | Category | Examples |\n|---|---|---|\n| 1xx | Informational | 100 Continue |\n| 2xx | Success | 200 OK, 201 Created, 204 No Content |\n| 3xx | Redirection | 301 Moved Permanently, 304 Not Modified |\n| 4xx | Client Error | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found |\n| 5xx | Server Error | 500 Internal Server Error, 503 Service Unavailable |\n\n```python\nresp = requests.get('https://api.example.com')\nif resp.status_code == 200:\n    data = resp.json()\n```",
+        "de": "| Bereich | Kategorie | Beispiele |\n|---|---|---|\n| 1xx | Informativ | 100 Continue |\n| 2xx | Erfolg | 200 OK, 201 Created, 204 No Content |\n| 3xx | Umleitung | 301 Moved Permanently, 304 Not Modified |\n| 4xx | Client-Fehler | 400 Bad Request, 401 Unauthorized, 403 Forbidden, 404 Not Found |\n| 5xx | Server-Fehler | 500 Internal Server Error, 503 Service Unavailable |\n\n```python\nresp = requests.get('https://api.example.com')\nif resp.status_code == 200:\n    daten = resp.json()\n```"
+      }
+    },
+    {
+      "id": 45,
+      "module": 4,
+      "tag": "code",
+      "q": {
+        "en": "How do you work with JSON data in Python?",
+        "de": "Wie arbeitet man mit JSON-Daten in Python?"
+      },
+      "a": {
+        "en": "Python's `json` module handles JSON serialization/deserialization.\n```python\nimport json\n\n# Python dict → JSON string\ndata = {'name': 'Alice', 'age': 30}\njson_str = json.dumps(data)\n# '{\"name\": \"Alice\", \"age\": 30}'\n\n# JSON string → Python dict\nparsed = json.loads(json_str)\n\n# File I/O\nwith open('data.json', 'w') as f:\n    json.dump(data, f, indent=2)\n\nwith open('data.json', 'r') as f:\n    loaded = json.load(f)\n```\n`requests.response.json()` auto-parses JSON responses.",
+        "de": "Pythons `json`-Modul verarbeitet JSON-Serialisierung/Deserialisierung.\n```python\nimport json\n\n# Python-Dict → JSON-String\ndaten = {'name': 'Alice', 'alter': 30}\njson_str = json.dumps(daten)\n# '{\"name\": \"Alice\", \"alter\": 30}'\n\n# JSON-String → Python-Dict\ngeparst = json.loads(json_str)\n\n# Datei-I/O\nwith open('daten.json', 'w') as f:\n    json.dump(daten, f, indent=2)\n\nwith open('daten.json', 'r') as f:\n    geladen = json.load(f)\n```\n`requests.response.json()` parsed JSON-Antworten automatisch."
+      }
+    },
+    {
+      "id": 46,
+      "module": 4,
+      "tag": "concept",
+      "q": {
+        "en": "What is the difference between AF_INET and SOCK_STREAM vs SOCK_DGRAM?",
+        "de": "Was ist der Unterschied zwischen AF_INET und SOCK_STREAM vs SOCK_DGRAM?"
+      },
+      "a": {
+        "en": "**AF_INET**: Address Family – specifies IPv4 addressing.\n**AF_INET6**: IPv6 addressing.\n\n**SOCK_STREAM**: TCP – connection-oriented, reliable, ordered, error-checked. Use for most applications.\n**SOCK_DGRAM**: UDP – connectionless, faster, no delivery guarantee. Use for real-time apps (gaming, video streaming).\n\n```python\n# TCP (reliable)\ntcp_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# UDP (fast)\nudp_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n```",
+        "de": "**AF_INET**: Adressfamilie – spezifiziert IPv4-Adressierung.\n**AF_INET6**: IPv6-Adressierung.\n\n**SOCK_STREAM**: TCP – verbindungsorientiert, zuverlässig, geordnet, fehlergeprüft. Für die meisten Anwendungen.\n**SOCK_DGRAM**: UDP – verbindungslos, schneller, keine Zustellgarantie. Für Echtzeit-Apps (Gaming, Videostreaming).\n\n```python\n# TCP (zuverlässig)\ntcp_sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n\n# UDP (schnell)\nudp_sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)\n```"
+      }
+    },
+    {
+      "id": 47,
+      "module": 4,
+      "tag": "code",
+      "q": {
+        "en": "How do you parse and create XML data in Python?",
+        "de": "Wie parst und erstellt man XML-Daten in Python?"
+      },
+      "a": {
+        "en": "Python's `xml.etree.ElementTree` module (built-in) provides simple XML handling.\n```python\nimport xml.etree.ElementTree as ET\n\n# Parse XML\ntree = ET.parse('data.xml')\nroot = tree.getroot()\n\nfor child in root:\n    print(child.tag, child.attrib, child.text)\n\n# Find elements\nfor item in root.findall('item'):\n    name = item.find('name').text\n\n# Create XML\nroot = ET.Element('catalog')\nbook = ET.SubElement(root, 'book')\nbook.set('id', '1')\ntitle = ET.SubElement(book, 'title')\ntitle.text = 'Python Mastery'\ntree = ET.ElementTree(root)\ntree.write('output.xml')\n```",
+        "de": "Pythons `xml.etree.ElementTree`-Modul (eingebaut) bietet einfache XML-Verarbeitung.\n```python\nimport xml.etree.ElementTree as ET\n\n# XML parsen\nbaum = ET.parse('daten.xml')\nwurzel = baum.getroot()\n\nfor kind in wurzel:\n    print(kind.tag, kind.attrib, kind.text)\n\n# Elemente finden\nfor element in wurzel.findall('element'):\n    name = element.find('name').text\n\n# XML erstellen\nwurzel = ET.Element('katalog')\nbuch = ET.SubElement(wurzel, 'buch')\nbuch.set('id', '1')\ntitel = ET.SubElement(buch, 'titel')\ntitel.text = 'Python Meisterschaft'\nbaum = ET.ElementTree(wurzel)\nbaum.write('ausgabe.xml')\n```"
+      }
+    },
+    {
+      "id": 48,
+      "module": 4,
+      "tag": "exam",
+      "q": {
+        "en": "🎓 EXAM: What does ElementTree provide in Python? [Choose 1]\nA. Functions for creating HTML files\nB. An API for parsing JSON files\nC. Functions for manipulating text files in GUI programming\nD. A simple and efficient API for parsing and creating XML data",
+        "de": "🎓 PRÜFUNG: Was bietet ElementTree in Python? [1 Antwort]\nA. Funktionen zur Erstellung von HTML-Dateien\nB. Eine API zum Parsen von JSON-Dateien\nC. Funktionen zur Textdateiverarbeitung in der GUI-Programmierung\nD. Eine einfache und effiziente API zum Parsen und Erstellen von XML-Daten"
+      },
+      "a": {
+        "en": "✅ **Answer: D**\n\n`xml.etree.ElementTree` is a Python built-in module that provides a **simple and efficient API for parsing and creating XML data**. It allows you to access and manipulate XML in a straightforward way.",
+        "de": "✅ **Antwort: D**\n\n`xml.etree.ElementTree` ist ein eingebautes Python-Modul, das eine **einfache und effiziente API zum Parsen und Erstellen von XML-Daten** bietet. Es ermöglicht einfachen Zugriff auf und Manipulation von XML."
+      }
+    },
+    {
+      "id": 49,
+      "module": 4,
+      "tag": "concept",
+      "q": {
+        "en": "What is the difference between client-server and peer-to-peer architectures?",
+        "de": "Was ist der Unterschied zwischen Client-Server- und Peer-to-Peer-Architekturen?"
+      },
+      "a": {
+        "en": "**Client-Server**: Centralized. Server provides services, clients consume them. Server is always-on, clients connect/disconnect.\n- Advantages: Centralized control, security, easier management\n- Examples: Web browsers + web servers, REST APIs\n\n**Peer-to-Peer (P2P)**: Decentralized. Every node is both client and server.\n- Advantages: No single point of failure, scales well\n- Examples: BitTorrent, blockchain networks\n\nPython network programming typically focuses on the **client-server** model.",
+        "de": "**Client-Server**: Zentralisiert. Server bietet Dienste, Clients nutzen sie. Server ist immer verfügbar, Clients verbinden/trennen sich.\n- Vorteile: Zentralisierte Kontrolle, Sicherheit, einfachere Verwaltung\n- Beispiele: Webbrowser + Webserver, REST APIs\n\n**Peer-to-Peer (P2P)**: Dezentralisiert. Jeder Knoten ist gleichzeitig Client und Server.\n- Vorteile: Kein Single Point of Failure, skaliert gut\n- Beispiele: BitTorrent, Blockchain-Netzwerke\n\nPython-Netzwerkprogrammierung konzentriert sich typischerweise auf das **Client-Server**-Modell."
+      }
+    },
+    {
+      "id": 50,
+      "module": 4,
+      "tag": "code",
+      "q": {
+        "en": "How do you use the `requests` library to make HTTP requests with headers and authentication?",
+        "de": "Wie verwendet man die `requests`-Bibliothek für HTTP-Anfragen mit Headers und Authentifizierung?"
+      },
+      "a": {
+        "en": "```python\nimport requests\n\n# With headers\nheaders = {\n    'Authorization': 'Bearer my_token',\n    'Content-Type': 'application/json',\n    'Accept': 'application/json'\n}\n\n# GET with params\nparams = {'page': 1, 'limit': 10}\nresp = requests.get(\n    'https://api.example.com/data',\n    headers=headers,\n    params=params,\n    timeout=30\n)\n\n# Error handling\nresp.raise_for_status()  # raises for 4xx/5xx\ndata = resp.json()\n\n# Basic auth\nresp = requests.get(url, auth=('user', 'pass'))\n```",
+        "de": "```python\nimport requests\n\n# Mit Headers\nheaders = {\n    'Authorization': 'Bearer mein_token',\n    'Content-Type': 'application/json',\n    'Accept': 'application/json'\n}\n\n# GET mit Parametern\nparameter = {'seite': 1, 'limit': 10}\nresp = requests.get(\n    'https://api.example.com/daten',\n    headers=headers,\n    params=parameter,\n    timeout=30\n)\n\n# Fehlerbehandlung\nresp.raise_for_status()  # wirft Ausnahme für 4xx/5xx\ndaten = resp.json()\n\n# Basic Auth\nresp = requests.get(url, auth=('benutzer', 'passwort'))\n```"
+      }
+    },
+    {
+      "id": 51,
+      "module": 5,
+      "tag": "concept",
+      "q": {
+        "en": "How do you work with SQLite databases in Python?",
+        "de": "Wie arbeitet man mit SQLite-Datenbanken in Python?"
+      },
+      "a": {
+        "en": "Python's built-in `sqlite3` module provides SQLite database access.\n```python\nimport sqlite3\n\n# Connect (creates if not exists)\nconn = sqlite3.connect('mydb.sqlite')\ncursor = conn.cursor()\n\n# Create table\ncursor.execute('''CREATE TABLE IF NOT EXISTS users (\n    id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT NOT NULL,\n    email TEXT UNIQUE\n)''')\n\n# Insert\ncursor.execute('INSERT INTO users (name, email) VALUES (?, ?)',\n               ('Alice', 'alice@example.com'))\nconn.commit()  # save changes!\n\n# Query\nrows = cursor.execute('SELECT * FROM users').fetchall()\nconn.close()\n```",
+        "de": "Pythons eingebautes `sqlite3`-Modul bietet SQLite-Datenbankzugriff.\n```python\nimport sqlite3\n\n# Verbinden (erstellt Datenbank, falls nicht vorhanden)\nverbindung = sqlite3.connect('meindb.sqlite')\ncursor = verbindung.cursor()\n\n# Tabelle erstellen\ncursor.execute('''CREATE TABLE IF NOT EXISTS benutzer (\n    id INTEGER PRIMARY KEY AUTOINCREMENT,\n    name TEXT NOT NULL,\n    email TEXT UNIQUE\n)''')\n\n# Einfügen\ncursor.execute('INSERT INTO benutzer (name, email) VALUES (?, ?)',\n               ('Alice', 'alice@example.com'))\nverbindung.commit()  # Änderungen speichern!\n\n# Abfragen\nzeilen = cursor.execute('SELECT * FROM benutzer').fetchall()\nverbindung.close()\n```"
+      }
+    },
+    {
+      "id": 52,
+      "module": 5,
+      "tag": "code",
+      "q": {
+        "en": "How do you read and write CSV files in Python?",
+        "de": "Wie liest und schreibt man CSV-Dateien in Python?"
+      },
+      "a": {
+        "en": "Python's `csv` module handles CSV files.\n```python\nimport csv\n\n# Write CSV\nwith open('data.csv', 'w', newline='') as f:\n    writer = csv.writer(f)\n    writer.writerow(['Name', 'Age', 'City'])\n    writer.writerow(['Alice', 30, 'Bern'])\n    writer.writerows([['Bob', 25, 'Zurich'], ['Carol', 35, 'Basel']])\n\n# Read CSV\nwith open('data.csv', 'r') as f:\n    reader = csv.reader(f)\n    header = next(reader)  # skip header\n    for row in reader:\n        print(row)\n\n# DictReader / DictWriter (dict-based)\nwith open('data.csv') as f:\n    reader = csv.DictReader(f)\n    for row in reader:\n        print(row['Name'], row['Age'])\n```",
+        "de": "Pythons `csv`-Modul verarbeitet CSV-Dateien.\n```python\nimport csv\n\n# CSV schreiben\nwith open('daten.csv', 'w', newline='') as f:\n    writer = csv.writer(f)\n    writer.writerow(['Name', 'Alter', 'Stadt'])\n    writer.writerow(['Alice', 30, 'Bern'])\n    writer.writerows([['Bob', 25, 'Zürich'], ['Carol', 35, 'Basel']])\n\n# CSV lesen\nwith open('daten.csv', 'r') as f:\n    reader = csv.reader(f)\n    kopfzeile = next(reader)  # Header überspringen\n    for zeile in reader:\n        print(zeile)\n\n# DictReader / DictWriter (dict-basiert)\nwith open('daten.csv') as f:\n    reader = csv.DictReader(f)\n    for zeile in reader:\n        print(zeile['Name'], zeile['Alter'])\n```"
+      }
+    },
+    {
+      "id": 53,
+      "module": 5,
+      "tag": "code",
+      "q": {
+        "en": "How does Python's logging module work? What are the logging levels?",
+        "de": "Wie funktioniert Pythons logging-Modul? Was sind die Logging-Level?"
+      },
+      "a": {
+        "en": "The `logging` module provides a flexible logging framework.\n\n**Log levels** (ascending severity):\n```\nDEBUG → INFO → WARNING → ERROR → CRITICAL\n```\n```python\nimport logging\n\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format='%(asctime)s - %(levelname)s - %(message)s',\n    filename='app.log'\n)\n\nlogging.debug('Detailed debug info')\nlogging.info('Normal operation')\nlogging.warning('Something unexpected')\nlogging.error('An error occurred')\nlogging.critical('System failure!')\n\n# Named logger (recommended for modules)\nlogger = logging.getLogger(__name__)\nlogger.info('Module-specific message')\n```",
+        "de": "Das `logging`-Modul bietet ein flexibles Logging-Framework.\n\n**Log-Level** (aufsteigende Schwere):\n```\nDEBUG → INFO → WARNING → ERROR → CRITICAL\n```\n```python\nimport logging\n\nlogging.basicConfig(\n    level=logging.DEBUG,\n    format='%(asctime)s - %(levelname)s - %(message)s',\n    filename='app.log'\n)\n\nlogging.debug('Detaillierte Debug-Info')\nlogging.info('Normaler Betrieb')\nlogging.warning('Etwas Unerwartetes')\nlogging.error('Ein Fehler ist aufgetreten')\nlogging.critical('Systemausfall!')\n\n# Benannter Logger (empfohlen für Module)\nlogger = logging.getLogger(__name__)\nlogger.info('Modul-spezifische Nachricht')\n```"
+      }
+    },
+    {
+      "id": 54,
+      "module": 5,
+      "tag": "code",
+      "q": {
+        "en": "How do you use `configparser` to read and write .ini configuration files?",
+        "de": "Wie verwendet man `configparser` zum Lesen und Schreiben von .ini-Konfigurationsdateien?"
+      },
+      "a": {
+        "en": "```python\nimport configparser\n\n# Write config\nconfig = configparser.ConfigParser()\nconfig['DEFAULT'] = {'debug': 'False', 'encoding': 'utf-8'}\nconfig['database'] = {'host': 'localhost', 'port': '5432',\n                      'name': 'mydb'}\nconfig['server'] = {'host': '0.0.0.0', 'port': '8080'}\n\nwith open('config.ini', 'w') as f:\n    config.write(f)\n\n# Read config\nconfig = configparser.ConfigParser()\nconfig.read('config.ini')\n\ndb_host = config['database']['host']\nport = config.getint('server', 'port')  # typed access\nhas_debug = config.getboolean('DEFAULT', 'debug')\n```",
+        "de": "```python\nimport configparser\n\n# Konfiguration schreiben\nconfig = configparser.ConfigParser()\nconfig['DEFAULT'] = {'debug': 'False', 'encoding': 'utf-8'}\nconfig['datenbank'] = {'host': 'localhost', 'port': '5432',\n                       'name': 'meindb'}\nconfig['server'] = {'host': '0.0.0.0', 'port': '8080'}\n\nwith open('config.ini', 'w') as f:\n    config.write(f)\n\n# Konfiguration lesen\nconfig = configparser.ConfigParser()\nconfig.read('config.ini')\n\ndb_host = config['datenbank']['host']\nport = config.getint('server', 'port')  # typisierter Zugriff\ndebug = config.getboolean('DEFAULT', 'debug')\n```"
+      }
+    },
+    {
+      "id": 55,
+      "module": 5,
+      "tag": "concept",
+      "q": {
+        "en": "What are environment variables and how do you access them in Python?",
+        "de": "Was sind Umgebungsvariablen und wie greift man in Python darauf zu?"
+      },
+      "a": {
+        "en": "Environment variables are key-value pairs set in the OS environment, used to configure applications without hardcoding.\n\n```python\nimport os\n\n# Read environment variable\napi_key = os.environ.get('API_KEY')  # returns None if not set\napi_key = os.environ['API_KEY']      # raises KeyError if not set\n\n# With default value\nport = int(os.environ.get('PORT', '8080'))\n\n# Set environment variable (current process only)\nos.environ['MY_VAR'] = 'value'\n\n# List all environment variables\nfor key, val in os.environ.items():\n    print(f'{key}={val}')\n```\nBest practice: Use `.env` files with `python-dotenv` for local development.",
+        "de": "Umgebungsvariablen sind Schlüssel-Wert-Paare, die im OS-Environment gesetzt werden, um Anwendungen zu konfigurieren ohne Hardcoding.\n\n```python\nimport os\n\n# Umgebungsvariable lesen\napi_schluessel = os.environ.get('API_KEY')  # None wenn nicht gesetzt\napi_schluessel = os.environ['API_KEY']      # KeyError wenn nicht gesetzt\n\n# Mit Standardwert\nport = int(os.environ.get('PORT', '8080'))\n\n# Umgebungsvariable setzen (nur aktueller Prozess)\nos.environ['MEINE_VAR'] = 'wert'\n\n# Alle Umgebungsvariablen auflisten\nfor schluessel, wert in os.environ.items():\n    print(f'{schluessel}={wert}')\n```\nBest Practice: `.env`-Dateien mit `python-dotenv` für lokale Entwicklung verwenden."
+      }
+    },
+    {
+      "id": 56,
+      "module": 5,
+      "tag": "concept",
+      "q": {
+        "en": "What is the difference between a relational database and a flat file database?",
+        "de": "Was ist der Unterschied zwischen einer relationalen Datenbank und einer Flat-File-Datenbank?"
+      },
+      "a": {
+        "en": "**Flat File (CSV, TXT)**:\n- Simple, no structure enforcement\n- No relationships between data\n- Good for simple data export/import\n- No query language\n\n**Relational Database (SQLite, PostgreSQL)**:\n- Structured with tables, rows, columns\n- Relationships via foreign keys\n- ACID transactions (Atomic, Consistent, Isolated, Durable)\n- SQL query language\n- Data integrity enforcement\n\nSQLite is special: serverless, single-file relational DB. Perfect for local apps, prototypes, and mobile apps.",
+        "de": "**Flat File (CSV, TXT)**:\n- Einfach, keine Strukturdurchsetzung\n- Keine Beziehungen zwischen Daten\n- Gut für einfachen Datenexport/-import\n- Keine Abfragesprache\n\n**Relationale Datenbank (SQLite, PostgreSQL)**:\n- Strukturiert mit Tabellen, Zeilen, Spalten\n- Beziehungen über Fremdschlüssel\n- ACID-Transaktionen (Atomar, Konsistent, Isoliert, Dauerhaft)\n- SQL-Abfragesprache\n- Datenintegritätsdurchsetzung\n\nSQLite ist besonders: serverlos, einzelne Datei relationale DB. Perfekt für lokale Apps, Prototypen und mobile Apps."
+      }
+    },
+    {
+      "id": 57,
+      "module": 5,
+      "tag": "code",
+      "q": {
+        "en": "How do you use the `os` and `sys` modules for environment interaction?",
+        "de": "Wie verwendet man die Module `os` und `sys` für Umgebungsinteraktion?"
+      },
+      "a": {
+        "en": "```python\nimport os\nimport sys\n\n# os – operating system interface\nos.getcwd()          # current directory\nos.chdir('/tmp')     # change directory\nos.listdir('.')      # list files\nos.path.join('a', 'b', 'c')  # platform-safe paths\nos.path.exists(path) # check if exists\nos.makedirs('dir/sub', exist_ok=True)  # create dirs\nos.remove('file.txt')  # delete file\n\n# sys – Python runtime interaction\nsys.argv     # command line arguments\nsys.path     # module search paths\nsys.version  # Python version string\nsys.exit(0)  # exit program\nsys.stdin    # standard input stream\nsys.stdout   # standard output stream\nsys.stderr   # standard error stream\n```",
+        "de": "```python\nimport os\nimport sys\n\n# os – Betriebssystem-Interface\nos.getcwd()             # aktuelles Verzeichnis\nos.chdir('/tmp')        # Verzeichnis wechseln\nos.listdir('.')         # Dateien auflisten\nos.path.join('a', 'b')  # plattformsichere Pfade\nos.path.exists(pfad)    # prüfen ob existiert\nos.makedirs('dir/sub', exist_ok=True)  # Verzeichnisse erstellen\nos.remove('datei.txt')  # Datei löschen\n\n# sys – Python-Laufzeit-Interaktion\nsys.argv     # Kommandozeilenargumente\nsys.path     # Modul-Suchpfade\nsys.version  # Python-Versionsstring\nsys.exit(0)  # Programm beenden\nsys.stdin    # Standard-Eingabestrom\nsys.stdout   # Standard-Ausgabestrom\nsys.stderr   # Standard-Fehlerstrom\n```"
+      }
+    },
+    {
+      "id": 58,
+      "module": 5,
+      "tag": "exam",
+      "q": {
+        "en": "🎓 EXAM: Which Python module is used for interacting with SQLite databases?\nA. pymysql  B. sqlite3  C. sqlalchemy  D. database",
+        "de": "🎓 PRÜFUNG: Welches Python-Modul wird für die Interaktion mit SQLite-Datenbanken verwendet?\nA. pymysql  B. sqlite3  C. sqlalchemy  D. database"
+      },
+      "a": {
+        "en": "✅ **Answer: B – sqlite3**\n\n`sqlite3` is Python's **built-in** module for SQLite database access. It comes with the standard library – no installation needed!\n\n- pymysql: third-party for MySQL\n- sqlalchemy: ORM, works with many databases\n- database: not a standard Python module",
+        "de": "✅ **Antwort: B – sqlite3**\n\n`sqlite3` ist Pythons **eingebautes** Modul für SQLite-Datenbankzugriff. Es gehört zur Standardbibliothek – keine Installation nötig!\n\n- pymysql: Drittanbieter für MySQL\n- sqlalchemy: ORM, arbeitet mit vielen Datenbanken\n- database: kein Standard-Python-Modul"
+      }
+    },
+    {
+      "id": 59,
+      "module": 5,
+      "tag": "code",
+      "q": {
+        "en": "How do you create a rotating log file handler in Python?",
+        "de": "Wie erstellt man einen rotierenden Log-Datei-Handler in Python?"
+      },
+      "a": {
+        "en": "Use `RotatingFileHandler` or `TimedRotatingFileHandler` from `logging.handlers`.\n```python\nimport logging\nfrom logging.handlers import RotatingFileHandler\n\nlogger = logging.getLogger('myapp')\nlogger.setLevel(logging.DEBUG)\n\n# Rotate at 1MB, keep 5 backups\nhandler = RotatingFileHandler(\n    'app.log',\n    maxBytes=1_000_000,\n    backupCount=5\n)\nhandler.setFormatter(logging.Formatter(\n    '%(asctime)s %(levelname)s %(message)s'\n))\nlogger.addHandler(handler)\n\n# Or time-based rotation:\nfrom logging.handlers import TimedRotatingFileHandler\nhandler2 = TimedRotatingFileHandler(\n    'daily.log', when='midnight', backupCount=7\n)\n```",
+        "de": "Verwende `RotatingFileHandler` oder `TimedRotatingFileHandler` aus `logging.handlers`.\n```python\nimport logging\nfrom logging.handlers import RotatingFileHandler\n\nlogger = logging.getLogger('meineprog')\nlogger.setLevel(logging.DEBUG)\n\n# Rotiere bei 1MB, behalte 5 Sicherungen\nhandler = RotatingFileHandler(\n    'app.log',\n    maxBytes=1_000_000,\n    backupCount=5\n)\nhandler.setFormatter(logging.Formatter(\n    '%(asctime)s %(levelname)s %(message)s'\n))\nlogger.addHandler(handler)\n\n# Oder zeitbasierte Rotation:\nfrom logging.handlers import TimedRotatingFileHandler\nhandler2 = TimedRotatingFileHandler(\n    'taeglich.log', when='midnight', backupCount=7\n)\n```"
+      }
+    },
+    {
+      "id": 60,
+      "module": 5,
+      "tag": "concept",
+      "q": {
+        "en": "What is the ACID principle in databases?",
+        "de": "Was ist das ACID-Prinzip bei Datenbanken?"
+      },
+      "a": {
+        "en": "ACID describes the properties that guarantee database transactions are processed reliably:\n\n**A – Atomicity**: A transaction is all-or-nothing. If any part fails, the whole transaction is rolled back.\n\n**C – Consistency**: A transaction brings the database from one valid state to another.\n\n**I – Isolation**: Concurrent transactions behave as if they were serial.\n\n**D – Durability**: Once committed, a transaction persists even after system failure.\n\n```python\n# In sqlite3, commit() / rollback() manage transactions\ntry:\n    cursor.execute('INSERT ...')\n    conn.commit()    # Durable\nexcept:\n    conn.rollback()  # Atomic\n```",
+        "de": "ACID beschreibt die Eigenschaften, die garantieren, dass Datenbanktransaktionen zuverlässig verarbeitet werden:\n\n**A – Atomarität**: Eine Transaktion ist alles oder nichts. Schlägt ein Teil fehl, wird die gesamte Transaktion zurückgerollt.\n\n**C – Konsistenz**: Eine Transaktion bringt die Datenbank von einem gültigen Zustand in einen anderen.\n\n**I – Isolation**: Gleichzeitige Transaktionen verhalten sich, als wären sie seriell.\n\n**D – Dauerhaftigkeit**: Einmal committed, bleibt eine Transaktion auch nach Systemausfall bestehen.\n\n```python\n# In sqlite3 verwalten commit() / rollback() Transaktionen\ntry:\n    cursor.execute('INSERT ...')\n    conn.commit()    # Dauerhaft\nexcept:\n    conn.rollback()  # Atomar\n```"
+      }
     }
   ]
 }
